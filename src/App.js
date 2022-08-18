@@ -11,16 +11,6 @@ function App() {
                     {publicRoutes.map((route, index) => {
                         const Page = route.component;
                         let Layout = DefaultLayout;
-
-                        // eslint-disable-next-line no-lone-blocks
-                        {
-                            /* if (route.layout) {
-                            Layout = route.layout;
-                        } else if (route.layout === null) {
-                            Layout = Fragment;
-                        } */
-                        }
-                        
                         return (
                             <Route
                                 key={index}

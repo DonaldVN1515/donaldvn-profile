@@ -1,3 +1,6 @@
+// routesConfig
+import routesConfig from '~/config/routes';
+
 // Pages
 import Home from '~/pages/Home';
 import Gallerry from '~/pages/Gallerry';
@@ -7,11 +10,11 @@ import Contact from '~/pages/Contact';
 
 // publics Routes
 const publicRoutes = [
-    { path: '/', component: Home },
-    { path: '/gallerry', component: Gallerry },
-    { path: '/blog', component: Blog },
-    { path: '/project', component: Project },
-    { path: '/contact', component: Contact },
+    { path: routesConfig.home, component: Home },
+    { path: routesConfig.gallerry, component: Gallerry },
+    { path: routesConfig.blog, component: Blog },
+    { path: routesConfig.project, component: Project },
+    { path: routesConfig.contact, component: Contact },
 ];
 
 // private Routes
