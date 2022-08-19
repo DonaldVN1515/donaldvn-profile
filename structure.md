@@ -1,3 +1,8 @@
+#Trick:
+setTimeout(() => {
+    debugger
+}, 5000);
+
 #Structure:
     layout:
         header
@@ -18,10 +23,16 @@
                     Contact
         footer
             © Profiler 2022. Design by @DONALDVN
-
-1. Analysis Layout, Profile template
-2. Install reactjs, libraries
-    Set up scss, classnames
-3. Code Layout
+18/08/2022
+1. Analysis Layout, Profile template --> OK
+2. Install reactjs, libraries --> OK
+    Set up scss, classnames --> OK
+3. Code Layout 
+    SideBar --> OK
     Header
-    SideBar 
+19/08/2022
+1. Code Layout
+    Update SideBar
+    Header
+    personal infor component
+    Home (About me)

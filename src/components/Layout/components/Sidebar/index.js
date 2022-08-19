@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
+import Tippy from '@tippyjs/react';
 import {
     Twitter,
     Facebook,
@@ -18,11 +19,14 @@ import {
 import img from '~/assets/img';
 import styles from './Sidebar.module.scss';
 import configRoute from '~/config/routes';
+import Button from '~/components/Buttton';
+import PersonalInfor from '~/components/PersonalInfor';
 
 const cx = classNames.bind(styles);
 const Sidebar = () => {
     return (
         <div className={cx('sidebar')}>
+            {/* ABOUT ME */}
             <div className={cx('about')}>
                 <div className={cx('avt-blur')}>
                     <img src={img.avt} alt="Quoc Viet" />
@@ -38,92 +42,71 @@ const Sidebar = () => {
                     solutions for web and mobile applications. I'd love to work on yours, too!
                 </p>
                 <img src="https://profiler.jollyany.co/images/tz_profiler/Victoria-Rawson.png" alt="" />
-                <ul className={cx('infor')}>
-                    <li>
-                        <span>Date of Birth: </span>
-                        <a className={cx('link')} href="#">
-                            January 01, 2002
-                        </a>
-                    </li>
-                    <li>
-                        <span>Address: </span>
-                        <a className={cx('link')} href="#">
-                            66 Vo Van Tan, Thanh Khe, Da Nang
-                        </a>
-                    </li>
-                    <li>
-                        <span>Phone: </span>
-                        <a className={cx('link')} href="tel:0329702303">
-                            0329702303
-                        </a>
-                    </li>
-                    <li>
-                        <span>Email: </span>
-                        <a className={cx('link')} href="mail:vietplqbdaf200035@fpt.edu.vn">
-                            vietplqbdaf200035@fpt.edu.vn
-                        </a>
-                    </li>
-                    <li>
-                        <span>Website: </span>
-                        <a
-                            className={cx('link')}
-                            target="_blank"
-                            rel="noreferrer"
-                            href="https://github.com/DonaldVN1515"
-                        >
-                            https://github.com/DonaldVN1515
-                        </a>
-                    </li>
-                </ul>
+
+                {/* PersonalInfor */}
+                <PersonalInfor />
 
                 <div className={cx('socials')}>
-                    <a className={cx('link')} href="#" target="" rel="noreferrer">
+                    <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
                         <Facebook className={cx('icon')} />
-                    </a>
+                    </Button>
 
-                    <a className={cx('link')} href="#" target="" rel="noreferrer">
+                    <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
                         <YouTube className={cx('icon')} />
-                    </a>
+                    </Button>
 
-                    <a className={cx('link')} href="#" target="" rel="noreferrer">
+                    <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
                         <Email className={cx('icon')} />
-                    </a>
+                    </Button>
 
-                    <a className={cx('link')} href="#" target="" rel="noreferrer">
+                    <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
                         <Phone className={cx('icon')} />
-                    </a>
+                    </Button>
 
-                    <a className={cx('link')} href="#" target="" rel="noreferrer">
+                    <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
                         <Twitter className={cx('icon')} />
-                    </a>
+                    </Button>
 
-                    <a className={cx('link')} href="#" target="" rel="noreferrer">
+                    <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
                         <LinkedIn className={cx('icon')} />
-                    </a>
+                    </Button>
                 </div>
             </div>
 
+            {/* NAV BAR (active)*/}
             <nav className={cx('navbar')}>
-                <Link className={cx('option')} to={configRoute.home}>
-                    <Home className={cx('icon')} />
-                    <span>Home</span>
-                </Link>
-                <Link className={cx('option')} to={configRoute.gallerry}>
-                    <Collections className={cx('icon')} />
-                    <span>Gallerry</span>
-                </Link>
-                <Link className={cx('option')} to={configRoute.blog}>
-                    <Book className={cx('icon')} />
-                    <span>Blog</span>
-                </Link>
-                <Link className={cx('option')} to={configRoute.project}>
-                    <Web className={cx('icon')} />
-                    <span>Project</span>
-                </Link>
-                <Link className={cx('option')} to={configRoute.contact}>
-                    <Send className={cx('icon')} />
-                    <span>Contact</span>
-                </Link>
+                <Tippy content="Home" placement="right">
+                    <Link className={cx('option')} to={configRoute.home}>
+                        <Home className={cx('icon')} />
+                        <span>Home</span>
+                    </Link>
+                </Tippy>
+                <Tippy content="Collections" placement="right">
+                    <Link className={cx('option')} to={configRoute.gallerry}>
+                        <Collections className={cx('icon')} />
+                        <span>Gallerry</span>
+                    </Link>
+                </Tippy>
+                <Tippy content="Blog" placement="right">
+                    <Link className={cx('option')} to={configRoute.blog}>
+                        <Book className={cx('icon')} />
+                        <span>Blog</span>
+                    </Link>
+                </Tippy>
+
+                <Tippy content="Project" placement="right">
+                    <Link className={cx('option')} to={configRoute.project}>
+                        <Web className={cx('icon')} />
+                        <span>Project</span>
+                    </Link>
+                </Tippy>
+
+                <Tippy content="Contact me" placement="right">
+                    <Link className={cx('option')} to={configRoute.contact}>
+                        <Send className={cx('icon')} />
+                        <span>Contact</span>
+                    </Link>
+                </Tippy>
             </nav>
         </div>
     );

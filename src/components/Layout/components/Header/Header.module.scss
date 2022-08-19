@@ -1,0 +1,29 @@
+.wapper {
+    border-bottom: 1px solid var(--light-background-color);
+    height: var(--default-layout-header-height, 40px);
+}
+.header {
+    max-width: var(--default-layout-width, 1200px);
+    height: var(--default-layout-header-height, 50px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+
+    .icon {
+      margin-bottom: 2px;
+        font-size: 2rem;
+        color: var(--hover-color);
+    }
+}
+.path {
+    font-size: 1.5rem;
+}
+.infor {
+    display: flex;
+}
+.item {
+    font-size: 1.5rem;
+    margin-left: 20px;
+}

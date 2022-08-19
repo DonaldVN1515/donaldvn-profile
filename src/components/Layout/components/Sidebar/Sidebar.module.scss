@@ -8,6 +8,7 @@
 
 //  ABOUT ME
 .about {
+    flex: 4;
     padding: 15px;
     overflow-y: auto;
     background-color: var(--background-color);
@@ -52,66 +53,56 @@
     font-size: 2rem;
 }
 .description {
-}
-.infor {
-    .link {
-        color: var(--2nd-text-color);
-
-        &:hover {
-            color: white;
-            text-decoration: underline;
-        }
-    }
-    li {
-        padding:  4px 0;
-    }
-}
-.description,
-.infor {
     padding: 20px 0;
 
-
-    span {
-        font-weight: 600;
-    }
 }
+// SOCIALS
 
 .socials {
     display: flex;
     justify-content: space-between;
 
     .icon {
-        font-size: 2.5rem;
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
+}
+.link {
+    color: var(--2nd-text-color);
+    display: flex;
+    padding: 8px;
 
-    .link {
-        color: var(--2nd-text-color);
-        display: flex;
-        padding: 8px;
+    &:hover {
+        border-radius: 50%;
 
-        &:hover {
-            border-radius: 50%;
-
-            color: var(--text-color);
-            background-color: var(--light-background-color);
-        }
+        background-color: var(--light-background-color);
     }
 }
 
 // navbar
 
 .navbar {
-    width: 70%;
-    font-size: 1.4rem;
+    flex: 1;
+    font-size: 1.2rem;
     background-color: var(--light-background-color);
+    border-right: 1px solid transparent;
+
+
+    &:hover {
+        border-right: 1px solid var(--light-background-color);
+    }
     .icon {
         margin-bottom: 10px;
         font-size: 3rem;
     }
     .option {
         color: var(--2nd-text-color);
+    }
+
+    .active {
+        background-color: var(--white-color);
+        color: var(--hover-color);
+
     }
 }
 .option {
@@ -120,13 +111,25 @@
     justify-content: center;
     align-items: center;
     padding: 15px 10px;
+    text-decoration: none;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--white-color);
+    }
 
     &:hover {
-        background-color: var(--background-color);
-        color: var(--white-color);
+        background-color: var(--white-color);
+        color: var(--hover-color);
     }
 
     span {
+        letter-spacing: 0.1rem;
         text-transform: uppercase;
     }
 }

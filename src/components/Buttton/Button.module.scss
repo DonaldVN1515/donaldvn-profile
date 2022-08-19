@@ -1,0 +1,56 @@
+.wapper {
+    font-size: 1.8rem;
+    font-family: none;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    &:hover {
+        color: var(--hover-color);
+    }
+
+    span {
+        color: var(--2nd-text-color);
+        transition: all 0.25s ease-in-out;
+    }
+}
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+
+.icon {
+    display: flex;
+    text-align: center;
+}
+.title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+a {
+    &:hover {
+        color: var(--hover-color);
+    }
+    &:hover .title {
+        color: var(--hover-color);
+    }
+}
+
+// BUTTON TYPES
+
+.outline {
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+
+    &:hover {
+        color: var(--hover-color);
+
+        border-color: currentColor;
+    }
+}
+.text {
+    &:hover {
+        text-decoration: underline;
+    }
+}

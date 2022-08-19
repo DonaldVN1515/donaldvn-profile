@@ -7,6 +7,7 @@ import Gallerry from '~/pages/Gallerry';
 import Blog from '~/pages/Blog';
 import Project from '~/pages/Project';
 import Contact from '~/pages/Contact';
+import Login from '~/pages/Login';
 
 // publics Routes
 const publicRoutes = [
@@ -15,6 +16,7 @@ const publicRoutes = [
     { path: routesConfig.blog, component: Blog },
     { path: routesConfig.project, component: Project },
     { path: routesConfig.contact, component: Contact },
+    { path: routesConfig.login, component: Login, layout: null },
 ];
 
 // private Routes

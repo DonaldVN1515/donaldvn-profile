@@ -4,8 +4,12 @@
     --white-color: #fff;
     --text-color: #333;
     --2nd-text-color: #939393;
+    --hover-color: #a17560;
     --background-color: #3d3d3b;
-    --light-background-color:#e6e7e7;
+    --light-background-color: #e6e7e7;
+
+    --default-layout-width: 1200px; 
+    --default-layout-header-height: 35px;
 }
 
 * {
@@ -17,6 +21,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 body {
@@ -32,14 +37,34 @@ input,
 [tabindex] {
     outline: none;
     border: none;
+    background-color: transparent;
 }
 
 a[href] {
     color: var(--text-color);
     text-decoration: none;
     transition: all 0.25s ease-in-out;
-
 }
 li {
     list-style: none;
+}
+p {
+    text-align: justify;
+}
+
+// Custom tippy tooltip
+body {
+    .tippy-box {
+        border-radius: 3px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: var(--white-color);
+        background-color: var(--background-color);
+    }
+
+    .tippy-content {
+        padding: 8px 15px;
+        letter-spacing: 1px;
+    }
 }

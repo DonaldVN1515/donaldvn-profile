@@ -1,9 +1,11 @@
 .wapper {
-  display: flex;
+    display: flex;
 }
 .container {
-  flex: 3;
+    flex: 3;
+
 }
-.navbar {
-  
+.content {
+    max-width: var(--default-layout-width, 1200px);
+    margin: auto;
 }
