@@ -23,6 +23,7 @@ setTimeout(() => {
                     Contact
         footer
             © Profiler 2022. Design by @DONALDVN
+
 18/08/2022
 1. Analysis Layout, Profile template --> OK
 2. Install reactjs, libraries --> OK
@@ -30,9 +31,14 @@ setTimeout(() => {
 3. Code Layout 
     SideBar --> OK
     Header
+----------
 19/08/2022
 1. Code Layout
-    Update SideBar
-    Header
-    personal infor component
-    Home (About me)
+    Update SideBar--> OK
+    Header --> OK
+    personal infor component --> OK
+2. Code page Home 
+    Uodate heaer --> OK
+    About me --> 50%
+3. Add Footer Layout --> OK
+----------

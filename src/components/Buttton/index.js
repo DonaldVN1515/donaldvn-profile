@@ -14,6 +14,7 @@ const Button = ({
     rightIcon,
     outline = false,
     text = false,
+    primary = false,
     ...passProps
 }) => {
     let Comp = 'button';
@@ -29,14 +30,13 @@ const Button = ({
     } else if (href) {
         props.href = href;
         Comp = 'a';
-    } else if (null) {
-        Comp = 'span';
     }
 
     const classes = cx('wapper', {
         [className]: className,
         outline,
         text,
+        primary,
     });
 
     return (

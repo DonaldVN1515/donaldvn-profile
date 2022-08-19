@@ -3,9 +3,29 @@
 }
 .container {
     flex: 3;
-
+    background-color: var(--3rd-background-color);
+    height: 100vh;
+    overflow-y: auto;
 }
 .content {
     max-width: var(--default-layout-width, 1200px);
     margin: auto;
+}
+
+// 
+
+.wapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: var(--bluhover-color);
+}
+.wapper::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: var(--bluhover-color);
+}
+.wapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: var(--background-color);
 }
