@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/donaldvn-profile/static/css/main.5a1e0e9d.css",
+    "main.js": "/donaldvn-profile/static/js/main.2c8fef18.js",
+    "static/js/787.eee3f6cc.chunk.js": "/donaldvn-profile/static/js/787.eee3f6cc.chunk.js",
+    "static/media/mine2022.jpg": "/donaldvn-profile/static/media/mine2022.d288cd38b208c00d423f.jpg",
+    "static/media/mine2020.jpg": "/donaldvn-profile/static/media/mine2020.a857221d6452624cb9d4.jpg",
+    "index.html": "/donaldvn-profile/index.html",
+    "main.5a1e0e9d.css.map": "/donaldvn-profile/static/css/main.5a1e0e9d.css.map",
+    "main.2c8fef18.js.map": "/donaldvn-profile/static/js/main.2c8fef18.js.map",
+    "787.eee3f6cc.chunk.js.map": "/donaldvn-profile/static/js/787.eee3f6cc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a1e0e9d.css",
+    "static/js/main.2c8fef18.js"
+  ]
+}
