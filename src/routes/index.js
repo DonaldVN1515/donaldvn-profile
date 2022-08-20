@@ -1,5 +1,5 @@
 // routesConfig
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 // Pages
 import Home from '~/pages/Home';
@@ -11,12 +11,12 @@ import Login from '~/pages/Login';
 
 // publics Routes
 const publicRoutes = [
-    { path: routesConfig.home, component: Home },
-    { path: routesConfig.gallerry, component: Gallerry },
-    { path: routesConfig.blog, component: Blog },
-    { path: routesConfig.project, component: Project },
-    { path: routesConfig.contact, component: Contact },
-    { path: routesConfig.login, component: Login, layout: null },
+    { path: config.routes.home, component: Home },
+    { path: config.routes.gallerry, component: Gallerry },
+    { path: config.routes.blog, component: Blog },
+    { path: config.routes.project, component: Project },
+    { path: config.routes.contact, component: Contact },
+    { path: config.routes.login, component: Login, layout: null },
 ];
 
 // private Routes

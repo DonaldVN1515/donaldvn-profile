@@ -30,7 +30,9 @@
         "start": "react-app-rewired start",
         "build": "react-app-rewired build",
         "test": "react-app-rewired test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "predeploy":"npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [
@@ -52,5 +54,6 @@
     },
     "devDependencies": {
         "babel-plugin-module-resolver": "^4.1.0"
-    }
+    },
+    "homepage": "http://donaldvn1515.github.io/donaldvn-profile"
 }

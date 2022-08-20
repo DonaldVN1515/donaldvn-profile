@@ -10,11 +10,7 @@
 .about {
     flex: 4;
     padding: 15px;
-    overflow-y: auto;
     background-color: var(--background-color);
-}
-.about::-webkit-scrollbar {
-    display: none;
 }
 .avt-main {
     position: absolute;

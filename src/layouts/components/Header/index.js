@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import { Email, LocationOn, Person, PersonAddAlt } from '@mui/icons-material';
 
 import styles from './Header.module.scss';
-import configRoute from '~/config/routes';
+import config from '~/config';
 import Button from '~/components/Buttton';
 import { Avatar } from '@mui/material';
 
@@ -46,7 +46,7 @@ const Header = () => {
                                 outline
                                 className={cx('item')}
                                 leftIcon={<PersonAddAlt className={cx('icon')} />}
-                                to={configRoute.register}
+                                to={config.routes.register}
                             >
                                 Register
                             </Button>
@@ -54,7 +54,7 @@ const Header = () => {
                                 primary
                                 className={cx('item')}
                                 leftIcon={<Person className={cx('icon', 'login')} />}
-                                to={configRoute.login}
+                                to={config.routes.login}
                             >
                                 Log-in
                             </Button>

@@ -1,11 +1,12 @@
 .wapper {
     display: flex;
+    overflow: hidden;
 }
 .container {
     flex: 3;
     background-color: var(--3rd-background-color);
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: overlay;
 }
 .content {
     max-width: var(--default-layout-width, 1200px);
@@ -29,3 +30,4 @@
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: var(--hover-color);
 }
+
