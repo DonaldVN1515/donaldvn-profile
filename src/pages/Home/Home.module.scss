@@ -53,11 +53,44 @@
 
 // EXPERIENCE
 .experience {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 34.5%;
+        width: 1px;
+        height: 100%;
+        background-color: var(--light-background-color);
+    }
 }
 .period {
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        opacity: 0.6;
+        margin-top: 27px;
+        left: 33.9%;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--white-color);
+        border: 1px solid var(--hover-color);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        margin-top: 33px;
+        left: 31.5%;
+        width: 25px;
+        height: 2px;
+        background-color: var(--light-background-color);
+    }
 }
 
 .work {
@@ -72,7 +105,7 @@
 }
 .time {
     font-size: 1.8rem;
-    color: var(--2nd-text-color);
+    color: var(--hover-color);
 }
 .infor {
     margin-left: 50px;
@@ -94,4 +127,42 @@
 .details {
     font-size: 1.6rem;
     margin-left: 30px;
+}
+
+// SKILLS
+
+.skills
+ {
+    display: flex;
+    font-size: 1.8rem;
+    ul {
+        flex: 1;
+        margin-left: 20px;
+
+        
+    }
+    li {
+        padding: 5px 0;
+    }
+}
+
+// Education
+.education {
+
+
+    ul {
+        margin-left: 20px;
+
+    }
+    li {
+        padding: 5px 0;
+
+    }
+
+    h6 {
+        font-size: 1.8rem;
+    }
+    p {
+
+    }
 }

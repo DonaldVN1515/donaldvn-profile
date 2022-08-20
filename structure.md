@@ -25,20 +25,24 @@ setTimeout(() => {
             © Profiler 2022. Design by @DONALDVN
 
 18/08/2022
-1. Analysis Layout, Profile template --> OK
-2. Install reactjs, libraries --> OK
+- Analysis Layout, Profile template --> OK
+- Install reactjs, libraries --> OK
     Set up scss, classnames --> OK
-3. Code Layout 
+- Code Layout 
     SideBar --> OK
     Header
 ----------
 19/08/2022
-1. Code Layout
+- Code Layout
     Update SideBar--> OK
     Header --> OK
     personal infor component --> OK
-2. Code page Home 
-    Uodate heaer --> OK
+- Code page Home 
+    Update heaer --> OK
     About me --> 50%
-3. Add Footer Layout --> OK
+- Add Footer Layout --> OK
 ----------
+20/08/2022
+- Update aboutme --> 90%
+- Code footer Layout --> OK
+- Code scrollbar

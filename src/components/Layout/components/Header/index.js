@@ -9,7 +9,7 @@ import { Avatar } from '@mui/material';
 
 const cx = classNames.bind(styles);
 const Header = () => {
-    let currUser = true;
+    let currUser = false;
     // let currUser = false;
 
     return (
@@ -36,7 +36,9 @@ const Header = () => {
                                 outline
                                 className={cx('item', 'account')}
                                 leftIcon={<Avatar className={cx('icon', 'avt')} />}
-                            >My Account</Button>
+                            >
+                                My Account
+                            </Button>
                         </>
                     ) : (
                         <>
