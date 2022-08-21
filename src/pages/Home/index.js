@@ -1,9 +1,9 @@
 import classNames from 'classnames/bind';
-import React from 'react';
 
 import styles from './Home.module.scss';
 import img from '~/assets/img';
 import PersonalInfor from '~/components/PersonalInfor';
+import AvtImg from '~/components/AvtImg';
 
 const cx = classNames.bind(styles);
 
@@ -74,19 +74,17 @@ const Home = () => {
                     </div>
 
                     <div className={cx('infor')}>
-                        <div className={cx('avt')}>
-                            <img src={img.avt1} alt="AVT" />
-                        </div>
+                        <AvtImg src={img.avt2} alt="Avatar" />
 
                         <h3 className={cx('name')}>Phan Lam Quoc Viet</h3>
 
-                        <PersonalInfor className={cx('item')} />
+                        <PersonalInfor address="Da Nang city, Viet Nam" className={cx('item')} />
                     </div>
                 </div>
             </div>
 
             <div className={cx('container')}>
-                <h2>Relevant Experience</h2>
+                <h2 className={cx('title')}>Relevant Experience</h2>
                 <h6>
                     After working in that field for a couple of years, I decided to learn design on my own and have been
                     working as a product designer and front end developer since July, 2007.

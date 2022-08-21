@@ -1,10 +1,10 @@
 .wapper {
     color: var(--black-color);
+    height: var(--default-layout-header-height);
+    background-color: var(--3rd-background-color);
     border-bottom: 1px solid var(--light-background-color);
-    height: var(--default-layout-header-height, 40px);
-    position: sticky ;
+    position: sticky;
     top: 0;
-    background-color: var(--light-background-color);
     opacity: 1;
 }
 .header {
@@ -32,20 +32,19 @@
     }
     .login {
         color: var(--white-color);
-
     }
     &:hover .login {
         color: var(--hover-color);
     }
     .avt {
         width: 25px;
-        height:25px;
+        height: 25px;
     }
 }
 .account {
     padding: 3px 8px;
 
-    span{
+    span {
         color: var(--hover-color);
-    } 
+    }
 }

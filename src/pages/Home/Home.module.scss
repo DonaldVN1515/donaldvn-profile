@@ -37,15 +37,7 @@
         font-size: 1.6rem;
     }
 }
-.avt {
-    img {
-        width: 100%;
-        display: block;
-        object-fit: cover;
-        max-height: 350px;
-        border-radius: 3px;
-    }
-}
+
 .name {
     font-size: 2rem;
     padding: 10px 0;
@@ -115,7 +107,6 @@
     display: flex;
     flex: 2;
     flex-flow: column;
-    align-items: flex-start;
 }
 .job {
     font-weight: 500;
@@ -131,15 +122,12 @@
 
 // SKILLS
 
-.skills
- {
+.skills {
     display: flex;
     font-size: 1.8rem;
     ul {
         flex: 1;
         margin-left: 20px;
-
-        
     }
     li {
         padding: 5px 0;
@@ -148,21 +136,15 @@
 
 // Education
 .education {
-
-
     ul {
         margin-left: 20px;
-
     }
     li {
         padding: 5px 0;
-
     }
 
     h6 {
         font-size: 1.8rem;
     }
-    p {
 
-    }
 }

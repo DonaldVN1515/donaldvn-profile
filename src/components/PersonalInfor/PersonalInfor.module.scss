@@ -1,5 +1,5 @@
 .infor {
-    padding: 20px 0;
+
 
     li {
         padding: 4px 0;
@@ -12,7 +12,7 @@
 }
 .item {
     display: flex;
-
+    align-items: center;
     .about {
         font-size: 1.8rem;
     }

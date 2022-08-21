@@ -18,9 +18,9 @@ const BackToTop = (props, ref) => {
         ref.current.addEventListener('scroll', toggleVisible);
 
         return () => {
-            ref.current.removeEventListener('scroll', toggleVisible);
+            // ref.current.removeEventListener('scroll', toggleVisible);
         };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleScrollToTop = () => {

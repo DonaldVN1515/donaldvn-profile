@@ -16,11 +16,12 @@ import {
     Send,
 } from '@mui/icons-material';
 
-import img from '~/assets/img';
 import styles from './Sidebar.module.scss';
 import config from '~/config';
 import Button from '~/components/Buttton';
 import PersonalInfor from '~/components/PersonalInfor';
+import AvtImg from '~/components/AvtImg';
+import img from '~/assets/img';
 
 const cx = classNames.bind(styles);
 const Sidebar = () => {
@@ -28,20 +29,19 @@ const Sidebar = () => {
         <div className={cx('sidebar')}>
             {/* ABOUT ME */}
             <div className={cx('about')}>
-                <div className={cx('avt-blur')}>
-                    <img src={img.avt} alt="Quoc Viet" />
+                {/* AVT IMG */}
 
-                    <div className={cx('avt-main')}>
-                        <img src={img.avt} alt="Quoc Viet" />
-                    </div>
-                </div>
+                <AvtImg src={img.avt} alt="Quoc Viet" />
+
                 <h3 className={cx('name')}>Phan Lam Quoc Viet</h3>
                 <h4 className={cx('job')}>Web Developer</h4>
                 <p className={cx('description')}>
                     Hi! My name is Quoc Viet, I'm a creative designer and web developer. I enjoy creating eye candy
                     solutions for web and mobile applications. I'd love to work on yours, too!
                 </p>
-                <img src="https://profiler.jollyany.co/images/tz_profiler/Victoria-Rawson.png" alt="" />
+                <div className={cx('sub-avt')}>
+                    <img src="https://profiler.jollyany.co/images/tz_profiler/Victoria-Rawson.png" alt="" />
+                </div>
 
                 {/* PersonalInfor */}
                 <PersonalInfor />

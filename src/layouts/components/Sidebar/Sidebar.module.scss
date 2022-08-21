@@ -11,31 +11,17 @@
     flex: 4;
     padding: 15px;
     background-color: var(--background-color);
+    overflow-y: auto;
 }
-.avt-main {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
+.about::-webkit-scrollbar {
+    display: none;
 }
-.avt-blur > img,
-.avt-main > img {
-    width: 100%;
-    display: block;
-    max-height: 400px;
-    object-fit: contain;
+// SUB AVT
+.sub-avt {
+    padding: 25px 0;
 }
-.avt-blur {
-    position: relative;
-}
-.avt-blur > img {
-    object-fit: cover;
-    padding: 5px;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-}
+
+// Description
 .name,
 .job {
     color: var(--white-color);
@@ -47,16 +33,16 @@
 }
 .job {
     font-size: 2rem;
+    padding: 5px 0 10px 0;
 }
 .description {
-    padding: 20px 0;
-
 }
 // SOCIALS
 
 .socials {
     display: flex;
     justify-content: space-between;
+    padding: 10px 0;
 
     .icon {
         width: 20px;
@@ -83,7 +69,6 @@
     background-color: var(--light-background-color);
     border-right: 1px solid transparent;
 
-
     &:hover {
         border-right: 1px solid var(--light-background-color);
     }
@@ -98,7 +83,6 @@
     .active {
         background-color: var(--white-color);
         color: var(--hover-color);
-
     }
 }
 .option {
