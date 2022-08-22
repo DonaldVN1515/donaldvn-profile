@@ -4,47 +4,9 @@ import styles from './Home.module.scss';
 import img from '~/assets/img';
 import PersonalInfor from '~/components/PersonalInfor';
 import AvtImg from '~/components/AvtImg';
+import PeriodExperience from '~/components/PeriodExperience';
 
 const cx = classNames.bind(styles);
-
-const userExperience = [
-    {
-        title: 'Online Prepaid Services',
-        time: 'September 2019 - present',
-        job: 'Fulltime - Senior Web Developer at TemPlaza.com',
-        description:
-            'Working as a Senior Devloper on a large european based webshop for digital games and gifrcards. The application is Laravel based and as a team we are working in a fully scrum way.',
-        details: {
-            line1: 'Lorem ipsum dolor sit amet.',
-            line2: 'At vero eos et accusamus et iusto odio.',
-            line3: 'Excepteur sint occaecat cupidatat non proident.',
-        },
-    },
-    {
-        title: 'Chief Technology Officer',
-        time: 'June 2018 - August 2019',
-        job: 'Senior Web Developer at Global Art ,.LTD',
-        description:
-            'As a senior at The Secret Lab I work on projects like Kaartjes.nl, Clay.com and more. Using frameworks and technologies such as Laravel, Wordpress, Drupal 8 and ElasticSearch. I also introduced working with Git Flow and supporting my colleagues to write nice readable and reusable code.',
-        details: {
-            line1: 'Lorem ipsum dolor sit amet.',
-            line2: 'At vero eos et accusamus et iusto odio.',
-            line3: 'Excepteur sint occaecat cupidatat non proident.',
-        },
-    },
-    {
-        title: 'Chief Technology Officer',
-        time: 'June 2018 - August 2019',
-        job: 'Senior Web Developer at Global Art ,.LTD',
-        description:
-            'As a senior at The Secret Lab I work on projects like Kaartjes.nl, Clay.com and more. Using frameworks and technologies such as Laravel, Wordpress, Drupal 8 and ElasticSearch. I also introduced working with Git Flow and supporting my colleagues to write nice readable and reusable code.',
-        details: {
-            line1: 'Lorem ipsum dolor sit amet.',
-            line2: 'At vero eos et accusamus et iusto odio.',
-            line3: 'Excepteur sint occaecat cupidatat non proident.',
-        },
-    },
-];
 
 const Home = () => {
     return (
@@ -82,32 +44,15 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
+            {/* Experience */}
             <div className={cx('container')}>
                 <h2 className={cx('title')}>Relevant Experience</h2>
                 <h6>
                     After working in that field for a couple of years, I decided to learn design on my own and have been
                     working as a product designer and front end developer since July, 2007.
                 </h6>
-                <div className={cx('experience')}>
-                    {userExperience.map((period, index) => (
-                        <div key={index} className={cx('period')}>
-                            <div className={cx('work')}>
-                                <h3 className={cx('title')}>{period.title}</h3>
-                                <h6 className={cx('time')}>{period.time}</h6>
-                            </div>
-                            <div className={cx('infor')}>
-                                <h4 className={cx('job')}>{period.job}</h4>
-                                <p className={cx('description')}>{period.description}</p>
-                                <ul className={cx('details')}>
-                                    <li>{period.details.line1}</li>
-                                    <li>{period.details.line2}</li>
-                                    <li>{period.details.line3}</li>
-                                </ul>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+
+                <PeriodExperience />
             </div>
             {/* SKILLS */}
             <div className={cx('container')}>
