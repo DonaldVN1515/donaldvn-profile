@@ -15,6 +15,8 @@ import {
     Book,
     Web,
     Send,
+    ChevronLeft,
+    ChevronRight,
 } from '@mui/icons-material';
 
 import styles from './Sidebar.module.scss';
@@ -76,21 +78,28 @@ const Sidebar = () => {
             </div>
 
             {/* NAV BAR (active)*/}
-            <NavMenu className={cx('nav-menu')}>
-                <NavMenuItem icon={<Home className={cx('icon')} />} title="Home" to={config.routes.home} />
+            <div className={cx('navbar')}>
+                <NavMenu className={cx('nav-menu')}>
+                    <NavMenuItem icon={<Home className={cx('icon')} />} title="Home" to={config.routes.home} />
 
-                <NavMenuItem
-                    icon={<Collections className={cx('icon')} />}
-                    title="Gallerry"
-                    to={config.routes.gallerry}
-                />
+                    <NavMenuItem
+                        icon={<Collections className={cx('icon')} />}
+                        title="Gallerry"
+                        to={config.routes.gallerry}
+                    />
 
-                <NavMenuItem icon={<Book className={cx('icon')} />} title="Blog" to={config.routes.blog} />
+                    <NavMenuItem icon={<Book className={cx('icon')} />} title="Blog" to={config.routes.blog} />
 
-                <NavMenuItem icon={<Web className={cx('icon')} />} title="Project" to={config.routes.project} />
+                    <NavMenuItem icon={<Web className={cx('icon')} />} title="Project" to={config.routes.project} />
 
-                <NavMenuItem icon={<Send className={cx('icon')} />} title="Contact" to={config.routes.contact} />
-            </NavMenu>
+                    <NavMenuItem icon={<Send className={cx('icon')} />} title="Contact" to={config.routes.contact} />
+                </NavMenu>
+
+                <div className={cx('show-hide-profile')}>
+                    <ChevronLeft className={cx('icon', 'active')} />
+                    <ChevronRight className={cx('icon', '')} />
+                </div>
+            </div>
         </div>
     );
 };

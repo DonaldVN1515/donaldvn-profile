@@ -41,7 +41,7 @@ input,
     background-color: transparent;
 }
 
-a[href] {
+a{
     color: var(--text-color);
     text-decoration: none;
     transition: all 0.25s ease-in-out;
@@ -82,3 +82,17 @@ html {
     }
 }
 // Custom MATERIAL UI
+
+
+
+
+// ANIMATION 
+
+@keyframes dynamic {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}

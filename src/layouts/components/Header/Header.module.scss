@@ -5,6 +5,7 @@
     border-bottom: 1px solid var(--light-background-color);
     position: sticky;
     top: 0;
+    z-index: 9;
 }
 .header {
     max-width: var(--default-layout-width, 1200px);
@@ -23,10 +24,9 @@
 }
 .item {
     margin-left: 20px;
-
+    color: var(--2nd-text-color);
     .icon {
         font-size: 2rem;
-        margin-bottom: 2px;
         color: var(--hover-color);
     }
     .login {
@@ -43,6 +43,11 @@
 .account {
     padding: 3px 8px;
 
+    span {
+        color: var(--hover-color);
+    }
+}
+.language {
     span {
         color: var(--hover-color);
     }

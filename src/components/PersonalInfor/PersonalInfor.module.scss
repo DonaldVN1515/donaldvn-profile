@@ -1,6 +1,4 @@
 .infor {
-
-
     li {
         padding: 4px 0;
 
@@ -13,8 +11,16 @@
 .item {
     display: flex;
     align-items: center;
+    
     .about {
         font-size: 1.8rem;
+        color: var(--2nd-text-color);
+        height: 22px;
+        overflow: hidden;
+        line-height: 1.8rem;
+        display: block;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
     }
 }
-

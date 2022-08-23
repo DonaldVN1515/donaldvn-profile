@@ -29,14 +29,22 @@ layout:
                     Contact
         footer
             © Profiler 2022. Design by @DONALDVN
-
+Dark/ Light mode
 # Time
 
+---
+23/08/2022
+
+- Update Content CV --> 10%
+- My Account --> OK
+- Add Language --> OK
+
+---
 22/08/2022
 
-- Change file tag name
-- NavLink Sidebar Nav
-- Optimize Code #1
+- Change file tag name --> OK
+- NavLink Sidebar Nav --> OK
+- Optimize Code #1 --> OK
 
 ---
 21/08/2022

@@ -22,9 +22,11 @@
     width: 100%;
     display: flex;
     align-items: center;
-    color: var(--2nd-text-color);
+    // color: var(--2nd-text-color);
 }
 a {
+
+
     &:hover {
         color: var(--hover-color);
     }

@@ -1,77 +1,81 @@
-
 // EXPERIENCE
 .experience {
-  position: relative;
-  &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 34.5%;
-      width: 1px;
-      height: 100%;
-      background-color: var(--light-background-color);
-  }
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 34.5%;
+        width: 1px;
+        height: 100%;
+        background-color: var(--light-background-color);
+    }
 }
 .period {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
 
-  &::before {
-      content: '';
-      position: absolute;
-      opacity: 0.6;
-      margin-top: 27px;
-      left: 33.9%;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: var(--white-color);
-      border: 1px solid var(--hover-color);
-  }
+    &::before {
+        content: '';
+        position: absolute;
+        opacity: 0.6;
+        margin-top: 27px;
+        left: 33.9%;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--white-color);
+        border: 1px solid var(--hover-color);
+    }
 
-  &::after {
-      content: '';
-      position: absolute;
-      margin-top: 33px;
-      left: 31.5%;
-      width: 25px;
-      height: 2px;
-      background-color: var(--light-background-color);
-  }
+    &::after {
+        content: '';
+        position: absolute;
+        margin-top: 33px;
+        left: 31.5%;
+        width: 25px;
+        height: 2px;
+        background-color: var(--light-background-color);
+    }
 }
 
 .work {
-  display: flex;
-  flex: 1;
-  flex-flow: column;
-  align-items: flex-end;
-  margin-right: 50px;
+    display: flex;
+    flex: 1;
+    flex-flow: column;
+    align-items: flex-end;
+    margin-right: 50px;
 }
 .title {
-  font-size: 2.4rem;
+    font-size: 2.5rem;
 }
 .time {
-  font-size: 1.8rem;
-  color: var(--hover-color);
+    font-size: 1.8rem;
+    color: var(--hover-color);
+    padding: 10px 0;
 }
 .infor {
-  margin-left: 50px;
-  color: var(--text-color);
-  opacity: 0.8;
-  font-weight: 500;
-  display: flex;
-  flex: 2;
-  flex-flow: column;
+    margin-left: 50px;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-weight: 500;
+    display: flex;
+    flex: 2;
+    flex-flow: column;
 }
 .job {
-  font-weight: 500;
-  font-size: 2.5rem;
+    font-weight: 500;
+    font-size: 2.5rem;
 }
 .description {
-  font-size: 1.6rem;
+    font-size: 1.8rem;
+    padding: 10px 0;
 }
 .details {
-  font-size: 1.6rem;
-  margin-left: 30px;
+    font-size: 1.6rem;
+    margin-left: 30px;
+    li {
+        padding: 5px 0;
+    }
 }

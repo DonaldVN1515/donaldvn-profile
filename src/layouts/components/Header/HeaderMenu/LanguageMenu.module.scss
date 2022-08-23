@@ -1,0 +1,22 @@
+// Language menu
+.wrapper {
+  padding: 0;
+  max-height: 325px;
+  overflow-y: auto;
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    color: var(--black-color);
+    cursor: pointer;
+    padding: 8px 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    &:hover {
+        background-color: var(--light-background-color);
+    }
+}

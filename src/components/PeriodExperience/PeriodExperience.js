@@ -8,39 +8,14 @@ const cx = classNames.bind(styles);
 
 const userExperience = [
     {
-        title: 'Online Prepaid Services',
-        time: 'September 2019 - present',
-        job: 'Fulltime - Senior Web Developer at TemPlaza.com',
-        description:
-            'Working as a Senior Devloper on a large european based webshop for digital games and gifrcards. The application is Laravel based and as a team we are working in a fully scrum way.',
+        title: 'Tutors',
+        time: 'May 2022 - August 2022',
+        job: 'Tutors at British International College BTEC FPT',
+        description: 'Support teachers to manage students, answer academic and professional problems of the subject.',
         details: {
-            line1: 'Lorem ipsum dolor sit amet.',
-            line2: 'At vero eos et accusamus et iusto odio.',
-            line3: 'Excepteur sint occaecat cupidatat non proident.',
-        },
-    },
-    {
-        title: 'Chief Technology Officer',
-        time: 'June 2018 - August 2019',
-        job: 'Senior Web Developer at Global Art ,.LTD',
-        description:
-            'As a senior at The Secret Lab I work on projects like Kaartjes.nl, Clay.com and more. Using frameworks and technologies such as Laravel, Wordpress, Drupal 8 and ElasticSearch. I also introduced working with Git Flow and supporting my colleagues to write nice readable and reusable code.',
-        details: {
-            line1: 'Lorem ipsum dolor sit amet.',
-            line2: 'At vero eos et accusamus et iusto odio.',
-            line3: 'Excepteur sint occaecat cupidatat non proident.',
-        },
-    },
-    {
-        title: 'Chief Technology Officer',
-        time: 'June 2018 - August 2019',
-        job: 'Senior Web Developer at Global Art ,.LTD',
-        description:
-            'As a senior at The Secret Lab I work on projects like Kaartjes.nl, Clay.com and more. Using frameworks and technologies such as Laravel, Wordpress, Drupal 8 and ElasticSearch. I also introduced working with Git Flow and supporting my colleagues to write nice readable and reusable code.',
-        details: {
-            line1: 'Lorem ipsum dolor sit amet.',
-            line2: 'At vero eos et accusamus et iusto odio.',
-            line3: 'Excepteur sint occaecat cupidatat non proident.',
+            line1: 'Students are very enthusiastic, diligent in studying, always acquiring new knowledge.',
+            line2: "The environment in The United Kingdom's is vibrant, positive and always fun to learn.",
+            line3: 'I also learned how to communicate more effectively, get used to many new relationships.',
         },
     },
 ];

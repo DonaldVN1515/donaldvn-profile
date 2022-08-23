@@ -19,7 +19,7 @@ const NavMenuItem = ({ to, title, icon }) => {
         );
     };
     return (
-        <div className={cx('wapper')}>
+        <div className={cx('item')}>
             <Tippy interactive delay={[100, 0]} offset={[0, 10]} placement="right" render={renderSubMenu}>
                 <NavLink className={(nav) => cx('option', { active: nav.isActive })} to={to}>
                     {icon}

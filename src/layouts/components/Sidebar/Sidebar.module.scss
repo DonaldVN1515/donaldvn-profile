@@ -4,12 +4,13 @@
     font-size: 1.8rem;
     color: var(--2nd-text-color);
     display: flex;
+    max-width: 400px;
 }
 
 //  ABOUT ME
 .about {
     flex: 4;
-    padding: 15px;
+    padding: 15px 10px;
     background-color: var(--background-color);
     overflow-y: auto;
 }
@@ -60,12 +61,41 @@
         background-color: var(--light-background-color);
     }
 }
-// experience
+// nav bar
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .nav-menu {
-
-    
     .icon {
         margin-bottom: 10px;
         font-size: 3rem;
+    }
+}
+
+.show-hide-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    .icon {
+        font-size: 5rem;
+
+        display: none;
+    }
+    .active {
+        display: block;
+        cursor: pointer;
+        animation: dynamic 0.3s infinite ease-in-out alternate;
+    }
+}
+
+@keyframes dynamic {
+    0% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(2px);
     }
 }

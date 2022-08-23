@@ -1,0 +1,24 @@
+// Account menu
+.wrapper {
+    padding: 0;
+}
+.menu {
+}
+.item {
+    color: var(--black-color);
+
+    padding: 8px 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    &:hover {
+        background-color: var(--light-background-color);
+    }
+
+    &:first-child {
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+}
+.separate {
+    border-top: 1px solid var(--light-background-color);
+}

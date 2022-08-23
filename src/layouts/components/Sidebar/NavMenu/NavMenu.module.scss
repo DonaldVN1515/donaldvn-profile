@@ -1,13 +1,12 @@
 // NAV MENU
-.wrapper {
+.item {
   flex: 1;
   font-size: 1.2rem;
   background-color: var(--light-background-color);
-  border-right: 1px solid transparent;
-  margin-bottom: 2px;
+  border-right: 1px solid var(--white-color);
 
   &:hover {
-      border-right: 1px solid var(--light-background-color);
+      border-right: 1px solid var(--white-color);
   }
 
   .option {

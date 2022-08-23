@@ -1,17 +1,63 @@
-import React from 'react';
 import classNames from 'classnames/bind';
-import { Email, LocationOn, Person, PersonAddAlt } from '@mui/icons-material';
+import { Email, Language, LocationOn, Person, PersonAddAlt } from '@mui/icons-material';
 
 import styles from './Header.module.scss';
 import config from '~/config';
 import Button from '~/components/Buttton';
 import { Avatar } from '@mui/material';
+import SettingsIcon from '@mui/icons-material/Settings';
+import PersonIcon from '@mui/icons-material/Person';
+import LogoutIcon from '@mui/icons-material/Logout';
+import AccountMenu from '~/layouts/components/Header/HeaderMenu';
+import { LanguageMenu } from '~/layouts/components/Header/HeaderMenu';
 
 const cx = classNames.bind(styles);
-const Header = () => {
-    let currUser = false;
-    // let currUser = false;
 
+const Header = () => {
+    const dataAccount = [
+        {
+            icon: <PersonIcon />,
+            title: 'View Profile',
+            to: '/profile',
+        },
+        {
+            icon: <SettingsIcon />,
+            title: 'Settings',
+            to: '/settings',
+        },
+        {
+            icon: <LogoutIcon />,
+            title: 'Log out',
+            to: '/logout',
+            separate: true,
+        },
+    ];
+
+    const dataLanguage = [
+        {
+            code: 'en',
+            title: 'English',
+        },
+        {
+            code: 'vi',
+            title: 'Tiếng Việt',
+        },
+    ];
+    let currUser = true;
+
+    const handleChangeLanguage = () => {
+        // console.log(menuItem);
+
+        switch (dataLanguage.code) {
+            case 'language':
+                // HANDLE CHANGE LANGUAGE
+
+                break;
+
+            default:
+                break;
+        }
+    };
     return (
         <div className={cx('wapper')}>
             <div className={cx('header')}>
@@ -29,9 +75,20 @@ const Header = () => {
                     >
                         vietplqbdaf200035@fpt.edu.vn
                     </Button>
+                    {/* Language Menu */}
+                    <LanguageMenu dataLanguage={dataLanguage} onChange={handleChangeLanguage}>
+                        <Button
+                            outline
+                            className={cx('item', 'language')}
+                            leftIcon={<Language className={cx('icon')} />}
+                        >
+                            Enghlish
+                        </Button>
+                    </LanguageMenu>
 
+                    {/* Account Menu */}
                     {currUser ? (
-                        <>
+                        <AccountMenu dataAccount={dataAccount}>
                             <Button
                                 outline
                                 className={cx('item', 'account')}
@@ -39,7 +96,7 @@ const Header = () => {
                             >
                                 My Account
                             </Button>
-                        </>
+                        </AccountMenu>
                     ) : (
                         <>
                             <Button
