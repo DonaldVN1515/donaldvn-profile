@@ -10,8 +10,9 @@
     --light-background-color: #e6e7e7;
     --3rd-background-color: #f4f4f4;
 
-    --default-layout-width: 1200px;
+    --default-layout-width: 1450px;
     --default-layout-header-height: 45px;
+    --default-layout-padding: 0px 40px;
 }
 
 * {
@@ -41,10 +42,11 @@ input,
     background-color: transparent;
 }
 
-a{
+a {
     color: var(--text-color);
     text-decoration: none;
     transition: all 0.25s ease-in-out;
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
 }
 p {
     text-align: justify;
@@ -74,6 +76,8 @@ html {
         line-height: 2.2rem;
         color: var(--white-color);
         background-color: var(--background-color);
+        transition: all 0.25s ease-in-out;
+        -webkit-transition: -webkit-transform 0.25s ease-in-out;
     }
 
     .tippy-content {
@@ -83,10 +87,7 @@ html {
 }
 // Custom MATERIAL UI
 
-
-
-
-// ANIMATION 
+// ANIMATION
 
 @keyframes dynamic {
     0% {

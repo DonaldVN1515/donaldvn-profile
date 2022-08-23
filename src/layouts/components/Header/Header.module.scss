@@ -8,8 +8,10 @@
     z-index: 9;
 }
 .header {
-    max-width: var(--default-layout-width, 1200px);
+    // max-width: var(--default-layout-width, 1200px);
     height: var(--default-layout-header-height, 50px);
+    padding: var( --default-layout-padding);
+
     display: flex;
     justify-content: space-between;
     align-items: center;

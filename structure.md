@@ -38,6 +38,7 @@ Dark/ Light mode
 - Update Content CV --> 10%
 - My Account --> OK
 - Add Language --> OK
+- Code Gallerry --> 80%
 
 ---
 22/08/2022

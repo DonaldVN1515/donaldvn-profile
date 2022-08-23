@@ -9,8 +9,9 @@
     overflow-y: overlay;
 }
 .content {
-    max-width: var(--default-layout-width, 1200px);
+    // max-width: var(--default-layout-width, 1200px);
     margin: auto;
+    padding: var( --default-layout-padding);
 }
 
 // Custom scroll bar

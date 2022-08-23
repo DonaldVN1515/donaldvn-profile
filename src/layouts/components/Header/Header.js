@@ -8,8 +8,7 @@ import { Avatar } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
-import AccountMenu from '~/layouts/components/Header/HeaderMenu';
-import { LanguageMenu } from '~/layouts/components/Header/HeaderMenu';
+import { AccountMenu, LanguageMenu } from '~/layouts/components/Header/HeaderMenu';
 
 const cx = classNames.bind(styles);
 
