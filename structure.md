@@ -30,7 +30,16 @@ layout:
         footer
             © Profiler 2022. Design by @DONALDVN
 Dark/ Light mode
+
 # Time
+
+---
+23/08/2022
+
+- Update Gallerry --> 90%
+- Replace custom component to material UI component
+    Button
+    Breadcrumbs
 
 ---
 23/08/2022

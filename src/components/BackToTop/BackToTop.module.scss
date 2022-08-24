@@ -1,16 +1,17 @@
 // BACK TO TOP
 
 .back-to-top {
-  display: block;
+    display: block;
     position: fixed;
     bottom: 20px;
-    right: 30px;
+    right: 40px;
     padding: 6px 8px 3px 8px;
     border-radius: 3px;
     border: 1px solid transparent;
     color: var(--white-color);
     background-color: var(--hover-color);
     animation: fade 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
     &:hover {
         color: var(--hover-color);

@@ -9,6 +9,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { AccountMenu, LanguageMenu } from '~/layouts/components/Header/HeaderMenu';
+import Breadcrumb from '~/layouts/components/Header/Breadcrumb';
 
 const cx = classNames.bind(styles);
 
@@ -60,7 +61,7 @@ const Header = () => {
     return (
         <div className={cx('wapper')}>
             <div className={cx('header')}>
-                <div className={cx('path')}>PATH</div>
+                <Breadcrumb />
                 <ul className={cx('infor')}>
                     <Button className={cx('item')} leftIcon={<LocationOn className={cx('icon')} />}>
                         66 Vo Van Tan, Thanh Khe, Da Nang

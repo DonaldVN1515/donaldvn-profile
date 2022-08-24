@@ -32,6 +32,9 @@ body {
     text-rendering: optimizeSpeed;
     color: var(--text-color);
     user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 button,

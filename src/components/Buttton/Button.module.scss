@@ -25,13 +25,11 @@
     // color: var(--2nd-text-color);
 }
 a {
-
-
     &:hover {
-        color: var(--hover-color);
+        // color: var(--hover-color);
     }
     &:hover .title {
-        color: var(--hover-color);
+        // color: var(--hover-color);
     }
 }
 

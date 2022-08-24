@@ -1,0 +1,157 @@
+.label {
+    text-transform: capitalize;
+}
+// CUSTOM RADIO BUTTON
+.wapper {
+    --input-size--default: 1.6rem;
+    --input-color: var(--hover-color);
+    --input-color--line: #42494f;
+    --input-color--border: rgba(0, 0, 0, 0.08627);
+    --input-color--default: #fff;
+
+    padding: 10px 0;
+    margin-right: 20px;
+    .input-secondary {
+        --input-color: var(--hover-color);
+        --input-color--line: var(--3rd-background-color);
+    }
+
+    * {
+        animation-duration: 0s !important;
+    }
+
+    &:last-child {
+        margin-left: 50px;
+    }
+}
+
+.input {
+    display: inline;
+    font-size: 1.6rem;
+    font-size: var(--input-size--default);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: #42494f;
+    --input-size: var(--input-size--default);
+}
+
+.input label {
+    text-align: left;
+}
+
+.input-box {
+    display: inline-block;
+    width: 20px;
+
+    height: 20px;
+    background-color: var(--input-color--default);
+
+    margin-right: 7px;
+    border: 1px solid var(--input-color--border);
+    border-color: rgba(0, 0, 0, 0.08627);
+    vertical-align: -2.75px;
+    vertical-align: calc((var(--input-size--default) - var(--input-size)) / 2 - var(--input-size--default) / 4);
+    -webkit-transition: background-color 0.1s ease;
+    transition: background-color 0.1s ease;
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+
+@keyframes wobble {
+    0% {
+        -webkit-transform: scale(1) rotate(0deg);
+        transform: scale(1) rotate(0deg);
+    }
+    40% {
+        -webkit-transform: scale(1.1, 0.9) rotate(5deg);
+        transform: scale(1.1, 0.9) rotate(5deg);
+    }
+    70% {
+        -webkit-transform: scale(0.9, 1.1) rotate(-3deg);
+        transform: scale(0.9, 1.1) rotate(-3deg);
+    }
+    80% {
+        -webkit-transform: scale(1.05, 0.95) rotate(1deg);
+        transform: scale(1.05, 0.95) rotate(1deg);
+    }
+    to {
+        -webkit-transform: scale(1) rotate(0deg);
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.input-radio input {
+    display: none;
+}
+
+.input-radio .input-box {
+    border-radius: 11px;
+    opacity: 0.9;
+    position: relative;
+    overflow: hidden;
+}
+
+.input-radio .input-box:after,
+.input-radio .input-box:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform-origin: 38% 36%;
+    transform-origin: 38% 36%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    width: 20px;
+    height: 20px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+    -webkit-transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
+}
+
+.input-radio .input-box:before {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+    background-color: #fff;
+    background-color: var(--input-color);
+}
+
+.input-radio .input-box:after {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    background-color: var(--input-color--line);
+}
+
+.input-radio label {
+    cursor: pointer;
+}
+
+.input-radio label:hover .input-box {
+    opacity: 1;
+}
+
+.input-radio input:checked + .input-box {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-animation-name: wobble;
+    animation-name: wobble;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+}
+
+.input-radio input:checked + .input-box:before {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.input-radio input:checked + .input-box:after {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+    -webkit-transform: scale(0.33);
+    transform: scale(0.33);
+}

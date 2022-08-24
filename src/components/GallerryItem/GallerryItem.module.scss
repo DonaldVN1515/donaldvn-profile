@@ -1,0 +1,75 @@
+// GALLERRY ITEM
+.item {
+    list-style: none;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    transition: all 0.25s ease-in-out;
+
+    &:hover .img {
+        filter: none;
+    }
+    &:hover .shadow {
+        display: flex;
+        background: linear-gradient(0deg, rgba(61, 61, 59, 0.7) 0%, rgba(61, 61, 59, 0) 75%);
+    }
+
+    &:hover .description {
+        transform: translateY(-15px);
+        display: flex;
+        opacity: 1;
+    }
+}
+
+.img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all 0.25s ease-in-out;
+    filter: grayscale(100%);
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: transparent;
+    transition: all 0.25s ease-in-out;
+}
+.description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: var(--white-color);
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 3;
+    opacity: 0.5;
+    transition: transform 0.25s ease-in-out;
+    transform: translateY(50px);
+}
+.more {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    letter-spacing: 0.1rem;
+}
+.title {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    color: var(--white-color);
+    &:hover {
+        color: var(--white-color);
+    }
+}

@@ -1,8 +1,6 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
-import Tippy from '@tippyjs/react/headless';
 import {
     Twitter,
     Facebook,
