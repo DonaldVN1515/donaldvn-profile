@@ -36,10 +36,8 @@ Dark/ Light mode
 ---
 23/08/2022
 
-- Update Gallerry --> 90%
-- Replace custom component to material UI component
-    Button
-    Breadcrumbs
+- Update Gallerry --> OK
+- Replace custom component to material UI --> No
 
 ---
 23/08/2022

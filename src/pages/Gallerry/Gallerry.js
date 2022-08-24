@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 // import PropTypes from 'prop-types';
 import styles from './Gallerry.module.scss';
-import GallerryItem from '~/components/GallerryItem';
+import GallerryItem from '~/pages/Gallerry/GallerryItem';
 import RadioItem from '~/components/RadioItem';
 import FilterIcon from '@mui/icons-material/Filter';
 // import { useState } from 'react';

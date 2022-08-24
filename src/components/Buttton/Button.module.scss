@@ -47,6 +47,8 @@ a {
     }
 }
 .text {
+
+    cursor: pointer;
     &:hover {
         text-decoration: underline;
     }

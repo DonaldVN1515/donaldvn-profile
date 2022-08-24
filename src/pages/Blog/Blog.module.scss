@@ -1,0 +1,23 @@
+.wapper {
+
+
+
+  .large {
+    // flex: 2;
+  }
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item {
+    flex: 1;
+    // margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(2n + 2) {
+        margin-right: 30px;
+    }
+}
+
