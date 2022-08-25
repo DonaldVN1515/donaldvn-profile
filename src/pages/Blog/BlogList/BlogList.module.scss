@@ -1,4 +1,7 @@
-.wapper {
+.blogs {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    padding-top: 10px;
 }
 .item {
     flex: 1;
@@ -12,5 +15,3 @@
         margin-right: unset;
     }
 }
-
-// PAGINATION

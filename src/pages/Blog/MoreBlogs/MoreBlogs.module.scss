@@ -1,0 +1,27 @@
+// MORE ARTICLES
+.blogs {
+    background-color: var(--white-color);
+}
+
+.more {
+}
+.title {
+    display: flex;
+    align-items: center;
+    h4 {
+        font-size: 3rem;
+        padding: 10px 0;
+        margin-left: 10px;
+    }
+}
+.icon {
+    font-size: 3rem;
+}
+
+.blog {
+    list-style: none;
+    border: 1px solid var(--light-background-color);
+}
+.link {
+    padding: 10px 20px;
+}

@@ -1,37 +1,34 @@
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
-import videos from '~/assets/video';
-
-import styles from './BlogItem.module.scss';
-import Button from '~/components/Buttton';
 import { AccessTime, EventAvailable, FolderOpen, PersonOutline, Visibility } from '@mui/icons-material';
+
+import videos from '~/assets/video';
+import Button from '~/components/Buttton';
+import styles from './BlogItem.module.scss';
+import { convertUrl } from '~/components/Functions';
 
 const cx = classNames.bind(styles);
 
 const BlogItem = ({
-    to,
     title,
     subtitle,
     className,
-    blog = 'Blog',
-    author = 'DonaldVN',
-    readTime = '0',
+    category,
+    author,
+    readTime = '00:00',
     viewers = '0',
-    large = false,
-    video = videos.video,
+    mediaUrl = videos.video,
     published = 'dd/mm/yyyy',
 }) => {
-    const classes = cx('wapper', {
-        [className]: className,
-        large,
-    });
+    const url = convertUrl(title);
+
     return (
-        <div className={classes}>
-            <video src={video} controls className={cx('video')} />
+        <div className={cx('item', className)}>
+            <video src={mediaUrl} controls className={cx('video')} />
 
             <div className={cx('content')}>
-                <Button text className={cx('title')}>
+                <Button to={`/blog/${url}`} text className={cx('title')}>
                     {title}
                 </Button>
                 <div className={cx('infor')}>
@@ -41,7 +38,7 @@ const BlogItem = ({
                     </span>
                     <span>
                         <FolderOpen className={cx('icon')} />
-                        <h6>{blog}</h6>
+                        <h6>{category}</h6>
                     </span>
                     <span>
                         <EventAvailable className={cx('icon')} />
@@ -57,12 +54,22 @@ const BlogItem = ({
                     </span>
                 </div>
                 <p className={cx('subtitle')}>{subtitle}</p>
-                <Button to={to} className={cx('read-more')}>
+                <Button to={`/blog/${url}`} className={cx('read-more')}>
                     Read more: {title}
                 </Button>
             </div>
         </div>
     );
 };
-BlogItem.propTypes = {};
+BlogItem.propTypes = {
+    className: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    readTime: PropTypes.string.isRequired,
+    viewers: PropTypes.number.isRequired,
+    mediaUrl: PropTypes.string.isRequired,
+    published: PropTypes.string.isRequired,
+};
 export default BlogItem;

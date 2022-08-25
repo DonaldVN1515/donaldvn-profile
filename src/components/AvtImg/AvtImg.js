@@ -6,13 +6,16 @@ import styles from './AvtImg.module.scss';
 import img from '~/assets/img';
 
 const cx = classNames.bind(styles);
-const AvtImg = ({ src = img.noImage, alt = 'No Image' }) => {
+const AvtImg = ({ src = img.noImage, alt = 'No Image', cover = false }) => {
+    const classes = cx({
+        cover,
+    });
     return (
         <div className={cx('avt-blur')}>
             <img src={src} alt={alt} />
 
             <div className={cx('avt-main')}>
-                <img src={src} alt={alt} />
+                <img src={src} alt={alt} className={classes} />
             </div>
         </div>
     );
@@ -21,5 +24,6 @@ const AvtImg = ({ src = img.noImage, alt = 'No Image' }) => {
 AvtImg.propTypes = {
     src: PropTypes.node,
     alt: PropTypes.string,
+    cover: PropTypes.bool,
 };
 export default AvtImg;

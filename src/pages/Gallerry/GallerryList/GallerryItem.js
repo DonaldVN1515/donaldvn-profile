@@ -5,11 +5,12 @@ import React from 'react';
 import styles from './GallerryItem.module.scss';
 import imgUrl from '~/assets/img';
 import Button from '~/components/Buttton';
+import { convertUrl } from '~/components/Functions';
 
 const cx = classNames.bind(styles);
 
 const GallerryItem = ({ title, img = imgUrl.noImgae, href }) => {
-    const url = title.toLowerCase().replace(/\s/g,'-')
+    const url = convertUrl(title);
 
     return (
         <li className={cx('item')}>

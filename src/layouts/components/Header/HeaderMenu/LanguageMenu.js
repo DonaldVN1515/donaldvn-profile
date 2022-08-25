@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
-import { useState, Fragment } from 'react';
+import { useState } from 'react';
 import Tippy from '@tippyjs/react/headless';
 
 import styles from './LanguageMenu.module.scss';

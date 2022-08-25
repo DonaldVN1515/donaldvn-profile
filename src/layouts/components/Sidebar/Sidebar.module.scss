@@ -1,10 +1,12 @@
 .sidebar {
     flex: 1;
+    display: flex;
     height: 100vh;
+    max-width: 400px;
     font-size: 1.8rem;
     color: var(--2nd-text-color);
-    display: flex;
-    max-width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 
 //  ABOUT ME

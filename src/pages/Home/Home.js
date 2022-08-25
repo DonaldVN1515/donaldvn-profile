@@ -1,8 +1,9 @@
 import classNames from 'classnames/bind';
+import { useEffect, useState } from 'react';
 
 import styles from './Home.module.scss';
 import img from '~/assets/img';
-import PersonalInfor from '~/components/PersonalInfor';
+// import PersonalInfor from '~/components/PersonalInfor';
 import AvtImg from '~/components/AvtImg';
 import PeriodExperience from '~/components/PeriodExperience';
 import SkillbarItem from '~/components/SkillbarItem/SkillbarItem';
@@ -10,6 +11,27 @@ import SkillbarItem from '~/components/SkillbarItem/SkillbarItem';
 const cx = classNames.bind(styles);
 
 const Home = () => {
+    const [dataExperience, setDataExperience] = useState([]);
+
+    useEffect(() => {
+        const userExperience = [
+            {
+                title: 'Tutors',
+                time: 'May 2022 - August 2022',
+                job: 'Tutors at British International College BTEC FPT',
+                description:
+                    'Support teachers to manage students, answer academic and professional problems of the subject.',
+                details: {
+                    line1: 'Students are very enthusiastic, diligent in studying, always acquiring new knowledge.',
+                    line2: "The environment in The United Kingdom's is vibrant, positive and always fun to learn.",
+                    line3: 'I also learned how to communicate more effectively, get used to many new relationships.',
+                },
+            },
+        ];
+
+        setDataExperience(userExperience);
+    }, []);
+
     return (
         <div className={cx('home')}>
             <div className={cx('container')}>
@@ -37,27 +59,27 @@ const Home = () => {
                     </div>
 
                     <div className={cx('infor')}>
-                        <AvtImg src={img.avt2} alt="Avatar" />
+                        <AvtImg cover src={img.avt2} alt="Avatar" />
 
-                        <h3 className={cx('name')}>Phan Lam Quoc Viet</h3>
+                        {/* <h3 className={cx('name')}>Phan Lam Quoc Viet</h3> */}
 
-                        <PersonalInfor address="Da Nang city, Viet Nam" className={cx('item')} />
+                        {/* <PersonalInfor address="Da Nang city, Viet Nam" className={cx('item')} /> */}
                     </div>
                 </div>
             </div>
             {/* Experience */}
             <div className={cx('container')}>
-                <h2 className={cx('title')}>Work Experiences</h2>
+                <h4 className={cx('title')}>Work Experiences</h4>
                 <h6>
                     Being aware of the job specification and the skills required to become a Web developer, I always try
                     to improve my skills and qualifications as soon as possible.
                 </h6>
 
-                <PeriodExperience />
+                <PeriodExperience dataExperience={dataExperience} />
             </div>
             {/* PERSOONAL SKILLS */}
             <div className={cx('container')}>
-                <h2>Skills</h2>
+                <h4>Skills</h4>
                 <h6>
                     One of the greatest strenghs about being a designer with an engineer background is that not only I
                     can handle the graphical aspects of a project
@@ -82,7 +104,7 @@ const Home = () => {
             </div>
             {/* AWARDS */}
             <div className={cx('container')}>
-                <h2>Awards</h2>
+                <h4>Awards</h4>
                 <h6>
                     I have been good at math and science since my childhood, studying and obtaining a Master’s Degree in
                     Electrical Engineering.
@@ -106,7 +128,7 @@ const Home = () => {
             </div>
             {/* HOBBIES */}
             <div className={cx('container')}>
-                <h2>Hobbies</h2>
+                <h4>Hobbies</h4>
                 <h6>
                     I have been good at math and science since my childhood, studying and obtaining a Master’s Degree in
                     Electrical Engineering.
@@ -130,7 +152,7 @@ const Home = () => {
             </div>
             {/* EDUCATION */}
             <div className={cx('container')}>
-                <h2>Education</h2>
+                <h4>Education</h4>
                 <h6>
                     I have been good at math and science since my childhood, studying and obtaining a Master’s Degree in
                     Electrical Engineering.

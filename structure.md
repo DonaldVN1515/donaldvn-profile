@@ -34,7 +34,13 @@ Dark/ Light mode
 # Time
 
 ---
-23/08/2022
+25/08/2022
+
+- Code Blog --> OK
+- Code Pagination --> OK
+
+---
+24/08/2022
 
 - Update Gallerry --> OK
 - Replace custom component to material UI --> No

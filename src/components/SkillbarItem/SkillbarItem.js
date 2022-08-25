@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React from 'react';
 
 import styles from './SkillbarItem.module.scss';

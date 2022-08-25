@@ -1,28 +1,14 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import React from 'react';
 
 import styles from './PeriodExperience.module.scss';
 
 const cx = classNames.bind(styles);
 
-const userExperience = [
-    {
-        title: 'Tutors',
-        time: 'May 2022 - August 2022',
-        job: 'Tutors at British International College BTEC FPT',
-        description: 'Support teachers to manage students, answer academic and professional problems of the subject.',
-        details: {
-            line1: 'Students are very enthusiastic, diligent in studying, always acquiring new knowledge.',
-            line2: "The environment in The United Kingdom's is vibrant, positive and always fun to learn.",
-            line3: 'I also learned how to communicate more effectively, get used to many new relationships.',
-        },
-    },
-];
-const PeriodExperience = () => {
+const PeriodExperience = ({ dataExperience }) => {
     return (
         <div className={cx('experience')}>
-            {userExperience.map((period, index) => (
+            {dataExperience.map((period, index) => (
                 <div key={index} className={cx('period')}>
                     <div className={cx('work')}>
                         <h3 className={cx('title')}>{period.title}</h3>
@@ -42,5 +28,7 @@ const PeriodExperience = () => {
         </div>
     );
 };
-PeriodExperience.propTypes = {};
+PeriodExperience.propTypes = {
+    dataExperience: PropTypes.array.isRequired,
+};
 export default PeriodExperience;

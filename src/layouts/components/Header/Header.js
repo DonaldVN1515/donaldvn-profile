@@ -1,48 +1,55 @@
 import classNames from 'classnames/bind';
-import { Email, Language, LocationOn, Person, PersonAddAlt } from '@mui/icons-material';
+import { Email, Language, LocationOn, Person, PersonAddAlt, Logout, Settings } from '@mui/icons-material';
+import { Avatar } from '@mui/material';
+import { useState, useEffect } from 'react';
 
 import styles from './Header.module.scss';
 import config from '~/config';
 import Button from '~/components/Buttton';
-import { Avatar } from '@mui/material';
-import SettingsIcon from '@mui/icons-material/Settings';
-import PersonIcon from '@mui/icons-material/Person';
-import LogoutIcon from '@mui/icons-material/Logout';
 import { AccountMenu, LanguageMenu } from '~/layouts/components/Header/HeaderMenu';
 import Breadcrumb from '~/layouts/components/Header/Breadcrumb';
 
 const cx = classNames.bind(styles);
 
 const Header = () => {
-    const dataAccount = [
-        {
-            icon: <PersonIcon />,
-            title: 'View Profile',
-            to: '/profile',
-        },
-        {
-            icon: <SettingsIcon />,
-            title: 'Settings',
-            to: '/settings',
-        },
-        {
-            icon: <LogoutIcon />,
-            title: 'Log out',
-            to: '/logout',
-            separate: true,
-        },
-    ];
+    const [dataAccount, setDataAccount] = useState([]);
+    const [dataLanguage, setDataLanguage] = useState([]);
+    useEffect(() => {
+        const dataAccount = [
+            {
+                icon: <Person />,
+                title: 'View Profile',
+                to: '/profile',
+            },
+            {
+                icon: <Settings />,
+                title: 'Settings',
+                to: '/settings',
+            },
+            {
+                icon: <Logout />,
+                title: 'Log out',
+                to: '/logout',
+                separate: true,
+            },
+        ];
 
-    const dataLanguage = [
-        {
-            code: 'en',
-            title: 'English',
-        },
-        {
-            code: 'vi',
-            title: 'Tiếng Việt',
-        },
-    ];
+        const dataLanguage = [
+            {
+                code: 'en',
+                title: 'English',
+            },
+            {
+                code: 'vi',
+                title: 'Tiếng Việt',
+            },
+        ];
+
+        setDataAccount(dataAccount);
+
+        setDataLanguage(dataLanguage);
+    }, []);
+
     let currUser = true;
 
     const handleChangeLanguage = () => {
