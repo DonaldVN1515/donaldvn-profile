@@ -34,10 +34,29 @@ Dark/ Light mode
 # Time
 
 ---
+26/08/2022
+
+- Label Blog
+    Best Price
+    Best Seller
+    Hot
+    Trending
+    Feature
+- Category Blog --> 50%
+    Music
+    Video (Youtube)
+    Image Slides
+    Quote
+    Blog
+- Embedded Blog --> OK
+- install react-player --> OK
+
+---
 25/08/2022
 
 - Code Blog --> OK
 - Code Pagination --> OK
+- Code More Blog --> OK
 
 ---
 24/08/2022

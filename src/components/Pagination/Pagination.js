@@ -33,7 +33,7 @@ const Pagination = ({ blogsPerPage, totalBlogs, paginate, currentPage }) => {
                 {pageNumbers.map((index) => (
                     <li key={index} className={cx('page-item')} onClick={() => paginate(index)}>
                         <NavLink
-                            to={`${config.routes.blog}?${index}`}
+                            to={`${config.routes.blog}?page=${index}`}
                             className={(nav) => {
                                 if (currentPage === index) {
                                     return cx(cx('page-link'), { active: nav.isActive });
@@ -54,7 +54,11 @@ const Pagination = ({ blogsPerPage, totalBlogs, paginate, currentPage }) => {
                         Next
                     </Link>
                 </button>
-                <button disabled={currentPage > pageNumbers.length - 1} className={cx('page-item')} onClick={() => paginate(pageNumbers.length)}>
+                <button
+                    disabled={currentPage > pageNumbers.length - 1}
+                    className={cx('page-item')}
+                    onClick={() => paginate(pageNumbers.length)}
+                >
                     <Link to={config.routes.blog} className={cx('page-link')}>
                         Last
                     </Link>

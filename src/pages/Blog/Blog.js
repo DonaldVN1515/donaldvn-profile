@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import { useState, useEffect } from 'react';
 
 import styles from './Blog.module.scss';
-import videos from '~/assets/video';
+import images from '~/assets/img';
 import BlogList from '~/pages/Blog/BlogList';
 import Pagination from '~/components/Pagination';
 import MoreBlogs from '~/pages/Blog/MoreBlogs';
@@ -23,11 +23,11 @@ const Blog = () => {
     useEffect(() => {
         const dataBlogs = [
             {
-                id: 1,
+                label: 'soundcloud',
                 title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: videos.video,
+                url: 'https://soundcloud.com/longdley1/vstra-phong-ft-tgsn-tyronee?si=b4751788915346c7847719ffcb19565e',
                 published: 'dd/mm/yyy',
                 author: 'DonaldVN',
                 category: 'Blog',
@@ -35,11 +35,11 @@ const Blog = () => {
                 readTime: '00:00',
             },
             {
-                id: 2,
+                label: 'images',
                 title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: videos.video,
+                url: [images.avt, images.avt1, images.avt2],
                 published: 'dd/mm/yyy',
                 author: 'DonaldVN',
                 category: 'Blog',
@@ -47,11 +47,11 @@ const Blog = () => {
                 readTime: '00:00',
             },
             {
-                id: 3,
+                label: 'quote',
                 title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: videos.video,
+                url: 'Cần cù bù siêng lăng',
                 published: 'dd/mm/yyy',
                 author: 'DonaldVN',
                 category: 'Blog',
@@ -59,11 +59,11 @@ const Blog = () => {
                 readTime: '00:00',
             },
             {
-                id: 4,
+                label: 'image',
                 title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: videos.video,
+                url: images.avt,
                 published: 'dd/mm/yyy',
                 author: 'DonaldVN',
                 category: 'Blog',
@@ -71,11 +71,11 @@ const Blog = () => {
                 readTime: '00:00',
             },
             {
-                id: 5,
+                label: 'youtube',
                 title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: videos.video,
+                url: 'https://www.youtube.com/watch?v=czb2PASrzTA',
                 published: 'dd/mm/yyy',
                 author: 'DonaldVN',
                 category: 'Blog',
@@ -83,71 +83,11 @@ const Blog = () => {
                 readTime: '00:00',
             },
             {
-                id: 6,
+                label: 'youtube',
                 title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: videos.video,
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                id: 7,
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: videos.video,
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                id: 8,
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: videos.video,
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                id: 9,
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: videos.video,
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                id: 10,
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: videos.video,
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                id: 11,
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: videos.video,
+                url: 'https://www.youtube.com/watch?v=czb2PASrzTA',
                 published: 'dd/mm/yyy',
                 author: 'DonaldVN',
                 category: 'Blog',
