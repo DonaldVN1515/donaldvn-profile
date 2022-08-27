@@ -9,6 +9,7 @@
     padding: 0 0px 5px 0;
     border-radius: 5px;
     font-size: 1.6rem;
+    position: relative;
     background-color: var(--white-color);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     // width: 100%;
@@ -23,6 +24,82 @@
     }
     &:last-child .embedded {
         height: 100vh !important;
+    }
+
+    // LABEL
+    .label-icon {
+        font-size: 3.5rem;
+    }
+    .icon-quote {
+        transform: rotate(180deg);
+        font-size: 5rem;
+    }
+}
+
+// LABEL
+.label-embedded {
+    background-color: #fee8eb;
+    color: #f23453;
+
+    &::before {
+        border-bottom: 6px solid #fb9fab;
+    }
+
+    &::after {
+        border-left: 30px solid #fee8eb;
+        border-right: 30px solid #fee8eb;
+    }
+}
+.label-slides {
+    background-color: #f5db8b;
+    color: #bb900b;
+
+    &::before {
+        border-bottom: 6px solid #efc545;
+    }
+
+    &::after {
+        border-left: 30px solid #f5db8b;
+        border-right: 30px solid #f5db8b;
+    }
+}
+.label-image {
+    background-color: #e5f9f1;
+    color: #0dc772;
+
+    &::before {
+        border-bottom: 6px solid #a7ebd0;
+    }
+
+    &::after {
+        border-left: 30px solid #e5f9f1;
+        border-right: 30px solid #e5f9f1;
+    }
+}
+.label-quote {
+    background-color: #bfe6ff;
+    color: #45a9ea;
+
+    &::before {
+        border-bottom: 6px solid #73c8ff;
+    }
+
+    &::after {
+        border-left: 30px solid #bfe6ff;
+        border-right: 30px solid #bfe6ff;
+    }
+}
+.label-music {
+    background-color: #fff1ea;
+    color: #ff7930;
+
+    &::before {
+        border-bottom: 6px solid #ffbe9e;
+    }
+
+    &::after {
+        border-left: 30px solid #fff1ea;
+        border-right: 30px solid #fff1ea;
     }
 }
 // Slides

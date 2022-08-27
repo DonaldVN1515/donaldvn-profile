@@ -14,13 +14,15 @@ function BlogEmbedded({ mediaUrl, className }) {
     const cx = classNames.bind(styles);
 
     return (
-        <ReactPlayer
-            // height="unset"
-            width="100%"
-            url={mediaUrl}
-            controls
-            className={cx('video', className)}
-        />
+        <div className={cx('wrapper')}>
+            <ReactPlayer
+                // height="unset"
+                width="100%"
+                url={mediaUrl}
+                controls
+                className={cx('embedded', className)}
+            />
+        </div>
     );
 
     // <video src={mediaUrl} id='video' controls className={cx('video')} />

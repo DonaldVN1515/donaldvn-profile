@@ -1,9 +1,12 @@
 // MORE ARTICLES
-.blogs {
+.more-blogs {
     background-color: var(--white-color);
 }
 
 .more {
+    .icon {
+        font-size: 3rem;
+    }
 }
 .title {
     display: flex;
@@ -13,9 +16,6 @@
         padding: 10px 0;
         margin-left: 10px;
     }
-}
-.icon {
-    font-size: 3rem;
 }
 
 .blog {

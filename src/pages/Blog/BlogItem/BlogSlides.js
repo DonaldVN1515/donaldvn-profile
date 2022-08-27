@@ -1,18 +1,29 @@
 import classNames from 'classnames/bind';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './BlogItem.module.scss';
-import { ArrowLeft, ArrowRight } from '@mui/icons-material';
+import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
-BlogImages.propTypes = {
+BlogSlides.propTypes = {
     className: PropTypes.string,
 };
 
-function BlogImages(mediaUrl, title, className) {
+function BlogSlides(mediaUrl, title, className) {
     const cx = classNames.bind(styles);
 
     const [slideIndex, setSlideIndex] = useState(1);
+
+    // autoPlaySlide
+    // useEffect(() => {
+    //     const autoPlaySlide = setInterval(() => {
+    //         nextSlide();
+    //     }, 3000);
+    //     return () => {
+    //         clearInterval(autoPlaySlide);
+    //     };
+    // }, [slideIndex]);
+
 
     const nextSlide = () => {
         if (slideIndex !== mediaUrl.mediaUrl.length) {
@@ -36,6 +47,7 @@ function BlogImages(mediaUrl, title, className) {
 
     return (
         <div className={cx('slides', className)}>
+            {/* Slides */}
             {mediaUrl.mediaUrl.map((data, index) => {
                 return (
                     <div key={index} className={cx('slide', slideIndex === index + 1 ? 'active-anim' : '')}>
@@ -44,10 +56,14 @@ function BlogImages(mediaUrl, title, className) {
                 );
             })}
 
-            <button onClick={nextSlide} className={cx('btn-slide', 'next' ? 'next' : 'prev')}>
-                <img src={'next' ? <ArrowRight /> : <ArrowLeft />} alt="" />
+            {/* Button */}
+            <button onClick={prevSlide} className={cx('btn-slide', 'prev')}>
+                <ChevronLeft className={cx('icon')} />
             </button>
-
+            <button onClick={nextSlide} className={cx('btn-slide', 'next')}>
+                <ChevronRight className={cx('icon')} />
+            </button>
+            {/* Dots */}
             <div className={cx('dots')}>
                 {Array.from({ length: mediaUrl.mediaUrl.length }).map((item, index) => (
                     <div
@@ -61,4 +77,4 @@ function BlogImages(mediaUrl, title, className) {
     );
 }
 
-export default BlogImages;
+export default BlogSlides;

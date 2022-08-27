@@ -16,6 +16,11 @@ BlogContent.propTypes = {
     readTime: PropTypes.string.isRequired,
     viewers: PropTypes.number.isRequired,
     published: PropTypes.string.isRequired,
+    hotBadge: PropTypes.bool,
+    bestPriceBadge: PropTypes.bool,
+    bestSellerBadge: PropTypes.bool,
+    trendingBadge: PropTypes.bool,
+    featureBadge: PropTypes.bool,
 };
 
 function BlogContent({
@@ -24,6 +29,11 @@ function BlogContent({
     className,
     category,
     author,
+    hotBadge = false,
+    bestPriceBadge = false,
+    bestSellerBadge = false,
+    trendingBadge = false,
+    featureBadge = false,
     readTime = '00:00',
     viewers = '0',
     published = 'dd/mm/yyyy',
@@ -32,8 +42,16 @@ function BlogContent({
 
     const url = convertUrl(title);
 
+    const classes = cx('content', {
+        [className]: className,
+        hotBadge,
+        bestPriceBadge,
+        bestSellerBadge,
+        trendingBadge,
+        featureBadge,
+    });
     return (
-        <div className={cx('content', className)}>
+        <div className={classes}>
             <Button to={`/blog/${url}`} text className={cx('title')}>
                 {title}
             </Button>

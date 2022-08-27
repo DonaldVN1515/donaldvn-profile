@@ -9,6 +9,20 @@
 
 .content {
     padding: 10px 20px 20px 20px;
+
+    // Badge
+
+    ::before {
+        position: absolute;
+        height: 40px;
+        left: -8px;
+        top: 0px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 14px;
+        color: #fff;
+        padding: 0 10px;
+    }
 }
 .title {
     font-size: 2.5rem;
@@ -60,26 +74,67 @@
         border: 1px solid var(--hover-color);
     }
 }
+// LABEL
+.label {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -6px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: '';
+        height: 0;
+        width: 0;
+        position: absolute;
+        right: -6px;
+        top: 0;
+        border-right: 6px solid transparent;
+    }
+
+    &::after {
+        height: 0;
+        width: 0;
+        bottom: -20px;
+        left: 0;
+        content: '';
+        position: absolute;
+        border-bottom: 20px solid transparent;
+    }
+}
+.label-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 // BLOG EMBEDDED
 
+.wrapper {
+}
+
 .embedded {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     // width: 100%;
     // height: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    // overflow: hidden;
 }
 
 // MUSIC
 .slides {
-    position: relative;
     width: 100%;
     height: 360px;
-
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
     // margin: 100px auto 0;
     position: relative;
     // overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--light-background-color);
 
     img {
         display: block;
@@ -101,33 +156,34 @@
     transition: opacity ease-in-out 0.4s;
 }
 .btn-slide {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #f1f1f1;
-    border: 1px solid rgba(34, 34, 34, 0.287);
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 
-    img {
-        width: 25px;
-        height: 25px;
-        pointer-events: none;
+    .icon {
+        font-size: 6rem;
+        color: var(--white-color);
+        opacity: 0.6;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 
-.prev {
-    top: 50%;
-    left: 20px;
-    transform: translateY(-60%);
-}
+.prev,
 .next {
     top: 50%;
-    right: 20px;
     transform: translateY(-60%);
+    animation: dynamic 1s ease-in-out alternate;
+}
+.prev {
+    left: 0px;
+}
+.next {
+    right: 0px;
 }
 
 .dots {
@@ -138,17 +194,90 @@
     display: flex;
 }
 .dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 3px solid #f1f1f1;
+    width: 50px;
+    height: 3px;
+    border: 1px solid var(--3rd-background-color);
     margin: 0 5px;
-    background: #f1f1f1;
+    border-radius: 3px;
+    background-color: var(--white-color);
+    opacity: 0.4;
+    transition: all 0.3s ease-in-out;
 }
 .active {
-    background: rgb(32, 32, 32);
-}
+    background: var(--hover-color);
+    border: 1px solid var(--hover-color);
 
+    opacity: 1;
+}
 // Image Slides
 
+.image {
+    width: 100%;
+    height: 360px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+
+    background-color: var(--light-background-color);
+    img {
+        display: block;
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+    }
+}
+
 // Quote
+.quote {
+    width: 100%;
+    height: 360px;
+    padding: 60px;
+    background-color: var(--light-background-color);
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 240px;
+        border-radius: 3px;
+        background-color: var(--text-color);
+    }
+    .quote-icon {
+        position: absolute;
+        top: 40px;
+        right: 0px;
+        font-size: 15rem;
+        color: rgba(44, 46, 54, 0.1);
+    }
+}
+.quote-content {
+    padding-left: 30px;
+    padding-right: 80px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+}
+.quote-title {
+    font-size: 3.5rem;
+    color: var(--hover-color);
+}
+.quote-author {
+    text-align: right;
+    display: block;
+    color: var(--text-color);
+    font-style: italic;
+
+    &::before {
+        content: '— ';
+    }
+}
+
+// Badge
+.hotBadge {
+    &::before {
+        content: 'Hot';
+
+        background-color: #6f42c1;
+    }
+}

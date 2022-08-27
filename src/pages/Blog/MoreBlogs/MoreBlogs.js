@@ -23,11 +23,11 @@ function MoreBlogs({ moreBlogs, indexOfLastBlog, indexOfFirstBlog }) {
                 <h4>More Articles ...</h4>
             </div>
 
-            <ul className={cx('blogs')}>
+            <ul className={cx('more-blogs')}>
                 {moreBlogs.map((data, index) => {
                     const url = convertUrl(data.title);
 
-                    if (data.id > indexOfLastBlog || data.id < indexOfFirstBlog) {
+                    if (index + 1 > indexOfLastBlog || index + 1 < indexOfFirstBlog) {
                         return (
                             <li key={index} className={cx('blog')}>
                                 <Button to={`/blog/${url}`} text className={cx('link')}>

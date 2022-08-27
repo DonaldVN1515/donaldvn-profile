@@ -30,8 +30,15 @@ layout:
         footer
             © Profiler 2022. Design by @DONALDVN
 Dark/ Light mode
+# Link Git: <https://github.com/DonaldVN1515/donaldvn-profile.git>
 
 # Time
+
+---
+27/08/2022
+
+- Type Blog (label) --> OK
+- Badge Blog
 
 ---
 26/08/2022

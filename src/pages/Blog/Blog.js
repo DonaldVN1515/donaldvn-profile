@@ -21,9 +21,10 @@ const Blog = () => {
     const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog);
 
     useEffect(() => {
+        // isRequired: Label, title, url, published, author, category, viewers, readTime
         const dataBlogs = [
             {
-                label: 'soundcloud',
+                label: 'music',
                 title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
@@ -39,7 +40,7 @@ const Blog = () => {
                 title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: [images.avt, images.avt1, images.avt2],
+                url: [images.btec14, images.btec17, images.btec19],
                 published: 'dd/mm/yyy',
                 author: 'DonaldVN',
                 category: 'Blog',
@@ -51,7 +52,7 @@ const Blog = () => {
                 title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'Cần cù bù siêng lăng',
+                url: 'Ông cha ta có câu: Ở đời này, có nàm thì mới có lăn, không nàm mà đòi lăn thì chỉ có cạp đất mà lăn.',
                 published: 'dd/mm/yyy',
                 author: 'DonaldVN',
                 category: 'Blog',
@@ -63,7 +64,7 @@ const Blog = () => {
                 title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: images.avt,
+                url: images.btec19,
                 published: 'dd/mm/yyy',
                 author: 'DonaldVN',
                 category: 'Blog',
@@ -71,7 +72,7 @@ const Blog = () => {
                 readTime: '00:00',
             },
             {
-                label: 'youtube',
+                label: 'video',
                 title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
@@ -83,7 +84,7 @@ const Blog = () => {
                 readTime: '00:00',
             },
             {
-                label: 'youtube',
+                label: 'video',
                 title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
