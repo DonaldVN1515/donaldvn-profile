@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 import styles from './BlogItem.module.scss';
 import { FormatQuote } from '@mui/icons-material';
 
-BlogQuote.propTypes = {};
+BlogQuote.propTypes = {
+    mediaUrl: PropTypes.string.isRequired,
+};
 
 function BlogQuote(mediaUrl) {
     const cx = classNames.bind(styles);

@@ -7,10 +7,12 @@ import images from '~/assets/img';
 import BlogList from '~/pages/Blog/BlogList';
 import Pagination from '~/components/Pagination';
 import MoreBlogs from '~/pages/Blog/MoreBlogs';
+import Filter from '~/components/Filter';
 
 const cx = classNames.bind(styles);
 const Blog = () => {
-    const [blogs, setBlogs] = useState([]);
+    const [dataBlogs, setBlogs] = useState([]);
+    const [filterData, setFilterData] = useState([]);
 
     const [currentPage, setCurrentPage] = useState(1);
     const [blogsPerPage] = useState(5);
@@ -18,7 +20,7 @@ const Blog = () => {
     // Get current blogs
     const indexOfLastBlog = currentPage * blogsPerPage;
     const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
-    const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog);
+    const currentBlogs = dataBlogs.slice(indexOfFirstBlog, indexOfLastBlog);
 
     useEffect(() => {
         // isRequired: Label, title, url, published, author, category, viewers, readTime
@@ -106,20 +108,52 @@ const Blog = () => {
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     // console.log('Blog: ', paginate);
+
+    // FILTER
+
+    const dataFilter = [];
+
+    dataBlogs.map((data) =>
+        data.category.map((duplicateCategory) => {
+            if (dataFilter.includes(duplicateCategory)) return null;
+            dataFilter.push(duplicateCategory);
+            return dataFilter;
+        }),
+    );
+
+    const handleFilter = (filterValueSelected) => {
+        // // Filter by category
+        if (filterValueSelected === 'Show All') {
+            setFilterData(dataBlogs);
+            return;
+        }
+        const filteredData = dataBlogs.filter((data) => {
+            let category = '';
+            data.category.map((data) => {
+                category = data;
+                return category;
+            });
+
+            return category === filterValueSelected;
+        });
+
+        setFilterData(filteredData);
+    };
+
     return (
         <div className={cx('wapper')}>
-            <h4>FILTER</h4>
+            <Filter dataFilter={dataFilter} filterValueSelected={handleFilter} />
 
             <BlogList dataBlogs={currentBlogs} />
 
             <Pagination
                 blogsPerPage={blogsPerPage}
-                totalBlogs={blogs.length}
+                totalBlogs={filterData.length}
                 paginate={paginate}
                 currentPage={currentPage}
             />
 
-            <MoreBlogs moreBlogs={blogs} indexOfLastBlog={indexOfLastBlog} indexOfFirstBlog={indexOfFirstBlog} />
+            <MoreBlogs moreBlogs={dataBlogs} indexOfLastBlog={indexOfLastBlog} indexOfFirstBlog={indexOfFirstBlog} />
         </div>
     );
 };

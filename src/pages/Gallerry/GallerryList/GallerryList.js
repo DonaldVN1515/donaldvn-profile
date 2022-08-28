@@ -6,15 +6,16 @@ import styles from './GallerryList.module.scss';
 import { GallerryItem } from '~/pages/Gallerry/GallerryList';
 
 GallerryList.propTypes = {
-    dataImgs: PropTypes.array.isRequired,
+    dataGallery: PropTypes.array.isRequired,
 };
 
-function GallerryList({ dataImgs }) {
+function GallerryList({ dataGallery }) {
     const cx = classNames.bind(styles);
+
     return (
         <ul className={cx('collections')}>
-            {dataImgs.map((data) => (
-                <GallerryItem key={data.id} title={data.title} img={data.imgUrl} />
+            {dataGallery.map((data, index) => (
+                <GallerryItem key={index} title={data.title} img={data.imgUrl} />
             ))}
         </ul>
     );

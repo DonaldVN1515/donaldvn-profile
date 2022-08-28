@@ -23,7 +23,6 @@ function BlogList({ dataBlogs, className }) {
                                 <BlogEmbedded className={cx('embedded')} mediaUrl={data.url} />
 
                                 <BlogContent
-                                    hotBadge
                                     title={data.title}
                                     subtitle={data.subtitle}
                                     author={data.author}

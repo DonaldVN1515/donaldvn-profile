@@ -1,30 +1,4 @@
 .wapper {
-    padding: 10px 0;
+padding: 10px 0;
 }
 
-// Filter Gallerry
-.filter {
-    padding: 10px 0;
-    border-bottom: 1px solid var(--light-background-color);
-}
-
-.title {
-    display: flex;
-    align-items: center;
-    padding-bottom: 10px;
-
-    h3 {
-        font-size: 2.5rem;
-        margin-left: 10px;
-    }
-
-    .icon {
-        font-size: 2.2rem;
-    }
-}
-
-.options {
-    display: flex;
-    // flex-flow: row-reverse wrap;
-    // justify-content: flex-end;
-}
