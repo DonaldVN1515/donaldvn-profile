@@ -57,7 +57,7 @@ function BlogList({ dataBlogs, className }) {
                                 </BlogType>
                             </div>
                         );
-                    case 'images':
+                    case 'slides':
                         return (
                             <div key={index} className={cx('item', className)}>
                                 <BlogSlides mediaUrl={data.url} title={data.title} className={cx('slides')} />

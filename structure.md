@@ -38,12 +38,14 @@ Dark/ Light mode
 ---
 29/08/2022
 
-- Search Filter
+- Fix height blogs
+- Filter Blogs --> OK
+- Search Filter --> OK
 
 ---
 28/08/2022
 
-- Filter by Category -> OK
+- Filter by Category --> OK
 - Search Filter --> 30%
 - Badge Blog --> Can not do it
 

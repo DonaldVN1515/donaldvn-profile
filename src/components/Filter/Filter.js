@@ -18,6 +18,7 @@ function Filter({ dataFilterCategory, filterValueSelected, dataFilterTitle }) {
     // FILTER
     const filterValueChanged = (e) => {
         filterValueSelected(e.target.value);
+
     };
     return (
         <div className={cx('filter')}>

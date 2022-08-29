@@ -150,6 +150,7 @@ const Gallerry = () => {
         const filteredData = dataGallery.filter((data) => {
             let category = '';
             data.category.map((data) => {
+                console.log(category);
                 category = data;
                 return category;
             });
