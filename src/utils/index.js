@@ -1,1 +1,2 @@
-export { default as httpRequest } from './httpRequest';
+export * from './httpRequest';
+export * from './httpMockApi';

@@ -15,7 +15,7 @@ layout:
             location
             email
             login / register
-        sidebar
+        sidebargit
             persional infor
                 infor
                     Avt
@@ -36,10 +36,15 @@ Dark/ Light mode
 # Time
 
 ---
+29/08/2022
+
+- Search Filter
+
+---
 28/08/2022
 
-- Filter
-- Search
+- Filter by Category -> OK
+- Search Filter --> 30%
 - Badge Blog --> Can not do it
 
 ---

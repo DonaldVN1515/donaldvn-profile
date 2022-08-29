@@ -7,11 +7,12 @@ import classNames from 'classnames/bind';
 import styles from './Filter.module.scss';
 import Search from '~/components/Search';
 Filter.propTypes = {
-    dataFilterLabel: PropTypes.array.isRequired,
+    dataFilterCategory: PropTypes.array.isRequired,
+    dataFilterTitle: PropTypes.array,
     filterValueSelected: PropTypes.func,
 };
 
-function Filter({ dataFilterLabel, filterValueSelected }) {
+function Filter({ dataFilterCategory, filterValueSelected, dataFilterTitle }) {
     const cx = classNames.bind(styles);
 
     // FILTER
@@ -26,14 +27,14 @@ function Filter({ dataFilterLabel, filterValueSelected }) {
                     <h4>Filter:</h4>
                 </div>
 
-                <Search />
+                <Search dataFilterTitle={dataFilterTitle} />
             </div>
 
             {/* FIll by CATEGORY */}
             <div className={cx('options')}>
                 <RadioItem label="Show All" isChecked={true} onClick={filterValueChanged} />
 
-                {dataFilterLabel.map((category, index) => {
+                {dataFilterCategory.map((category, index) => {
                     return <RadioItem key={index} label={category} onClick={filterValueChanged} />;
                 })}
             </div>

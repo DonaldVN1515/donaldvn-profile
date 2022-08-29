@@ -38,7 +38,6 @@ const LanguageMenu = ({ children, dataLanguage = [], onChange = defautFunction }
                 interactive
                 placement="bottom"
                 visible={visible}
-                offset={[10, 10]}
                 onClickOutside={handleHide}
                 render={renderMenu}
             >

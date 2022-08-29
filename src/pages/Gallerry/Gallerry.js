@@ -5,12 +5,14 @@ import { useState, useEffect } from 'react';
 import styles from './Gallerry.module.scss';
 import GallerryList from '~/pages/Gallerry/GallerryList';
 import Filter from '~/components/Filter';
-
+// import { useDebounce } from '~/hooks';
+// import * as gallerryService from '~/services/gallerryService';
 const Gallerry = () => {
     const cx = classNames.bind(styles);
     const [dataGallery, setDataGallerry] = useState([]);
     const [dataFilter, setdataFilter] = useState([]);
 
+    // const debouncedValue = useDebounce(gallerryValue, 500)
     useEffect(() => {
         // dataImage
         const dataImages = [
@@ -75,7 +77,7 @@ const Gallerry = () => {
                 imgUrl: require('~/assets/img/btec12.jpg'),
             },
             {
-                title: 'Signing Ceremony between Enterprises and British International College',
+                title: 'Signing Ceremony between Enterprises and British International College ',
                 category: ['BTEC FPT', 'Signing Ceremony'],
                 imgUrl: require('~/assets/img/btec13.jpg'),
             },
@@ -116,18 +118,26 @@ const Gallerry = () => {
             },
         ];
 
+        // const fetchApi = async () => {
+
+        //     const resultGallerry = await gallerryService.gallerry();
+
+        //     console.log(resultGallerry);
         setDataGallerry(dataImages);
 
         setdataFilter(dataImages);
+        // };
+
+        // fetchApi();
     }, []);
     // FILTER
-    const dataFilterLabel = [];
+    const dataFilterCategory = [];
 
     dataGallery.map((data) =>
         data.category.map((duplicateCategory) => {
-            if (dataFilterLabel.includes(duplicateCategory)) return null;
-            dataFilterLabel.push(duplicateCategory);
-            return dataFilterLabel;
+            if (dataFilterCategory.includes(duplicateCategory)) return null;
+            dataFilterCategory.push(duplicateCategory);
+            return dataFilterCategory;
         }),
     );
 
@@ -152,10 +162,23 @@ const Gallerry = () => {
 
     // SEARCH
 
+    const dataFilterTitle = [];
+
+    dataGallery.map((data) => {
+        if (dataFilterTitle.includes(data.title)) return null;
+        dataFilterTitle.push(data.title);
+
+        return dataFilterTitle;
+    });
+
     return (
         <div className={cx('wapper')}>
             {/* Filter */}
-            <Filter dataFilterLabel={dataFilterLabel} filterValueSelected={handleFilter} />
+            <Filter
+                dataFilterCategory={dataFilterCategory}
+                dataFilterTitle={dataFilterTitle}
+                filterValueSelected={handleFilter}
+            />
 
             {/* GALLERRY */}
             <GallerryList dataGallery={dataFilter} />

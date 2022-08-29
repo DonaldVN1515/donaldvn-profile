@@ -12,7 +12,7 @@ import Filter from '~/components/Filter';
 const cx = classNames.bind(styles);
 const Blog = () => {
     const [dataBlogs, setBlogs] = useState([]);
-    const [filterData, setFilterData] = useState([]);
+    const [dataFilter, setdataFilter] = useState([]);
 
     const [currentPage, setCurrentPage] = useState(1);
     const [blogsPerPage] = useState(5);
@@ -110,45 +110,49 @@ const Blog = () => {
     // console.log('Blog: ', paginate);
 
     // FILTER
+    const dataFilterCategory = [];
 
-    const dataFilter = [];
-
-    dataBlogs.map((data) =>
-        data.category.map((duplicateCategory) => {
-            if (dataFilter.includes(duplicateCategory)) return null;
-            dataFilter.push(duplicateCategory);
-            return dataFilter;
-        }),
-    );
+    dataBlogs.map((data) => {
+        if (dataFilterCategory.includes(data.label)) return null;
+        dataFilterCategory.push(data.label);
+        return dataFilterCategory;
+    });
 
     const handleFilter = (filterValueSelected) => {
-        // // Filter by category
+        // // Filter by label
         if (filterValueSelected === 'Show All') {
-            setFilterData(dataBlogs);
+            setdataFilter(dataBlogs);
             return;
         }
-        const filteredData = dataBlogs.filter((data) => {
-            let category = '';
-            data.category.map((data) => {
-                category = data;
-                return category;
-            });
+        const filteredData = dataBlogs.filter((data) => (data = filterValueSelected));
 
-            return category === filterValueSelected;
-        });
-
-        setFilterData(filteredData);
+        setdataFilter(filteredData);
     };
+    console.log(dataFilter);
 
+    // SEARCH
+
+    const dataFilterTitle = [];
+
+    dataBlogs.map((data) => {
+        if (dataFilterTitle.includes(data.title)) return null;
+        dataFilterTitle.push(data.title);
+
+        return dataFilterTitle;
+    });
     return (
         <div className={cx('wapper')}>
-            <Filter dataFilter={dataFilter} filterValueSelected={handleFilter} />
+            <Filter
+                dataFilterCategory={dataFilter}
+                filterValueSelected={handleFilter}
+                dataFilterTitle={dataFilterTitle}
+            />
 
             <BlogList dataBlogs={currentBlogs} />
 
             <Pagination
                 blogsPerPage={blogsPerPage}
-                totalBlogs={filterData.length}
+                totalBlogs={dataFilter.length}
                 paginate={paginate}
                 currentPage={currentPage}
             />

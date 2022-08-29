@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
 import { Close, RotateRight } from '@mui/icons-material';
@@ -8,12 +8,14 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useState, useEffect, useRef } from 'react';
 
 import styles from './Search.module.scss';
-import { useDebounce } from '~/hooks';
-import * as SearchServices from '~/services/searchService';
+// import { useDebounce } from '~/hooks';
+// import  * as searchService from '~/services/searchService';
 import { Wrapper } from '~/components/Wrapper';
-Search.propTypes = {};
+Search.propTypes = {
+    dataFilterTitle: PropTypes.array.isRequired,
+};
 
-function Search() {
+function Search({ dataFilterTitle }) {
     const cx = classNames.bind(styles);
 
     const inputRef = useRef();
@@ -23,25 +25,26 @@ function Search() {
     const [showResult, setShowResult] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const debouncedValue = useDebounce(searchValue, 500);
+    // const debouncedValue = useDebounce(searchValue, 500);
 
     // https://tiktok.fullstack.edu.vn/api/users/search?q=hoaa&type=less
     useEffect(() => {
-        if (!debouncedValue.trim()) {
-            setSearchResult([]);
-            return;
-        }
+        // if (!debouncedValue.trim()) {
+        //     setSearchResult([]);
+        //     return;
+        // }
         setLoading(true);
 
-        const fetchApi = async () => {
-            const result = await SearchServices.search(debouncedValue);
+        // const fetchApi = async () => {
+        //     const result = await searchService.search(debouncedValue);
 
-            setSearchResult(result);
+        setSearchResult(dataFilterTitle);
 
-            setLoading(false);
-        };
-        fetchApi();
-    }, [debouncedValue]);
+        setLoading(false);
+        // };
+        // fetchApi();
+        // debouncedValue
+    }, [dataFilterTitle, searchResult]);
 
     const handleChange = (e) => {
         const searchValue = e.target.value;
@@ -64,23 +67,40 @@ function Search() {
     const handleSubmit = () => {
         // Search Page
     };
+
+    // renderSearchResult
+    const renderSearchResult = (attrs) => (
+        <div className={cx('search-result')} tabIndex="-1" {...attrs}>
+            <Wrapper className={cx('search-wrapper')}>
+                {searchResult
+                    .filter((result) => {
+                        if (result === '') {
+                            return result;
+                        } else if (result.toLowerCase().includes(searchValue.toLowerCase())) {
+                            return result;
+                        }
+                        // eslint-disable-next-line array-callback-return
+                        return;
+                    })
+                    .map((result, index) => {
+                        return (
+                            <div key={index} onClick={() => setShowResult(false)}>
+                                <h6>{result}</h6>
+                            </div>
+                        );
+                    })}
+            </Wrapper>
+        </div>
+    );
     return (
         <div className={cx('search')}>
             <Tippy
+                // placement="bottom"
+                offset={[0, 5]}
                 interactive
+                placement="bottom-end"
                 visible={showResult && searchResult.length > 0}
-                render={(attrs) => (
-                    <div className={cx('searchResult')} tabIndex="-1" {...attrs}>
-                        <Wrapper>
-                            <h4>Accounts</h4>
-                            {searchResult.map((result) => (
-                                <div key={result.id} data={result} onClick={() => setShowResult(false)}>
-                                    Hello
-                                </div>
-                            ))}
-                        </Wrapper>
-                    </div>
-                )}
+                render={renderSearchResult}
                 onClickOutside={handleHideResult}
             >
                 <form className={cx('searchbar')}>
