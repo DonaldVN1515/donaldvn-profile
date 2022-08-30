@@ -41,10 +41,19 @@ Dark/ Light mode
 # Time
 
 ---
+30/08/2022
+
+- Component Overlay --> OK
+- Contact Page
+    Intro
+    Infor
+    follow
+- Optimize Blog & Gallerry --> OK
+- Fix height blogs, more Blogs --> OK
+
+---
 29/08/2022
 
-- Optimize Blog & Gallerry --OK
-- Fix height blogs, more Blogs --> OK
 - Filter by Category Blogs --> OK
 - Search Filter Blogs --> OK
 - Search Filter --> OK

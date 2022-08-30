@@ -1,0 +1,11 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-repeat: repeat;
+    background-position: center center;
+    background: linear-gradient(0deg, rgb(244, 244, 244) 0%, rgba(244, 244, 244, 0) 100%) transparent;
+}

@@ -1,0 +1,238 @@
+// OVERLAY
+.container-follow {
+    .overlay {
+        background: linear-gradient(180deg, rgb(244, 244, 244) 0%, rgba(244, 244, 244, 0) 100%) transparent;
+    }
+}
+
+// CONTACT
+.wrapper {
+    --overlay-color: rgba(0, 0, 0, 0.5);
+
+    margin: 0 -40px;
+
+    & > div {
+        position: relative;
+    }
+}
+
+// INTRO
+.container-intro {
+    padding-top: 50%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin: 0px;
+    background-image: url(../../assets/img/btec4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center 25%;
+    box-shadow: 0 0 0 0 #ffffff;
+
+    position: relative;
+}
+.intro {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: var(--white-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.intro-music {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--overlay-color);
+    width: 120px;
+    height: 120px;
+    background-color: var(--overlay-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    margin-bottom: 30px;
+
+    &:hover {
+        transform: scale(0.9);
+    }
+
+    .icon {
+        font-size: 6rem;
+    }
+}
+.intro-play {
+    display: flex;
+
+    // display: none;
+    &::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        bottom: -20px;
+        right: -20px;
+        background: var(--overlay-color);
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 0.4;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+.intro-pause {
+    display: none;
+
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: -7px;
+        top: -7px;
+        left: -7px;
+        right: -7px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 4px solid var(--overlay-color);
+        margin: 0px;
+        opacity: 1;
+        transform-origin: center;
+        animation: anim 800ms linear infinite;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        bottom: -7px;
+        top: -7px;
+        left: -7px;
+        right: -7px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 4px solid var(--overlay-color);
+        margin: 0px;
+        opacity: 0.8;
+        transform-origin: center;
+        animation: anim 800ms linear 400ms infinite;
+    }
+}
+.active .intro-pause {
+    display: flex;
+}
+.active .intro-play {
+    display: none;
+}
+.audio {
+    display: none;
+}
+// ANIMATION
+
+@keyframes anim {
+    from {
+        margin: 10px;
+        opacity: 1;
+    }
+
+    to {
+        margin: -40px;
+        opacity: 0;
+    }
+}
+
+.intro-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--overlay-color);
+    h4 {
+        font-size: 7rem;
+    }
+    p {
+        margin-top: 10px;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+}
+
+// INFORMATION
+.container-contact {
+    padding-top: 50%;
+    padding-right: 0px;
+    padding-left: 0px;
+    box-shadow: 0 0 0 0 #ffffff;
+}
+
+.contact {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: var(--text-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 2rem;
+}
+.contact-infor {
+    h6 {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+}
+.contact-about {
+    display: flex;
+    padding: 20px 0;
+
+    .icon {
+
+        font-size: 7rem;
+        color: var(--hover-color);
+    }
+}
+.contact-location {
+    flex: 1;
+    margin-right: 30px;
+}
+.contact-me {
+    flex: 1;
+
+    & > p {
+        display: flex;
+        align-items: center;
+    }
+}
+.contact-phone {
+}
+.contact-email {
+}
+
+// Get in touch
+.contact-form {
+}
+.contact-radio {
+}
+.contact-submit {
+}
+
+// follow
+.container-follow {
+    padding-top: 40%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+    background-image: url(../../assets/img/view2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 70% 10%;
+    box-shadow: 0 0 0 0 #ffffff;
+    // background-attachment: scroll;
+}
