@@ -158,7 +158,6 @@
 .embedded {
     // width: 100%;
     // height: 100%;
-
 }
 
 // MUSIC
@@ -173,9 +172,9 @@
     img {
         display: block;
         width: 100%;
-        height: 360px;
-
-        object-fit: cover;
+        // height: 360px;
+        height: inherit;
+        object-fit: contain;
     }
     .active-anim {
         opacity: 1;
@@ -247,7 +246,7 @@
 
 .image {
     width: 100%;
-    // height: 360px;
+    height: 360px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     overflow: hidden;
@@ -256,8 +255,9 @@
     img {
         display: block;
         width: 100%;
+        height: inherit;
         // height: 360px;
-        object-fit: cover;
+        object-fit: contain;
     }
 }
 
@@ -267,15 +267,8 @@
     // height: 360px;
     padding: 60px;
     background-color: var(--light-background-color);
+    position: relative;
 
-    &::before {
-        content: '';
-        position: absolute;
-        width: 8px;
-        height: 240px;
-        border-radius: 3px;
-        background-color: var(--text-color);
-    }
     .quote-icon {
         position: absolute;
         top: 40px;
@@ -291,6 +284,17 @@
     flex-flow: column;
     justify-content: center;
     height: 100%;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 70%;
+        left: 55px;
+        border-radius: 3px;
+        background-color: var(--text-color);
+    }
 }
 .quote-title {
     font-size: 3.5rem;

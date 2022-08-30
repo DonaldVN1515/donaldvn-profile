@@ -9,7 +9,7 @@ BlogSlides.propTypes = {
     className: PropTypes.string,
 };
 
-function BlogSlides(mediaUrl, title, className) {
+function BlogSlides({ mediaUrl, title, className }) {
     const cx = classNames.bind(styles);
 
     const [slideIndex, setSlideIndex] = useState(1);
@@ -24,11 +24,10 @@ function BlogSlides(mediaUrl, title, className) {
     //     };
     // }, [slideIndex]);
 
-
     const nextSlide = () => {
-        if (slideIndex !== mediaUrl.mediaUrl.length) {
+        if (slideIndex !== mediaUrl.length) {
             setSlideIndex(slideIndex + 1);
-        } else if (slideIndex === mediaUrl.mediaUrl.length) {
+        } else if (slideIndex === mediaUrl.length) {
             setSlideIndex(1);
         }
     };
@@ -37,20 +36,22 @@ function BlogSlides(mediaUrl, title, className) {
         if (slideIndex !== 1) {
             setSlideIndex(slideIndex - 1);
         } else if (slideIndex === 1) {
-            setSlideIndex(mediaUrl.mediaUrl.length);
+            setSlideIndex(mediaUrl.length);
         }
     };
 
     const moveDot = (index) => {
         setSlideIndex(index);
     };
-
+    const classes = cx('slides', {
+        [className]: className,
+    });
     return (
-        <div className={cx('slides', className)}>
+        <div className={classes}>
             {/* Slides */}
-            {mediaUrl.mediaUrl.map((data, index) => {
+            {mediaUrl.map((data, index) => {
                 return (
-                    <div key={index} className={cx('slide', slideIndex === index + 1 ? 'active-anim' : '')}>
+                    <div key={index} className={cx('slide', className, slideIndex === index + 1 ? 'active-anim' : '')}>
                         <img src={data} alt={mediaUrl.title} />
                     </div>
                 );
@@ -65,7 +66,7 @@ function BlogSlides(mediaUrl, title, className) {
             </button>
             {/* Dots */}
             <div className={cx('dots')}>
-                {Array.from({ length: mediaUrl.mediaUrl.length }).map((item, index) => (
+                {Array.from({ length: mediaUrl.length }).map((item, index) => (
                     <div
                         key={index}
                         onClick={() => moveDot(index + 1)}

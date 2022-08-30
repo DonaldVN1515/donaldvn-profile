@@ -60,7 +60,7 @@ function BlogList({ dataBlogs, className }) {
                     case 'slides':
                         return (
                             <div key={index} className={cx('item', className)}>
-                                <BlogSlides mediaUrl={data.url} title={data.title} className={cx('slides')} />
+                                <BlogSlides mediaUrl={data.url} title={data.title} className={cx('slides-image')} />
 
                                 <BlogContent
                                     title={data.title}
@@ -100,7 +100,7 @@ function BlogList({ dataBlogs, className }) {
                     case 'image':
                         return (
                             <div key={index} className={cx('item', className)}>
-                                <BlogImage mediaUrl={data.url} title={data.title} />
+                                <BlogImage mediaUrl={data.url} title={data.title} className={cx('image')}/>
 
                                 <BlogContent
                                     title={data.title}

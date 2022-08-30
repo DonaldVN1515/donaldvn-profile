@@ -9,13 +9,13 @@ BlogQuote.propTypes = {
     mediaUrl: PropTypes.string.isRequired,
 };
 
-function BlogQuote(mediaUrl) {
+function BlogQuote({mediaUrl}) {
     const cx = classNames.bind(styles);
 
     return (
         <div className={cx('quote')}>
             <div className={cx('quote-content')}>
-                <p className={cx('quote-title')}>{mediaUrl.mediaUrl}</p>
+                <p className={cx('quote-title')}>{mediaUrl}</p>
 
                 <span className={cx('quote-author')}>Huan Roses</span>
             </div>

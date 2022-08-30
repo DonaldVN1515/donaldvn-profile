@@ -33,13 +33,20 @@ Dark/ Light mode
 
 # Link Git: <https://github.com/DonaldVN1515/donaldvn-profile.git>
 
+# Can not do it
+
+- Badge Blog
+- Bug When Click Pagination and Radio button
+
 # Time
 
 ---
 29/08/2022
 
-- Fix height blogs
-- Filter Blogs --> OK
+- Optimize Blog & Gallerry --OK
+- Fix height blogs, more Blogs --> OK
+- Filter by Category Blogs --> OK
+- Search Filter Blogs --> OK
 - Search Filter --> OK
 
 ---
@@ -47,13 +54,11 @@ Dark/ Light mode
 
 - Filter by Category --> OK
 - Search Filter --> 30%
-- Badge Blog --> Can not do it
 
 ---
 27/08/2022
 
 - Type Blog (label) --> OK
-- Badge Blog
 
 ---
 26/08/2022

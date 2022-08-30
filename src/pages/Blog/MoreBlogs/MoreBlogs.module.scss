@@ -1,27 +1,49 @@
 // MORE ARTICLES
-.more-blogs {
-    background-color: var(--white-color);
-}
-
 .more {
+    margin-top: 20px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: var(--3rd-background-color);
     .icon {
         font-size: 3rem;
     }
 }
+
+.more-blogs {
+}
+
 .title {
     display: flex;
     align-items: center;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    background-color: var(--light-background-color);
     h4 {
         font-size: 3rem;
         padding: 10px 0;
-        margin-left: 10px;
+        margin-left: 5px;
     }
 }
 
 .blog {
     list-style: none;
     border: 1px solid var(--light-background-color);
+    margin-bottom: 10px;
+    background-color: var(--light-background-color);
+    border-radius: 3px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
 .link {
+    background-color: var(--white-color);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 10px 20px;
+    font-weight: 600;
+    &:hover {
+        color: var(--white-color);
+
+        background-color: var(--hover-color);
+    }
 }

@@ -22,7 +22,7 @@ const Blog = () => {
         const dataBlogs = [
             {
                 label: 'music',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
+                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt 1',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
                 url: 'https://soundcloud.com/longdley1/vstra-phong-ft-tgsn-tyronee?si=b4751788915346c7847719ffcb19565e',
@@ -34,7 +34,7 @@ const Blog = () => {
             },
             {
                 label: 'slides',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
+                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt 2',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
                 url: [images.btec14, images.btec17, images.btec19],
@@ -46,7 +46,7 @@ const Blog = () => {
             },
             {
                 label: 'quote',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
+                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt 3',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
                 url: 'Ông cha ta có câu: Ở đời này, có nàm thì mới có lăn, không nàm mà đòi lăn thì chỉ có cạp đất mà lăn.',
@@ -58,58 +58,10 @@ const Blog = () => {
             },
             {
                 label: 'image',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
+                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt 4',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: images.btec19,
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'video',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://www.youtube.com/watch?v=czb2PASrzTA',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'video',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://www.youtube.com/watch?v=czb2PASrzTA',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'music',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://soundcloud.com/longdley1/vstra-phong-ft-tgsn-tyronee?si=b4751788915346c7847719ffcb19565e',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'slides',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: [images.btec14, images.btec17, images.btec19],
+                url: images.avt,
                 published: 'dd/mm/yyy',
                 author: 'DonaldVN',
                 category: 'Blog',
@@ -118,7 +70,7 @@ const Blog = () => {
             },
             {
                 label: 'quote',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
+                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt 5',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
                 url: 'Ông cha ta có câu: Ở đời này, có nàm thì mới có lăn, không nàm mà đòi lăn thì chỉ có cạp đất mà lăn.',
@@ -130,7 +82,7 @@ const Blog = () => {
             },
             {
                 label: 'image',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
+                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt 6',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
                 url: images.btec19,
@@ -142,7 +94,7 @@ const Blog = () => {
             },
             {
                 label: 'video',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
+                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt 7',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
                 url: 'https://www.youtube.com/watch?v=czb2PASrzTA',
@@ -154,7 +106,7 @@ const Blog = () => {
             },
             {
                 label: 'video',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
+                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt 8',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
                 url: 'https://www.youtube.com/watch?v=czb2PASrzTA',
@@ -166,7 +118,7 @@ const Blog = () => {
             },
             {
                 label: 'music',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
+                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt 9',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
                 url: 'https://soundcloud.com/longdley1/vstra-phong-ft-tgsn-tyronee?si=b4751788915346c7847719ffcb19565e',
@@ -178,7 +130,7 @@ const Blog = () => {
             },
             {
                 label: 'slides',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
+                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt 10',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
                 url: [images.btec14, images.btec17, images.btec19],
@@ -190,295 +142,7 @@ const Blog = () => {
             },
             {
                 label: 'quote',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'Ông cha ta có câu: Ở đời này, có nàm thì mới có lăn, không nàm mà đòi lăn thì chỉ có cạp đất mà lăn.',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'image',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: images.btec19,
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'video',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://www.youtube.com/watch?v=czb2PASrzTA',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'video',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://www.youtube.com/watch?v=czb2PASrzTA',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'music',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://soundcloud.com/longdley1/vstra-phong-ft-tgsn-tyronee?si=b4751788915346c7847719ffcb19565e',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'slides',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: [images.btec14, images.btec17, images.btec19],
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'quote',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'Ông cha ta có câu: Ở đời này, có nàm thì mới có lăn, không nàm mà đòi lăn thì chỉ có cạp đất mà lăn.',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'image',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: images.btec19,
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'video',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://www.youtube.com/watch?v=czb2PASrzTA',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'video',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://www.youtube.com/watch?v=czb2PASrzTA',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'music',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://soundcloud.com/longdley1/vstra-phong-ft-tgsn-tyronee?si=b4751788915346c7847719ffcb19565e',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'slides',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: [images.btec14, images.btec17, images.btec19],
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'quote',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'Ông cha ta có câu: Ở đời này, có nàm thì mới có lăn, không nàm mà đòi lăn thì chỉ có cạp đất mà lăn.',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'image',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: images.btec19,
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'video',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://www.youtube.com/watch?v=czb2PASrzTA',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'video',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://www.youtube.com/watch?v=czb2PASrzTA',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'music',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://soundcloud.com/longdley1/vstra-phong-ft-tgsn-tyronee?si=b4751788915346c7847719ffcb19565e',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'slides',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: [images.btec14, images.btec17, images.btec19],
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'quote',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'Ông cha ta có câu: Ở đời này, có nàm thì mới có lăn, không nàm mà đòi lăn thì chỉ có cạp đất mà lăn.',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'image',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: images.btec19,
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'video',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://www.youtube.com/watch?v=czb2PASrzTA',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'video',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://www.youtube.com/watch?v=czb2PASrzTA',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'music',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: 'https://soundcloud.com/longdley1/vstra-phong-ft-tgsn-tyronee?si=b4751788915346c7847719ffcb19565e',
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'slides',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
-                subtitle:
-                    'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
-                url: [images.btec14, images.btec17, images.btec19],
-                published: 'dd/mm/yyy',
-                author: 'DonaldVN',
-                category: 'Blog',
-                viewers: 1,
-                readTime: '00:00',
-            },
-            {
-                label: 'quote',
-                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt',
+                title: 'Video đầu tiên của Team Nhà Nghèo Đi Phượt 11',
                 subtitle:
                     'Kênh #NNDP Nhà Nghèo Đi Phượt là kênh đem các bạn những video về những địa điểm hoang sơ, ít người, tránh xa khỏi ồn ào thành thị. Theo cách của #NNDP Nhà Nghèo Đi Phượt nhằm mang lại những món ăn tinh thần sau những ngày làm việc và học tập mệt mỏi.',
                 url: 'Ông cha ta có câu: Ở đời này, có nàm thì mới có lăn, không nàm mà đòi lăn thì chỉ có cạp đất mà lăn.',
@@ -529,7 +193,7 @@ const Blog = () => {
         // fetch('http://js-blog-api.herokuapp/api/blogs?_limit=10&_page=1')
 
         setBlogs(dataBlogs);
-        setdataFilter(dataBlogs)
+        setdataFilter(dataBlogs);
     }, []);
     // PAGINATION
     // Get current blogs
@@ -590,7 +254,11 @@ const Blog = () => {
                 currentPage={currentPage}
             />
 
-            <MoreBlogs moreBlogs={dataFilter} indexOfLastBlog={indexOfLastBlog} indexOfFirstBlog={indexOfFirstBlog} />
+            <MoreBlogs
+                moreBlogs={dataFilterTitle}
+                indexOfLastBlog={indexOfLastBlog}
+                indexOfFirstBlog={indexOfFirstBlog}
+            />
         </div>
     );
 };
