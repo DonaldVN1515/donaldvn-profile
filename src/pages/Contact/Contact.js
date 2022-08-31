@@ -3,13 +3,14 @@ import React from 'react';
 import classNames from 'classnames/bind';
 import { useState, useRef } from 'react';
 import { Pause, PlayArrow, LocationOn, Phone } from '@mui/icons-material';
-import TextField from '@mui/material/TextField';
 
 import styles from './Contact.module.scss';
 import Overlay from '~/components/Overlay/Overlay';
 import songs from '~/assets/music';
 import Button from '~/components/Buttton';
 import RadioItem from '~/components/RadioItem';
+import InputItem from '~/components/InputItem';
+import { Checkbox } from '@mui/material';
 
 Contact.propTypes = {};
 
@@ -23,6 +24,7 @@ function Contact() {
         isActive ? audioRef.current.pause() : audioRef.current.play();
         setIsActive(!isActive);
     };
+
     return (
         <div className={cx('wrapper')}>
             {/* INTRO - MUSIC */}
@@ -60,7 +62,8 @@ function Contact() {
                                 <LocationOn className={cx('icon')} />
 
                                 <span>Location</span>
-                                <p>66 Vo Van Tan Street, Thanh Khe District, Da Nang City</p>
+                                <p>18 To Vinh Dien, Chu Se, Gia Lai</p>
+                                <p>66 Vo Van Tan, Thanh Khe, Da Nang</p>
                             </div>
                             <div className={cx('contact-me')}>
                                 <Phone className={cx('icon')} />
@@ -68,14 +71,14 @@ function Contact() {
                                 <span>Call Us</span>
                                 <p>
                                     <span>Phone: </span>
-                                    <Button className={cx('contact-phone')} text href="tel:0329702303">
+                                    <Button className={cx('contact-button')} text href="tel:0329702303">
                                         0329702303
                                     </Button>
                                 </p>
                                 <p>
                                     <span>Email: </span>
                                     <Button
-                                        className={cx('contact-email')}
+                                        className={cx('contact-button')}
                                         text
                                         href="mailto:vietplqbdaf200035@fpt.edu.vn"
                                     >
@@ -89,29 +92,19 @@ function Contact() {
                         <h6>Get In Touch</h6>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-                        <TextField id="standard-basic" label="Standard" variant="standard" />
-
-                        <TextField id="standard-basic" label="Standard" variant="standard" />
+                        <InputItem label="Name" required />
+                        <InputItem label="Email" required type="Email" />
 
                         <div className={cx('contact-radio')}>
                             <RadioItem label="I need a Coder" />
                             <RadioItem label="I need help in Finance" />
+                            <RadioItem label="I need other problem" isChecked />
                         </div>
-                        <TextField id="standard-basic" label="Standard" variant="standard" />
 
-                        <TextField id="standard-basic" label="Standard" variant="standard" />
+                        <InputItem label="Give me your question" />
+                        <InputItem label="What when you be meet me?" />
 
-                        <TextField id="standard-basic" label="Standard" variant="standard" />
-
-                        <textarea
-                            placeholder="Detail your issue"
-                            rows="20"
-                            name="comment[text]"
-                            id="comment_text"
-                            cols="40"
-                            class="ui-autocomplete-input"
-                            autocomplete="off"
-                        ></textarea>
+                        <InputItem label="Detail of your issue" multiline rows={5} />
 
                         <Button className={cx('contact-submit')} primary>
                             Send Message
@@ -119,9 +112,40 @@ function Contact() {
                     </form>
                 </div>
             </div>
+            {/* FOLLOW */}
             <div className={cx('container-follow')}>
                 <Overlay className={cx('overlay')} />
-                <div className={cx('follow')}></div>
+                <div className={cx('follow')}>
+                    <h6>FOLLOW ME</h6>
+                    <p>If you love me, let's follow me to get more information.</p>
+
+                    <form className={cx('follow-form')}>
+                        <InputItem label="Email" type="Email" required className={cx('follow-input')} />
+                        <div className={cx('follow-policy')}>
+                            <Checkbox
+                                sx={{
+                                    '& .MuiSvgIcon-root': { fontSize: 20 },
+                                    color: '#a17560',
+                                    '&.Mui-checked': {
+                                        color: '#a17560',
+                                    },
+                                }}
+                            />
+                            <label>
+                                I agree with the Terms of Use and Privacy Policy and I declare that I have read the
+                                information that is required in accordance with Article 13 of GDPR.
+                            </label>
+                        </div>
+                        <div className={cx('follow-btn')}>
+                            <Button className={cx('follow-submit')} primary>
+                                Subscribe
+                            </Button>
+                        </div>
+                    </form>
+                </div>
+                <div className={cx('footer')}>
+                    <h6>© Profile 2022. Design by DONALDVN</h6>
+                </div>
             </div>
         </div>
     );

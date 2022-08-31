@@ -1,0 +1,13 @@
+.wapper {
+    display: flex;
+    overflow: hidden;
+}
+
+.container {
+    flex: 3;
+    background-color: var(--3rd-background-color);
+    height: 100vh;
+    overflow-y: overlay;
+}
+.content {
+}

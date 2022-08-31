@@ -1,6 +1,9 @@
 // routesConfig
 import config from '~/config';
 
+// Layouts
+import { SidebarLayout } from '~/layouts';
+
 // Pages
 import { Home, Gallerry, Blog, Project, Contact, Login } from '~/pages';
 
@@ -10,7 +13,7 @@ const publicRoutes = [
     { path: config.routes.gallerry, component: Gallerry },
     { path: config.routes.blog, component: Blog },
     { path: config.routes.project, component: Project },
-    { path: config.routes.contact, component: Contact },
+    { path: config.routes.contact, component: Contact, layout: SidebarLayout },
     { path: config.routes.login, component: Login, layout: null },
 ];
 

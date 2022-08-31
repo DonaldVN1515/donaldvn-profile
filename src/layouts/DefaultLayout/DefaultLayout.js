@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
 import { useRef } from 'react';
+import PropTypes from 'prop-types';
 // import { motion, useScroll, useSpring } from 'framer-motion';
 
 import styles from './DefaultLayout.module.scss';
@@ -38,6 +39,10 @@ const DefaultLayout = ({ children }) => {
             </div>
         </div>
     );
+};
+
+DefaultLayout.propTypes = {
+    children: PropTypes.node.isRequired,
 };
 
 export default DefaultLayout;

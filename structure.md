@@ -41,11 +41,20 @@ Dark/ Light mode
 # Time
 
 ---
+31/08/2022
+
+- Sidebar Layout --> OK
+- Update Contact Page --> OK
+    Infor
+    follow
+    footer
+
+---
 30/08/2022
 
 - Component Overlay --> OK
 - Contact Page
-    Intro
+    Intro --> OK
     Infor
     follow
 - Optimize Blog & Gallerry --> OK
