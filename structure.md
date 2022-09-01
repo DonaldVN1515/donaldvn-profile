@@ -41,8 +41,15 @@ Dark/ Light mode
 # Time
 
 ---
+01/09/2022
+
+- Page 404
+- Animation typeWrite
+
+---
 31/08/2022
 
+- Project Page
 - Sidebar Layout --> OK
 - Update Contact Page --> OK
     Infor

@@ -5,7 +5,7 @@ import config from '~/config';
 import { SidebarLayout } from '~/layouts';
 
 // Pages
-import { Home, Gallerry, Blog, Project, Contact, Login } from '~/pages';
+import { Home, Gallerry, Blog, Project, Contact, Login, Page404 } from '~/pages';
 
 // publics Routes
 const publicRoutes = [
@@ -15,6 +15,7 @@ const publicRoutes = [
     { path: config.routes.project, component: Project },
     { path: config.routes.contact, component: Contact, layout: SidebarLayout },
     { path: config.routes.login, component: Login, layout: null },
+    { path: config.routes.page404, component: Page404, layout: null },
 ];
 
 // private Routes

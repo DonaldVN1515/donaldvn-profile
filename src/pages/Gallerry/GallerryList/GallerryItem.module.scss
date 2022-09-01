@@ -8,6 +8,8 @@
     border-radius: 5px;
     transition: all 0.25s ease-in-out;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    // transform: translate3d(838px, 0px, 0px) scale3d(1, 1, 1);
+    opacity: 1;
 
     &:hover .img {
         filter: none;

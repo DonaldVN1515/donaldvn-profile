@@ -3,6 +3,7 @@ import React from 'react';
 import classNames from 'classnames/bind';
 import { useState, useRef } from 'react';
 import { Pause, PlayArrow, LocationOn, Phone } from '@mui/icons-material';
+import TypeIt from 'typeit-react';
 
 import styles from './Contact.module.scss';
 import Overlay from '~/components/Overlay/Overlay';
@@ -41,7 +42,11 @@ function Contact() {
                     </div>
                     <audio src={songs.song2} ref={audioRef} loop className={cx('audio')} />
                     <div className={cx('intro-title')}>
-                        <h4>"Hi, I am Quoc Viet"</h4>
+                        <h4>
+                            <TypeIt options={{ speed: 60, waitUntilVisible: true, loopDelay: 5000 }}>
+                                "Hi, I am Quoc Viet"
+                            </TypeIt>
+                        </h4>
                         <p>Web developer</p>
                     </div>
                 </div>

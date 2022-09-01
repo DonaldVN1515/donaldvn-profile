@@ -5,6 +5,7 @@ const routes = {
     project: '/project',
     contact: '/contact',
     login: '/login',
+    page404: '*',
 };
 
 export default routes;

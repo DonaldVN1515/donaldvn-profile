@@ -93,6 +93,13 @@ const Sidebar = () => {
                     <NavMenuItem icon={<Send className={cx('icon')} />} title="Contact" to={config.routes.contact} />
                 </NavMenu>
 
+                {/* MENU ON TABLET & MOBILE */}
+                <div className={cx('menu')}>
+                    <span className={cx('menu-icon', 'icon-top', 'icon-top-click')}></span>
+                    <span className={cx('menu-icon', 'icon-mid', 'icon-mid-click')}></span>
+                    <span className={cx('menu-icon', 'icon-bot', 'icon-bot-click')}></span>
+                </div>
+
                 <div className={cx('show-hide-profile')}>
                     <ChevronLeft className={cx('icon', 'active')} />
                     <ChevronRight className={cx('icon', '')} />

@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
 import { useEffect, useState } from 'react';
+import TypeIt from 'typeit-react';
 
 import styles from './Home.module.scss';
 import img from '~/assets/img';
@@ -12,7 +13,6 @@ const cx = classNames.bind(styles);
 
 const Home = () => {
     const [dataExperience, setDataExperience] = useState([]);
-
     useEffect(() => {
         const userExperience = [
             {
@@ -34,8 +34,12 @@ const Home = () => {
 
     return (
         <div className={cx('home')}>
-            <div className={cx('container')}>
-                <h1>Hi! My name is Quoc Viet, I'm a Creative Designer and Front-end Developer.</h1>
+            <div className={cx('container', 'container-home')}>
+                <h1>
+                    <TypeIt options={{ speed: 60, waitUntilVisible: true, loopDelay: 5000, }}>
+                        Hi! My name is Quoc Viet, I'm a Creative Designer and Front-end Developer.
+                    </TypeIt>
+                </h1>
 
                 <div className={cx('intro')}>
                     <div className={cx('about')}>

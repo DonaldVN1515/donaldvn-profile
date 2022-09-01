@@ -6,6 +6,7 @@ const img = {
     btec14: require('~/assets/img/btec14.jpg'),
     btec19: require('~/assets/img/btec19.jpg'),
     btec17: require('~/assets/img/btec17.jpg'),
+    waveBackground: require('./waveBackgound.svg').default,
 };
 
 export default img;

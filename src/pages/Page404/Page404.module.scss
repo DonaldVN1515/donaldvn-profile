@@ -1,0 +1,254 @@
+.wrapper {
+    height: 100vh;
+    color: var(--white-color);
+    background-color: linear-gradient(180deg,  #939393, #3d3d3b);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    .overlay {
+        background: var(--black-color);
+        opacity: 0.6;
+    }
+}
+
+.page404 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(109.61deg, #4c4f5a 4.26%, #202125 84.84%);
+    border-radius: 5px;
+    padding: 0 80px;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    h4 {
+        font-size: 15rem;
+        line-height: 1;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 5px;
+            background: var(--light-background-color);
+        }
+    }
+    p {
+        font-size: 2rem;
+        padding: 40px;
+        text-align: center;
+    }
+}
+.button {
+    max-width: 200px;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+// CUSTOM
+
+.programming {
+    position: relative;
+    display: block;
+    width: 600px;
+    height: 600px;
+
+    border-radius: 10px;
+    font-size: 1.6rem;
+    z-index: 1;
+    .icon {
+        font-size: 2rem;
+        color: #c5c8d4;
+    }
+}
+
+.code {
+    position: absolute;
+    background: #1d1e22;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    z-index: 5;
+    header {
+        display: grid;
+        grid-template-columns: 36px auto 36px;
+        align-items: center;
+        padding: 10px 5px 10px 10px;
+        h1 {
+            font-weight: 900;
+            font-size: 14px;
+            letter-spacing: 1.57px;
+            color: #c5c8d4;
+            margin: 0;
+        }
+    }
+    &-html {
+        left: -140px;
+        top: 30px;
+        width: 300px;
+        height: 150px;
+    }
+    &-css {
+        left: 80px;
+        top: 50%;
+        width: 300px;
+        height: 170px;
+        transform: translateY(-50%);
+    }
+    &-js {
+        left: -40px;
+        bottom: 25px;
+        width: 300px;
+        height: 160px;
+
+        .block {
+            display: block;
+        }
+    }
+    .code-content {
+        margin: 0 10px 10px;
+        color: white;
+        .c-r {
+            color: #a88038;
+        }
+        .c-o {
+            color: #de7300;
+        }
+        .c-y {
+            color: #e1ca72;
+        }
+        .c-g {
+            color: #74b087;
+        }
+        .c-p {
+            color: #9f8198;
+        }
+        .c-b {
+            color: #7a99ad;
+        }
+        .c-c {
+            color: #666666;
+        }
+    }
+    &-css {
+        .line {
+            @for $i from 1 through 5 {
+                &-#{$i} {
+                    width: 0%;
+                    margin: 0;
+                    border-right: 0.15em solid transparent;
+                    overflow: hidden;
+                    display: inline-block;
+                    white-space: nowrap;
+                }
+            }
+            @for $i from 1 through 4 {
+                &-#{$i} {
+                    animation: typing-#{$i} 3s unquote((($i - 1) * 3) + 's') steps(30, end) forwards,
+                        cursor 1s linear unquote((($i - 1) * 3) + 's') 3;
+                }
+            }
+            &-1,
+            &-3,
+            &-4 {
+                animation-duration: 1s;
+                animation-timing-function: steps(10, end);
+            }
+            &-5 {
+                border-color: transparent;
+                animation: typing-5 3s 12s steps(30, end) forwards, cursor-persist 1s linear 12s infinite;
+            }
+            &-2 {
+                margin-left: 2rem;
+            }
+            &-3,
+            &-4,
+            &-5 {
+                margin-left: 4rem;
+            }
+        }
+    }
+}
+@keyframes typing-1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 60px;
+    }
+}
+@keyframes typing-2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 260px;
+    }
+}
+@keyframes typing-3 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 70px;
+    }
+}
+@keyframes typing-4 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 75px;
+    }
+}
+@keyframes typing-5 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 170px;
+    }
+}
+
+@keyframes cursor {
+    from,
+    to,
+    20%,
+    80% {
+        border-color: transparent;
+    }
+    25%,
+    75% {
+        border-color: white;
+    }
+}
+
+@keyframes cursor-persist {
+    from,
+    45% {
+        border-color: transparent;
+    }
+    50%,
+    to {
+        border-color: white;
+    }
+}

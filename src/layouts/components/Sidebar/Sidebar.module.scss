@@ -6,7 +6,6 @@
     font-size: 1.8rem;
     color: var(--2nd-text-color);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
 }
 
 //  ABOUT ME
@@ -75,7 +74,29 @@
         font-size: 3rem;
     }
 }
-
+// MENU ON TABLET & MOBILE
+.menu {
+    display: none;
+}
+.menu-icon {
+    backface-visibility: hidden;
+    // position: absolute;
+    // left: 0;
+    border-top: 3px solid #fff;
+    width: 100%;
+    transition: 0.55s;
+}
+.icon-top-click {
+    transform: rotate(45deg);
+    transition: 0.55s 0.5s;
+}
+.icon-mid-click {
+    opacity: 0;
+}
+.icon-bot-click {
+    transform: rotate(-405deg);
+    transition: 0.55s 0.5s;
+}
 .show-hide-profile {
     display: flex;
     align-items: center;

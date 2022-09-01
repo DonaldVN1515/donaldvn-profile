@@ -28,6 +28,7 @@
         "react-scripts": "5.0.1",
         "sass": "^1.54.4",
         "tippy": "0.0.0",
+        "typeit-react": "^2.6.0",
         "video.js": "^7.20.2",
         "web-vitals": "^2.1.4"
     },
