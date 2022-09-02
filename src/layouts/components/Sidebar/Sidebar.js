@@ -20,7 +20,7 @@ import {
 import styles from './Sidebar.module.scss';
 import config from '~/config';
 import Button from '~/components/Buttton/Button';
-import PersonalInfor from '~/components/PersonalInfor';
+import PersonalInfor from '~/layouts/components/Sidebar/PersonalInfor';
 import AvtImg from '~/components/AvtImg';
 import img from '~/assets/img';
 import NavMenu, { NavMenuItem } from './NavMenu';
@@ -88,7 +88,7 @@ const Sidebar = () => {
 
                     <NavMenuItem icon={<Book className={cx('icon')} />} title="Blog" to={config.routes.blog} />
 
-                    <NavMenuItem icon={<Web className={cx('icon')} />} title="Project" to={config.routes.project} />
+                    <NavMenuItem icon={<Web className={cx('icon')} />} title="Game" to={config.routes.game} />
 
                     <NavMenuItem icon={<Send className={cx('icon')} />} title="Contact" to={config.routes.contact} />
                 </NavMenu>

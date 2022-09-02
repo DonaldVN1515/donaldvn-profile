@@ -1,0 +1,103 @@
+// Circular Progress
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+// Circular Progress Item
+
+.card {
+    justify-self: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+    padding: 20px 40px;
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        // box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    }
+}
+.percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px transparent;
+    background: transparent;
+    z-index: 3;
+}
+.percent .num {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.percent .num h6 {
+    color: var(--background-color);
+    font-weight: 700;
+    font-size: 3rem;
+    transition: 0.5s;
+}
+.card:hover .percent .num h6 {
+    color: var(--hover-color);
+    // font-size: 60px;
+}
+.percent .num h6 span {
+    color: var(--background-color);
+    font-size: 2.4rem;
+    transition: 0.5s;
+}
+.card:hover .percent .num h6 span {
+    color: var(--hover-color);
+}
+.text {
+    position: relative;
+    color: var(--background-color);
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.card:hover .text {
+    color: var(--hover-color);
+}
+svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 3;
+}
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #ffdece;
+    stroke-width: 7;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+svg circle:nth-child(n + 2) {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+.card:nth-child(n + 1) svg circle:nth-child(n + 2) {
+    // stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: var(--hover-color);
+}

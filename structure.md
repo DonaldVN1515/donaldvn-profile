@@ -43,8 +43,18 @@ Dark/ Light mode
 ---
 01/09/2022
 
-- Page 404
-- Animation typeWrite
+- Fix avatImg Component
+- Update Home
+    Skills
+    Status
+    Portfolio
+- Game Page
+
+---
+01/09/2022
+
+- Page 404 --> OK
+- Animation typeWrite --> OK
 
 ---
 31/08/2022

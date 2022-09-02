@@ -43,7 +43,7 @@ function Contact() {
                     <audio src={songs.song2} ref={audioRef} loop className={cx('audio')} />
                     <div className={cx('intro-title')}>
                         <h4>
-                            <TypeIt options={{ speed: 60, waitUntilVisible: true, loopDelay: 5000 }}>
+                            <TypeIt options={{ speed: 80, waitUntilVisible: true, loopDelay: 5000 }}>
                                 "Hi, I am Quoc Viet"
                             </TypeIt>
                         </h4>

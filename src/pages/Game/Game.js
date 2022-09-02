@@ -1,15 +1,15 @@
 import classNames from 'classnames/bind';
 import React from 'react';
 
-import styles from './Project.module.scss';
-const Project = () => {
+import styles from './Game.module.scss';
+const Game = () => {
     const cx = classNames.bind(styles);
     return (
         <div className={cx('project')}>
-            <h2>PROJECT PAGE</h2>
+            <h2>Game PAGE</h2>
             <div className={cx('wrapper')}></div>
         </div>
     );
 };
 
-export default Project;
+export default Game;

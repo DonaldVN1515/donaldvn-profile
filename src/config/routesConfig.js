@@ -2,7 +2,7 @@ const routes = {
     home: '/',
     gallerry: '/gallerry',
     blog: '/blog',
-    project: '/project',
+    game: '/game',
     contact: '/contact',
     login: '/login',
     page404: '*',

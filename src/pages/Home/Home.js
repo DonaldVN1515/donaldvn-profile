@@ -1,13 +1,21 @@
 import classNames from 'classnames/bind';
 import { useEffect, useState } from 'react';
 import TypeIt from 'typeit-react';
+import {
+    SentimentVerySatisfiedOutlined,
+    BusinessCenterOutlined,
+    AccessAlarmsOutlined,
+    EmojiEventsOutlined,
+} from '@mui/icons-material';
 
 import styles from './Home.module.scss';
 import img from '~/assets/img';
 // import PersonalInfor from '~/components/PersonalInfor';
 import AvtImg from '~/components/AvtImg';
-import PeriodExperience from '~/components/PeriodExperience';
-import SkillbarItem from '~/components/SkillbarItem/SkillbarItem';
+import PeriodExperience from '~/pages/Home/PeriodExperience';
+import { CircularProgress, CircularProgressItem } from '~/pages/Home/CircularProgress';
+import Overlay from '~/components/Overlay';
+import PortfolioItem from '~/pages/Home/PortfolioItem';
 
 const cx = classNames.bind(styles);
 
@@ -34,9 +42,9 @@ const Home = () => {
 
     return (
         <div className={cx('home')}>
-            <div className={cx('container', 'container-home')}>
+            <div className={cx('container')}>
                 <h1>
-                    <TypeIt options={{ speed: 60, waitUntilVisible: true, loopDelay: 5000, }}>
+                    <TypeIt options={{ speed: 60, waitUntilVisible: true, loopDelay: 5000 }}>
                         Hi! My name is Quoc Viet, I'm a Creative Designer and Front-end Developer.
                     </TypeIt>
                 </h1>
@@ -71,6 +79,69 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            {/* PERSONAL SKILLS */}
+            <div className={cx('container')}>
+                <h4>Skills</h4>
+                <h6>
+                    One of the greatest strenghs about being a designer with an engineer background is that not only I
+                    can handle the graphical aspects of a project
+                </h6>
+                <CircularProgress>
+                    <CircularProgressItem label="HTML" value={90} />
+                    <CircularProgressItem label="CSS" value={90} />
+                    <CircularProgressItem label="Javascript" value={80} />
+                    <CircularProgressItem label="Reactjs" value={70} />
+                    <CircularProgressItem label="Database" value={60} />
+                    <CircularProgressItem label="NodeJS" value={50} />
+                    <CircularProgressItem label="English" value={70} />
+                    <CircularProgressItem label="Photoshop" value={60} />
+                </CircularProgress>
+            </div>
+            {/* PERSONAL Status */}
+            <div className={cx('status')}>
+                <Overlay className={cx('overlay')} />
+
+                <div className={cx('status-content')}>
+                    <div className={cx('status-item')}>
+                        <BusinessCenterOutlined className={cx('status-icon')} />
+                        <span>10</span>
+                        <h6>Projects done</h6>
+                    </div>
+                    <div className={cx('status-item')}>
+                        <AccessAlarmsOutlined className={cx('status-icon')} />
+                        <span>1,013</span>
+                        <h6>Hous of work</h6>
+                    </div>
+
+                    <div className={cx('status-item')}>
+                        <EmojiEventsOutlined className={cx('status-icon')} />
+                        <span>3</span>
+                        <h6>Awards Won</h6>
+                    </div>
+
+                    <div className={cx('status-item')}>
+                        <SentimentVerySatisfiedOutlined className={cx('status-icon')} />
+                        <span>30</span>
+                        <h6>Happy Clients</h6>
+                    </div>
+                </div>
+            </div>
+            {/* PORTFOLIO */}
+            <div className={cx('container')}>
+                <h4>Portfolio</h4>
+                <h6>
+                    I have been good at math and science since my childhood, studying and obtaining a Master’s Degree in
+                    Electrical Engineering.
+                </h6>
+                <div className={cx('portfolio')}>
+                    <PortfolioItem src={img.btec14} alt="" category="category" title="title" href="#" />
+                    <PortfolioItem src={img.avt} alt="" category="category" title="title" href="#" />
+                    <PortfolioItem src={img.avt2} alt="" category="category" title="title" href="#" />
+                    <PortfolioItem src={img.noImage} alt="" category="category" title="title" href="#" />
+                    <PortfolioItem src={img.btec19} alt="" category="category" title="title" href="#" />
+                    <PortfolioItem src={img.btec17} alt="" category="category" title="title" href="#" />
+                </div>
+            </div>
             {/* Experience */}
             <div className={cx('container')}>
                 <h4 className={cx('title')}>Work Experiences</h4>
@@ -81,30 +152,29 @@ const Home = () => {
 
                 <PeriodExperience dataExperience={dataExperience} />
             </div>
-            {/* PERSOONAL SKILLS */}
+            {/* EDUCATION */}
             <div className={cx('container')}>
-                <h4>Skills</h4>
+                <h4>Education</h4>
                 <h6>
-                    One of the greatest strenghs about being a designer with an engineer background is that not only I
-                    can handle the graphical aspects of a project
+                    I have been good at math and science since my childhood, studying and obtaining a Master’s Degree in
+                    Electrical Engineering.
                 </h6>
-                <div className={cx('skills')}>
+                <div className={cx('education')}>
                     <ul>
-                        <li>Graphic Design</li>
-                        <li>Interaction Design</li>
-                        <li>App UI</li>
-                        <li>Mobile Design</li>
-                        <li>Web Design</li>
-                    </ul>
-                    <ul>
-                        <li>PHP Developer</li>
-                        <li>MySQL Database</li>
-                        <li>Big Data</li>
-                        <li>HTML5 & CSS3</li>
-                        <li>jQuery Javascript</li>
+                        <li>
+                            <h6>Master of Industrial Design from Harvard</h6>
+                            <p>September 2015 - June 2018</p>
+                        </li>
+                        <li>
+                            <h6>BA of Technology Science from Harvard</h6>
+                            <p>August 2011 - June 2015</p>
+                        </li>
+                        <li>
+                            <h6>Master of Industrial Design from Harvard</h6>
+                            <p>September 2015 - June 2018</p>
+                        </li>
                     </ul>
                 </div>
-                <SkillbarItem />
             </div>
             {/* AWARDS */}
             <div className={cx('container')}>
@@ -130,51 +200,27 @@ const Home = () => {
                     </ul>
                 </div>
             </div>
-            {/* HOBBIES */}
+            {/* REVIEW */}
             <div className={cx('container')}>
-                <h4>Hobbies</h4>
+                <h4>REVIEW</h4>
                 <h6>
-                    I have been good at math and science since my childhood, studying and obtaining a Master’s Degree in
-                    Electrical Engineering.
+                    One of the greatest strenghs about being a designer with an engineer background is that not only I
+                    can handle the graphical aspects of a project
                 </h6>
-                <div className={cx('education')}>
+                <div className={cx('skills')}>
                     <ul>
-                        <li>
-                            <h6>Master of Industrial Design from Harvard</h6>
-                            <p>September 2015 - June 2018</p>
-                        </li>
-                        <li>
-                            <h6>BA of Technology Science from Harvard</h6>
-                            <p>August 2011 - June 2015</p>
-                        </li>
-                        <li>
-                            <h6>Master of Industrial Design from Harvard</h6>
-                            <p>September 2015 - June 2018</p>
-                        </li>
+                        <li>Graphic Design</li>
+                        <li>Interaction Design</li>
+                        <li>App UI</li>
+                        <li>Mobile Design</li>
+                        <li>Web Design</li>
                     </ul>
-                </div>
-            </div>
-            {/* EDUCATION */}
-            <div className={cx('container')}>
-                <h4>Education</h4>
-                <h6>
-                    I have been good at math and science since my childhood, studying and obtaining a Master’s Degree in
-                    Electrical Engineering.
-                </h6>
-                <div className={cx('education')}>
                     <ul>
-                        <li>
-                            <h6>Master of Industrial Design from Harvard</h6>
-                            <p>September 2015 - June 2018</p>
-                        </li>
-                        <li>
-                            <h6>BA of Technology Science from Harvard</h6>
-                            <p>August 2011 - June 2015</p>
-                        </li>
-                        <li>
-                            <h6>Master of Industrial Design from Harvard</h6>
-                            <p>September 2015 - June 2018</p>
-                        </li>
+                        <li>PHP Developer</li>
+                        <li>MySQL Database</li>
+                        <li>Big Data</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>jQuery Javascript</li>
                     </ul>
                 </div>
             </div>
