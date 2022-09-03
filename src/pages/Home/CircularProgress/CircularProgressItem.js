@@ -6,7 +6,7 @@ import styles from './CircularProgressItem.module.scss';
 
 const cx = classNames.bind(styles);
 
-const CircularProgressItem = ({ label, value }) => {
+const CircularProgressItem = ({ data }) => {
     const [valueProgress, setValueProgress] = useState(0);
 
     const circleRef = useRef();
@@ -14,7 +14,7 @@ const CircularProgressItem = ({ label, value }) => {
     useEffect(() => {
         const circumference = circleRef.current.getTotalLength();
         let speed = 1000;
-        setValueProgress(value);
+        setValueProgress(data.value);
         let progress = setInterval(() => {
             circleRef.current.style.strokeDashoffset = circumference - (valueProgress * circumference) / 100;
         }, speed);
@@ -22,7 +22,7 @@ const CircularProgressItem = ({ label, value }) => {
         return () => {
             clearInterval(progress);
         };
-    }, [value, valueProgress]);
+    }, [data.value, valueProgress]);
 
     return (
         <div className={cx('card')}>
@@ -38,15 +38,13 @@ const CircularProgressItem = ({ label, value }) => {
                     </h6>
                 </div>
             </div>
-            <h2 className={cx('text')}>{label}</h2>
+            <h2 className={cx('text')}>{data.title}</h2>
         </div>
     );
 };
 
 CircularProgressItem.propTypes = {
-    label: PropTypes.string.isRequired,
-    value: PropTypes.number.isRequired,
-    speed: PropTypes.number,
+    data: PropTypes.object.isRequired,
 };
 
 export default CircularProgressItem;

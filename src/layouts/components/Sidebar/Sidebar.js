@@ -21,7 +21,7 @@ import styles from './Sidebar.module.scss';
 import config from '~/config';
 import Button from '~/components/Buttton/Button';
 import PersonalInfor from '~/layouts/components/Sidebar/PersonalInfor';
-import AvtImg from '~/components/AvtImg';
+import Image from '~/components/Image';
 import img from '~/assets/img';
 import NavMenu, { NavMenuItem } from './NavMenu';
 
@@ -33,7 +33,7 @@ const Sidebar = () => {
             <div className={cx('about')}>
                 {/* AVT IMG */}
 
-                <AvtImg src={img.avt} alt="Quoc Viet" />
+                <Image src={img.avt} alt="Quoc Viet" />
 
                 <h3 className={cx('name')}>Phan Lam Quoc Viet</h3>
                 <h4 className={cx('job')}>Web Developer</h4>

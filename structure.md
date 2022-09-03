@@ -9,7 +9,7 @@ debugger
 }, 5000);
 
 # Structure
-
+color: #ea2e0d
 layout:
         header
             location
@@ -33,6 +33,8 @@ Dark/ Light mode
 
 # Link Git: <https://github.com/DonaldVN1515/donaldvn-profile.git>
 
+# Color: #ea2e0d
+
 # Can not do it
 
 - Badge Blog
@@ -41,13 +43,22 @@ Dark/ Light mode
 # Time
 
 ---
-01/09/2022
+03/09/2022
+
+- Fix Image Component --> OK
+- Update Home
+    Education --> OK
+    Awards
+    People review
+
+---
+02/09/2022
 
 - Fix avatImg Component
 - Update Home
-    Skills
-    Status
-    Portfolio
+    Skills --> OK
+    Status --> OK
+    Portfolio --> OK
 - Game Page
 
 ---

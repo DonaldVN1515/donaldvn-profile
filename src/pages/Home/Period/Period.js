@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
-import styles from './PeriodExperience.module.scss';
+import styles from './Period.module.scss';
 
 const cx = classNames.bind(styles);
 
-const PeriodExperience = ({ dataExperience }) => {
+const Period = ({ data }) => {
     return (
         <div className={cx('experience')}>
-            {dataExperience.map((period, index) => (
+            {data.map((period, index) => (
                 <div key={index} className={cx('period')}>
                     <div className={cx('work')}>
                         <h3 className={cx('title')}>{period.title}</h3>
@@ -18,9 +18,9 @@ const PeriodExperience = ({ dataExperience }) => {
                         <h4 className={cx('job')}>{period.job}</h4>
                         <p className={cx('description')}>{period.description}</p>
                         <ul className={cx('details')}>
-                            <li>{period.details.line1}</li>
-                            <li>{period.details.line2}</li>
-                            <li>{period.details.line3}</li>
+                            {period.details.map((detail) => (
+                                <li>{detail}</li>
+                            ))}
                         </ul>
                     </div>
                 </div>
@@ -28,7 +28,7 @@ const PeriodExperience = ({ dataExperience }) => {
         </div>
     );
 };
-PeriodExperience.propTypes = {
-    dataExperience: PropTypes.array.isRequired,
+Period.propTypes = {
+    data: PropTypes.array.isRequired,
 };
-export default PeriodExperience;
+export default Period;

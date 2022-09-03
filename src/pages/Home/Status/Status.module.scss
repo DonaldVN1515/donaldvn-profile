@@ -1,0 +1,50 @@
+// STATUS
+.status {
+    background-color: #28353e;
+    background-image: url(../../../assets/img/view2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0 -40px;
+    padding-top: 350px;
+    position: relative;
+
+    .overlay {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .icon {
+        font-size: 7rem;
+        color: var(--hover-color);
+    }
+
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    color: var(--white-color);
+}
+.item {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    & > span {
+        padding: 6px 0;
+        font-size: 4rem;
+    }
+
+    & > h6 {
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+}

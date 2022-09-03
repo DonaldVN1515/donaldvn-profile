@@ -11,33 +11,111 @@ import {
 import styles from './Home.module.scss';
 import img from '~/assets/img';
 // import PersonalInfor from '~/components/PersonalInfor';
-import AvtImg from '~/components/AvtImg';
-import PeriodExperience from '~/pages/Home/PeriodExperience';
+import Image from '~/components/Image';
+import Period from '~/pages/Home/Period';
 import { CircularProgress, CircularProgressItem } from '~/pages/Home/CircularProgress';
-import Overlay from '~/components/Overlay';
 import PortfolioItem from '~/pages/Home/PortfolioItem';
+import AwardItem from '~/pages/Home/AwardItem';
+import Status from '~/pages/Home/Status';
 
 const cx = classNames.bind(styles);
 
 const Home = () => {
     const [dataExperience, setDataExperience] = useState([]);
+    const [dataEducation, setDataEducation] = useState([]);
+    const [dataSkills, setDataSkills] = useState([]);
+    const [status, setStatus] = useState([]);
     useEffect(() => {
-        const userExperience = [
-            {
-                title: 'Tutors',
-                time: 'May 2022 - August 2022',
-                job: 'Tutors at British International College BTEC FPT',
-                description:
-                    'Support teachers to manage students, answer academic and professional problems of the subject.',
-                details: {
-                    line1: 'Students are very enthusiastic, diligent in studying, always acquiring new knowledge.',
-                    line2: "The environment in The United Kingdom's is vibrant, positive and always fun to learn.",
-                    line3: 'I also learned how to communicate more effectively, get used to many new relationships.',
+        const dataDonaldVN = {
+            experience: [
+                {
+                    title: 'Tutors',
+                    time: 'May 2022 - August 2022',
+                    job: 'Tutors at British International College BTEC FPT',
+                    description:
+                        'Support teachers to manage students, answer academic and professional problems of the subject.',
+                    details: [
+                        'Students are very enthusiastic, diligent in studying, always acquiring new knowledge.',
+                        "The environment in The United Kingdom's is vibrant, positive and always fun to learn.",
+                        'I also learned how to communicate more effectively, get used to many new relationships.',
+                    ],
                 },
-            },
-        ];
+            ],
+            education: [
+                {
+                    title: 'High School',
+                    time: 'September 2017 - August 2020',
+                    job: 'student at Nguyen Binh Khiem High School',
+                    description: 'This is wonderful memory that I never forgot',
+                    details: [
+                        'Students are very enthusiastic, diligent in studying, always acquiring new knowledge.',
+                        "The environment in The United Kingdom's is vibrant, positive and always fun to learn.",
+                        'I also learned how to communicate more effectively, get used to many new relationships.',
+                    ],
+                },
+            ],
+            skills: [
+                {
+                    title: 'HTML',
+                    value: 90,
+                },
 
-        setDataExperience(userExperience);
+                {
+                    title: 'CSS',
+                    value: 90,
+                },
+                {
+                    title: 'Javascript',
+                    value: 90,
+                },
+                {
+                    title: 'Reactjs',
+                    value: 90,
+                },
+                {
+                    title: 'Database',
+                    value: 90,
+                },
+                {
+                    title: 'NodeJS',
+                    value: 90,
+                },
+                {
+                    title: 'English',
+                    value: 90,
+                },
+                {
+                    title: 'Photoshop',
+                    value: 90,
+                },
+            ],
+            status: [
+                {
+                    icon: <BusinessCenterOutlined />,
+                    value: 10,
+                    title: 'Projects done',
+                },
+                {
+                    icon: <AccessAlarmsOutlined />,
+                    value: 1013,
+                    title: 'Hours of work',
+                },
+                {
+                    icon: <EmojiEventsOutlined />,
+                    value: 3,
+                    title: 'Awards Won',
+                },
+                {
+                    icon: <SentimentVerySatisfiedOutlined />,
+                    value: 30,
+                    title: 'Happy Clients',
+                },
+            ],
+        };
+        setDataExperience(dataDonaldVN.experience);
+        setDataEducation(dataDonaldVN.education);
+        setDataSkills(dataDonaldVN.skills);
+        setStatus(dataDonaldVN.status);
     }, []);
 
     return (
@@ -70,62 +148,29 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div className={cx('infor')}>
-                        <AvtImg cover src={img.avt2} alt="Avatar" />
+                    <Image src={img.avt2} alt="Avatar" className={cx('infor')} />
 
-                        {/* <h3 className={cx('name')}>Phan Lam Quoc Viet</h3> */}
+                    {/* <h3 className={cx('name')}>Phan Lam Quoc Viet</h3> */}
 
-                        {/* <PersonalInfor address="Da Nang city, Viet Nam" className={cx('item')} /> */}
-                    </div>
+                    {/* <PersonalInfor address="Da Nang city, Viet Nam" className={cx('item')} /> */}
                 </div>
             </div>
             {/* PERSONAL SKILLS */}
             <div className={cx('container')}>
                 <h4>Skills</h4>
+                {/* <FontAwesomeIcon icon="fa-solid fa-briefcase" /> */}
                 <h6>
                     One of the greatest strenghs about being a designer with an engineer background is that not only I
                     can handle the graphical aspects of a project
                 </h6>
                 <CircularProgress>
-                    <CircularProgressItem label="HTML" value={90} />
-                    <CircularProgressItem label="CSS" value={90} />
-                    <CircularProgressItem label="Javascript" value={80} />
-                    <CircularProgressItem label="Reactjs" value={70} />
-                    <CircularProgressItem label="Database" value={60} />
-                    <CircularProgressItem label="NodeJS" value={50} />
-                    <CircularProgressItem label="English" value={70} />
-                    <CircularProgressItem label="Photoshop" value={60} />
+                    {dataSkills.map((data, index) => (
+                        <CircularProgressItem key={index} data={data} />
+                    ))}
                 </CircularProgress>
             </div>
             {/* PERSONAL Status */}
-            <div className={cx('status')}>
-                <Overlay className={cx('overlay')} />
-
-                <div className={cx('status-content')}>
-                    <div className={cx('status-item')}>
-                        <BusinessCenterOutlined className={cx('status-icon')} />
-                        <span>10</span>
-                        <h6>Projects done</h6>
-                    </div>
-                    <div className={cx('status-item')}>
-                        <AccessAlarmsOutlined className={cx('status-icon')} />
-                        <span>1,013</span>
-                        <h6>Hous of work</h6>
-                    </div>
-
-                    <div className={cx('status-item')}>
-                        <EmojiEventsOutlined className={cx('status-icon')} />
-                        <span>3</span>
-                        <h6>Awards Won</h6>
-                    </div>
-
-                    <div className={cx('status-item')}>
-                        <SentimentVerySatisfiedOutlined className={cx('status-icon')} />
-                        <span>30</span>
-                        <h6>Happy Clients</h6>
-                    </div>
-                </div>
-            </div>
+            <Status data={status} />
             {/* PORTFOLIO */}
             <div className={cx('container')}>
                 <h4>Portfolio</h4>
@@ -150,7 +195,7 @@ const Home = () => {
                     to improve my skills and qualifications as soon as possible.
                 </h6>
 
-                <PeriodExperience dataExperience={dataExperience} />
+                <Period data={dataExperience} />
             </div>
             {/* EDUCATION */}
             <div className={cx('container')}>
@@ -159,47 +204,13 @@ const Home = () => {
                     I have been good at math and science since my childhood, studying and obtaining a Master’s Degree in
                     Electrical Engineering.
                 </h6>
-                <div className={cx('education')}>
-                    <ul>
-                        <li>
-                            <h6>Master of Industrial Design from Harvard</h6>
-                            <p>September 2015 - June 2018</p>
-                        </li>
-                        <li>
-                            <h6>BA of Technology Science from Harvard</h6>
-                            <p>August 2011 - June 2015</p>
-                        </li>
-                        <li>
-                            <h6>Master of Industrial Design from Harvard</h6>
-                            <p>September 2015 - June 2018</p>
-                        </li>
-                    </ul>
-                </div>
+                <Period data={dataEducation} />
             </div>
             {/* AWARDS */}
-            <div className={cx('container')}>
-                <h4>Awards</h4>
-                <h6>
-                    I have been good at math and science since my childhood, studying and obtaining a Master’s Degree in
-                    Electrical Engineering.
-                </h6>
-                <div className={cx('education')}>
-                    <ul>
-                        <li>
-                            <h6>Master of Industrial Design from Harvard</h6>
-                            <p>September 2015 - June 2018</p>
-                        </li>
-                        <li>
-                            <h6>BA of Technology Science from Harvard</h6>
-                            <p>August 2011 - June 2015</p>
-                        </li>
-                        <li>
-                            <h6>Master of Industrial Design from Harvard</h6>
-                            <p>September 2015 - June 2018</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+
+            <ul className={cx('awards')}>
+                <AwardItem src={img.btec14} alt="" title="title" time="dd/mm/yyyy" />
+            </ul>
             {/* REVIEW */}
             <div className={cx('container')}>
                 <h4>REVIEW</h4>
@@ -207,22 +218,7 @@ const Home = () => {
                     One of the greatest strenghs about being a designer with an engineer background is that not only I
                     can handle the graphical aspects of a project
                 </h6>
-                <div className={cx('skills')}>
-                    <ul>
-                        <li>Graphic Design</li>
-                        <li>Interaction Design</li>
-                        <li>App UI</li>
-                        <li>Mobile Design</li>
-                        <li>Web Design</li>
-                    </ul>
-                    <ul>
-                        <li>PHP Developer</li>
-                        <li>MySQL Database</li>
-                        <li>Big Data</li>
-                        <li>HTML5 & CSS3</li>
-                        <li>jQuery Javascript</li>
-                    </ul>
-                </div>
+                <div className={cx('skills')}></div>
             </div>
         </div>
     );
