@@ -9,15 +9,6 @@
         font-size: 4.6rem;
         text-align: justify;
     }
-    & > h4 {
-        text-transform: uppercase;
-        font-size: 3.6rem;
-    }
-    & > h6 {
-        font-size: 2rem;
-        font-weight: 500;
-        padding: 20px 0;
-    }
 }
 // INTRODUCE
 .intro {
@@ -28,6 +19,7 @@
     margin-right: 40px;
     flex: 3;
     p {
+        text-indent: 30px;
         font-size: 2.1rem;
         margin-bottom: 20px;
     }
@@ -37,9 +29,30 @@
     width: 100%;
     flex: 2;
     max-height: 400px;
-    // .item {
-    //     font-size: 1.6rem;
-    // }
+    overflow: unset;
+    border-radius: 5px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    position: relative;
+
+    & > img {
+        border-radius: 5px;
+        position: absolute;
+        z-index: 2;
+    }
+    &::before {
+        border-radius: 5px;
+        border: 6px solid #ffb400;
+        display: inline-block;
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        transform: translate3d(30px, 30px, -30px);
+    }
 }
 
 .name {
@@ -50,15 +63,6 @@
 // SKILLS
 .skills {
 }
-
-// portfolio
-.portfolio {
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
 
 // Education
 .education {

@@ -1,0 +1,11 @@
+.wrapper {
+    & > h4 {
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
+    & > p {
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 10px 0;
+    }
+}

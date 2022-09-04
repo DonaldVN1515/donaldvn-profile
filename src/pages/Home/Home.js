@@ -1,12 +1,9 @@
 import classNames from 'classnames/bind';
 import { useEffect, useState } from 'react';
 import TypeIt from 'typeit-react';
-import {
-    SentimentVerySatisfiedOutlined,
-    BusinessCenterOutlined,
-    AccessAlarmsOutlined,
-    EmojiEventsOutlined,
-} from '@mui/icons-material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faFaceLaughBeam } from '@fortawesome/free-regular-svg-icons';
+import { faBriefcase, faTrophy } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Home.module.scss';
 import img from '~/assets/img';
@@ -15,8 +12,10 @@ import Image from '~/components/Image';
 import Period from '~/pages/Home/Period';
 import { CircularProgress, CircularProgressItem } from '~/pages/Home/CircularProgress';
 import PortfolioItem from '~/pages/Home/PortfolioItem';
-import AwardItem from '~/pages/Home/AwardItem';
+import Technologies from '~/pages/Home/Technologies';
 import Status from '~/pages/Home/Status';
+import Title from '~/pages/Home/Title';
+import Reviews from '~/pages/Home/Reviews';
 
 const cx = classNames.bind(styles);
 
@@ -24,7 +23,10 @@ const Home = () => {
     const [dataExperience, setDataExperience] = useState([]);
     const [dataEducation, setDataEducation] = useState([]);
     const [dataSkills, setDataSkills] = useState([]);
-    const [status, setStatus] = useState([]);
+    const [dataStatus, setDataStatus] = useState([]);
+    const [dataProfolio, seDataProfolio] = useState([]);
+    const [dataTechnologies, setDataTechnologies] = useState([]);
+    const [dataReviews, setDataReviews] = useState([]);
     useEffect(() => {
         const dataDonaldVN = {
             experience: [
@@ -70,52 +72,220 @@ const Home = () => {
                 },
                 {
                     title: 'Reactjs',
-                    value: 90,
+                    value: 70,
                 },
                 {
                     title: 'Database',
-                    value: 90,
+                    value: 60,
                 },
                 {
                     title: 'NodeJS',
-                    value: 90,
+                    value: 70,
                 },
                 {
                     title: 'English',
-                    value: 90,
+                    value: 80,
                 },
                 {
                     title: 'Photoshop',
-                    value: 90,
+                    value: 70,
                 },
             ],
             status: [
                 {
-                    icon: <BusinessCenterOutlined />,
+                    icon: <FontAwesomeIcon icon={faBriefcase} />,
                     value: 10,
                     title: 'Projects done',
                 },
                 {
-                    icon: <AccessAlarmsOutlined />,
+                    icon: <FontAwesomeIcon icon={faClock} />,
+
                     value: 1013,
                     title: 'Hours of work',
                 },
                 {
-                    icon: <EmojiEventsOutlined />,
+                    icon: <FontAwesomeIcon icon={faTrophy} />,
                     value: 3,
-                    title: 'Awards Won',
+                    title: 'Technologies Won',
                 },
                 {
-                    icon: <SentimentVerySatisfiedOutlined />,
+                    icon: <FontAwesomeIcon icon={faFaceLaughBeam} />,
                     value: 30,
                     title: 'Happy Clients',
+                },
+            ],
+            portfolio: [
+                {
+                    category: 'category',
+                    title: 'title',
+                    imageUrl: img.avt1,
+                    href: '#',
+                },
+                {
+                    category: 'category',
+                    title: 'title',
+                    imageUrl: img.btec14,
+                    href: '#',
+                },
+                {
+                    category: 'category',
+                    title: 'title',
+                    imageUrl: img.btec14,
+                    href: '#',
+                },
+                {
+                    category: 'category',
+                    title: 'title',
+                    imageUrl: img.btec14,
+                    href: '#',
+                },
+                {
+                    category: 'category',
+                    title: 'title',
+                    imageUrl: img.btec14,
+                    href: '#',
+                },
+                {
+                    category: 'category',
+                    title: 'title',
+                    imageUrl: img.btec14,
+                    href: '#',
+                },
+            ],
+            technologies: [
+                {
+                    title: 'title',
+                    time: 'dd/mm/yyy',
+                    imageUrl: img.axios,
+                },
+                {
+                    title: 'title',
+                    time: 'dd/mm/yyy',
+
+                    imageUrl: img.babel,
+                },
+                {
+                    title: 'title',
+                    time: 'dd/mm/yyy',
+                    imageUrl: img.css,
+                },
+                {
+                    title: 'title',
+                    time: 'dd/mm/yyy',
+
+                    imageUrl: img.fontAwsome,
+                },
+                {
+                    title: 'title',
+                    time: 'dd/mm/yyy',
+                    imageUrl: img.frammerMotion,
+                },
+                {
+                    title: 'title',
+                    time: 'dd/mm/yyy',
+
+                    imageUrl: img.html,
+                },
+                {
+                    title: 'title',
+                    time: 'dd/mm/yyy',
+                    imageUrl: img.axios,
+                },
+                {
+                    title: 'title',
+                    time: 'dd/mm/yyy',
+
+                    imageUrl: img.babel,
+                },
+                {
+                    title: 'title',
+                    time: 'dd/mm/yyy',
+                    imageUrl: img.css,
+                },
+                {
+                    title: 'title',
+                    time: 'dd/mm/yyy',
+
+                    imageUrl: img.fontAwsome,
+                },
+                {
+                    title: 'title',
+                    time: 'dd/mm/yyy',
+                    imageUrl: img.frammerMotion,
+                },
+                {
+                    title: 'title',
+                    time: 'dd/mm/yyy',
+
+                    imageUrl: img.html,
+                },
+            ],
+            dataReviews: [
+                {
+                    name: 'name',
+                    linkFace: '#',
+                    imageUrl: img.avt2,
+                    createAt: 'dd/mm/yyy',
+                    review: 'LoremMollit veniam est est excepteur ullamco laborum enim proident non deserunt id ut minim tempor.',
+                },
+                {
+                    name: 'name',
+                    linkFace: '#',
+                    imageUrl: img.btec17,
+                    createAt: 'dd/mm/yyy',
+                    review: 'LoremMollit veniam est est excepteur ullamco laborum enim proident non deserunt id ut minim tempor.',
+                },
+                {
+                    name: 'name',
+                    linkFace: '#',
+                    imageUrl: img.btec19,
+                    createAt: 'dd/mm/yyy',
+                    review: 'LoremMollit veniam est est excepteur ullamco laborum enim proident non deserunt id ut minim tempor.',
+                },
+                {
+                    name: 'name',
+                    linkFace: '#',
+                    imageUrl: img.btec14,
+                    createAt: 'dd/mm/yyy',
+                    review: 'LoremMollit veniam est est excepteur ullamco laborum enim proident non deserunt id ut minim tempor.',
+                },
+                {
+                    name: 'name',
+                    linkFace: '#',
+                    imageUrl: img.avt2,
+                    createAt: 'dd/mm/yyy',
+                    review: 'LoremMollit veniam est est excepteur ullamco laborum enim proident non deserunt id ut minim tempor.',
+                },
+                {
+                    name: 'name',
+                    linkFace: '#',
+                    imageUrl: img.btec17,
+                    createAt: 'dd/mm/yyy',
+                    review: 'LoremMollit veniam est est excepteur ullamco laborum enim proident non deserunt id ut minim tempor.',
+                },
+                {
+                    name: 'name',
+                    linkFace: '#',
+                    imageUrl: img.btec19,
+                    createAt: 'dd/mm/yyy',
+                    review: 'LoremMollit veniam est est excepteur ullamco laborum enim proident non deserunt id ut minim tempor.',
+                },
+                {
+                    name: 'name',
+                    linkFace: '#',
+                    imageUrl: img.btec14,
+                    createAt: 'dd/mm/yyy',
+                    review: 'LoremMollit veniam est est excepteur ullamco laborum enim proident non deserunt id ut minim tempor.',
                 },
             ],
         };
         setDataExperience(dataDonaldVN.experience);
         setDataEducation(dataDonaldVN.education);
         setDataSkills(dataDonaldVN.skills);
-        setStatus(dataDonaldVN.status);
+        setDataStatus(dataDonaldVN.status);
+        seDataProfolio(dataDonaldVN.portfolio);
+        setDataTechnologies(dataDonaldVN.technologies);
+        setDataReviews(dataDonaldVN.dataReviews);
     }, []);
 
     return (
@@ -149,77 +319,68 @@ const Home = () => {
                     </div>
 
                     <Image src={img.avt2} alt="Avatar" className={cx('infor')} />
-
-                    {/* <h3 className={cx('name')}>Phan Lam Quoc Viet</h3> */}
-
-                    {/* <PersonalInfor address="Da Nang city, Viet Nam" className={cx('item')} /> */}
                 </div>
             </div>
             {/* PERSONAL SKILLS */}
             <div className={cx('container')}>
-                <h4>Skills</h4>
-                {/* <FontAwesomeIcon icon="fa-solid fa-briefcase" /> */}
-                <h6>
-                    One of the greatest strenghs about being a designer with an engineer background is that not only I
-                    can handle the graphical aspects of a project
-                </h6>
+                <Title
+                    title="Skills"
+                    sub="One of the greatest strenghs about being a designer with an engineer background is that not only I can
+                handle the graphical aspects of a project"
+                />
                 <CircularProgress>
                     {dataSkills.map((data, index) => (
                         <CircularProgressItem key={index} data={data} />
                     ))}
                 </CircularProgress>
             </div>
-            {/* PERSONAL Status */}
-            <Status data={status} />
+
             {/* PORTFOLIO */}
             <div className={cx('container')}>
-                <h4>Portfolio</h4>
-                <h6>
-                    I have been good at math and science since my childhood, studying and obtaining a Master’s Degree in
-                    Electrical Engineering.
-                </h6>
-                <div className={cx('portfolio')}>
-                    <PortfolioItem src={img.btec14} alt="" category="category" title="title" href="#" />
-                    <PortfolioItem src={img.avt} alt="" category="category" title="title" href="#" />
-                    <PortfolioItem src={img.avt2} alt="" category="category" title="title" href="#" />
-                    <PortfolioItem src={img.noImage} alt="" category="category" title="title" href="#" />
-                    <PortfolioItem src={img.btec19} alt="" category="category" title="title" href="#" />
-                    <PortfolioItem src={img.btec17} alt="" category="category" title="title" href="#" />
-                </div>
+                <Title
+                    title="Portfolio"
+                    sub="I have been good at math and science since my childhood, studying and obtaining a Master’s Degree in
+                    Electrical Engineering."
+                />
+
+                <PortfolioItem data={dataProfolio} />
             </div>
+            {/* PERSONAL Status */}
+            <Status data={dataStatus} />
             {/* Experience */}
             <div className={cx('container')}>
-                <h4 className={cx('title')}>Work Experiences</h4>
-                <h6>
-                    Being aware of the job specification and the skills required to become a Web developer, I always try
-                    to improve my skills and qualifications as soon as possible.
-                </h6>
+                <Title
+                    title="Work Experiences"
+                    sub="Being aware of the job specification and the skills required to become a Web developer, I always try
+                    to improve my skills and qualifications as soon as possible."
+                />
 
                 <Period data={dataExperience} />
             </div>
             {/* EDUCATION */}
             <div className={cx('container')}>
-                <h4>Education</h4>
-                <h6>
-                    I have been good at math and science since my childhood, studying and obtaining a Master’s Degree in
-                    Electrical Engineering.
-                </h6>
+                <Title
+                    title="Education"
+                    sub="I have been good at math and science since my childhood, studying and obtaining a Master’s Degree in
+                    Electrical Engineering."
+                />
                 <Period data={dataEducation} />
             </div>
-            {/* AWARDS */}
 
-            <ul className={cx('awards')}>
-                <AwardItem src={img.btec14} alt="" title="title" time="dd/mm/yyyy" />
-            </ul>
             {/* REVIEW */}
             <div className={cx('container')}>
-                <h4>REVIEW</h4>
-                <h6>
-                    One of the greatest strenghs about being a designer with an engineer background is that not only I
-                    can handle the graphical aspects of a project
-                </h6>
-                <div className={cx('skills')}></div>
+                <Title
+                    title="REVIEW"
+                    sub="One of the greatest strenghs about being a designer with an engineer background is that not only I
+                    can handle the graphical aspects of a project"
+                />
+
+                <Reviews data={dataReviews} />
             </div>
+
+            {/* Technologies */}
+
+            <Technologies data={dataTechnologies} />
         </div>
     );
 };

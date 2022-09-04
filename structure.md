@@ -9,6 +9,7 @@ debugger
 }, 5000);
 
 # Structure
+
 color: #ea2e0d
 layout:
         header
@@ -43,12 +44,20 @@ Dark/ Light mode
 # Time
 
 ---
+04/09/2022
+
+- SwipeJS Libraries  --> OK
+- Update Home
+    People review
+
+---
 03/09/2022
 
+- Font awsome-icon --> OK
 - Fix Image Component --> OK
 - Update Home
     Education --> OK
-    Awards
+    Awards --> OK
     People review
 
 ---

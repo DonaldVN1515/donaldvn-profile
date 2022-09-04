@@ -1,34 +1,24 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { useState } from 'react';
-import PropTypes from 'prop-types';
 
-import styles from './BlogItem.module.scss';
+import styles from './Slides.module.scss';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
-BlogSlides.propTypes = {
+Slides.propTypes = {
     className: PropTypes.string,
-    mediaUrl: PropTypes.array.isRequired,
+    data: PropTypes.array.isRequired,
 };
 
-function BlogSlides({ mediaUrl, className }) {
+function Slides({ className, data }) {
     const cx = classNames.bind(styles);
 
     const [slideIndex, setSlideIndex] = useState(1);
 
-    // autoPlaySlide
-    // useEffect(() => {
-    //     const autoPlaySlide = setInterval(() => {
-    //         nextSlide();
-    //     }, 3000);
-    //     return () => {
-    //         clearInterval(autoPlaySlide);
-    //     };
-    // }, [slideIndex]);
-
     const nextSlide = () => {
-        if (slideIndex !== mediaUrl.length) {
+        if (slideIndex !== data.length) {
             setSlideIndex(slideIndex + 1);
-        } else if (slideIndex === mediaUrl.length) {
+        } else if (slideIndex === data.length) {
             setSlideIndex(1);
         }
     };
@@ -37,7 +27,7 @@ function BlogSlides({ mediaUrl, className }) {
         if (slideIndex !== 1) {
             setSlideIndex(slideIndex - 1);
         } else if (slideIndex === 1) {
-            setSlideIndex(mediaUrl.length);
+            setSlideIndex(data.length);
         }
     };
 
@@ -47,13 +37,14 @@ function BlogSlides({ mediaUrl, className }) {
     const classes = cx('slides', {
         [className]: className,
     });
+
     return (
         <div className={classes}>
             {/* Slides */}
-            {mediaUrl.map((data, index) => {
+            {data.map((data, index) => {
                 return (
                     <div key={index} className={cx('slide', className, slideIndex === index + 1 ? 'active-anim' : '')}>
-                        <img src={data} alt={mediaUrl.title} />
+                        <img src={data} alt={data.title} />
                     </div>
                 );
             })}
@@ -67,7 +58,7 @@ function BlogSlides({ mediaUrl, className }) {
             </button>
             {/* Dots */}
             <div className={cx('dots')}>
-                {Array.from({ length: mediaUrl.length }).map((item, index) => (
+                {Array.from({ length: data.length }).map((item, index) => (
                     <div
                         key={index}
                         onClick={() => moveDot(index + 1)}
@@ -79,4 +70,4 @@ function BlogSlides({ mediaUrl, className }) {
     );
 }
 
-export default BlogSlides;
+export default Slides;

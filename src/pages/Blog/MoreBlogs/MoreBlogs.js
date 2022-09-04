@@ -26,7 +26,6 @@ function MoreBlogs({ moreBlogs, indexOfLastBlog, indexOfFirstBlog }) {
             <ul className={cx('more-blogs')}>
                 {moreBlogs.map((data, index) => {
                     const url = convertUrl(data);
-                    console.log(data)
                     if (index + 1 > indexOfLastBlog || index + 1 < indexOfFirstBlog) {
                         return (
                             <li key={index} className={cx('blog')}>

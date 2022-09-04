@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const Period = ({ data }) => {
     return (
-        <div className={cx('experience')}>
+        <div className={cx('wrapper')}>
             {data.map((period, index) => (
                 <div key={index} className={cx('period')}>
                     <div className={cx('work')}>
