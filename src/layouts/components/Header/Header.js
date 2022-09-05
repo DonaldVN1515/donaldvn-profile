@@ -1,33 +1,41 @@
 import classNames from 'classnames/bind';
-import { Email, Language, LocationOn, Person, PersonAddAlt, Logout, Settings } from '@mui/icons-material';
+import { Email, Language, LocationOn, Person, PersonAddAlt } from '@mui/icons-material';
 import { Avatar } from '@mui/material';
 import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { faGear, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
 
+import { ThemeContext } from '~/components/ThemeContext';
 import styles from './Header.module.scss';
 import config from '~/config';
 import Button from '~/components/Buttton';
 import { AccountMenu, LanguageMenu } from '~/layouts/components/Header/HeaderMenu';
 import Breadcrumb from '~/layouts/components/Header/Breadcrumb';
+import ThemeSwitcher from '~/layouts/components/Header/ThemeSwitcher';
 
 const cx = classNames.bind(styles);
 
 const Header = () => {
+    const context = useContext(ThemeContext);
+
     const [dataAccount, setDataAccount] = useState([]);
     const [dataLanguage, setDataLanguage] = useState([]);
     useEffect(() => {
         const dataAccount = [
             {
-                icon: <Person />,
+                icon: <FontAwesomeIcon icon={faUser} />,
                 title: 'View Profile',
                 to: '/profile',
             },
             {
-                icon: <Settings />,
+                icon: <FontAwesomeIcon icon={faGear} />,
                 title: 'Settings',
                 to: '/settings',
             },
             {
-                icon: <Logout />,
+                icon: <FontAwesomeIcon icon={faArrowRightFromBracket} />,
                 title: 'Log out',
                 to: '/logout',
                 separate: true,
@@ -50,7 +58,7 @@ const Header = () => {
         setDataLanguage(dataLanguage);
     }, []);
 
-    let currUser = true;
+    let currUser = false;
 
     const handleChangeLanguage = () => {
         // console.log(menuItem);
@@ -66,7 +74,7 @@ const Header = () => {
         }
     };
     return (
-        <div className={cx('wapper')}>
+        <div className={cx('wapper', context.theme)}>
             <div className={cx('header')}>
                 <Breadcrumb />
                 <ul className={cx('infor')}>
@@ -82,6 +90,8 @@ const Header = () => {
                     >
                         vietplqbdaf200035@fpt.edu.vn
                     </Button>
+                    {/* THEME SWITCHER */}
+                    <ThemeSwitcher />
                     {/* Language Menu */}
                     <LanguageMenu dataLanguage={dataLanguage} onChange={handleChangeLanguage}>
                         <Button
@@ -108,7 +118,7 @@ const Header = () => {
                         <>
                             <Button
                                 outline
-                                className={cx('item')}
+                                className={cx('item', 'register')}
                                 leftIcon={<PersonAddAlt className={cx('icon')} />}
                                 to={config.routes.register}
                             >
@@ -116,8 +126,8 @@ const Header = () => {
                             </Button>
                             <Button
                                 primary
-                                className={cx('item')}
-                                leftIcon={<Person className={cx('icon', 'login')} />}
+                                className={cx('item', 'login')}
+                                leftIcon={<Person className={cx('icon', 'login-icon')} />}
                                 to={config.routes.login}
                             >
                                 Log-in

@@ -4,6 +4,7 @@ import TypeIt from 'typeit-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faFaceLaughBeam } from '@fortawesome/free-regular-svg-icons';
 import { faBriefcase, faTrophy } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
 
 import styles from './Home.module.scss';
 import img from '~/assets/img';
@@ -16,10 +17,14 @@ import Technologies from '~/pages/Home/Technologies';
 import Status from '~/pages/Home/Status';
 import Title from '~/pages/Home/Title';
 import Reviews from '~/pages/Home/Reviews';
+import { ThemeContext } from '~/components/ThemeContext';
 
 const cx = classNames.bind(styles);
 
 const Home = () => {
+    // THEME
+    const context = useContext(ThemeContext);
+
     const [dataExperience, setDataExperience] = useState([]);
     const [dataEducation, setDataEducation] = useState([]);
     const [dataSkills, setDataSkills] = useState([]);
@@ -289,7 +294,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className={cx('home')}>
+        <div className={cx('home', context.theme)}>
             <div className={cx('container')}>
                 <h1>
                     <TypeIt options={{ speed: 60, waitUntilVisible: true, loopDelay: 5000 }}>

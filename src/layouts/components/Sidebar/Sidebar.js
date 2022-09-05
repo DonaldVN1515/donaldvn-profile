@@ -27,6 +27,7 @@ import NavMenu, { NavMenuItem } from './NavMenu';
 
 const cx = classNames.bind(styles);
 const Sidebar = () => {
+    
     return (
         <div className={cx('sidebar')}>
             {/* ABOUT ME */}

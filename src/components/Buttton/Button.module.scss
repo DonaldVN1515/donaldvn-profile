@@ -17,6 +17,11 @@
 .icon {
     display: flex;
     text-align: center;
+
+
+    & > svg {
+         width: unset;
+    }
 }
 .title {
     width: 100%;

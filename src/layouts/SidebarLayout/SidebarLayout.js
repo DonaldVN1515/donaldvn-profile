@@ -11,6 +11,8 @@ SidebarLayout.propTypes = {
 };
 
 function SidebarLayout({ children }) {
+    
+
     const cx = classNames.bind(styles);
 
     const backToTopRef = useRef();

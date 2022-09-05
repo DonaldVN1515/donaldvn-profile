@@ -4,8 +4,10 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
+    --light-text-color: #ccc;
     --2nd-text-color: #939393;
     --hover-color: #a17560;
+    --dark-background-color: #333;
     --background-color: #3d3d3b;
     --light-background-color: #e6e7e7;
     --3rd-background-color: #f4f4f4;
@@ -84,6 +86,13 @@ html {
         -webkit-transition: -webkit-transform 0.25s ease-in-out;
     }
 
+    .dark {
+        .tippy-box {
+            background-color: var(--dark-background-color);
+            color: var(--light-text-color);
+            transition: all 0.3s ease-in-out;
+        }
+    }
     .tippy-content {
         padding: 8px 15px;
         letter-spacing: 1px;
@@ -91,6 +100,16 @@ html {
 }
 // Custom MATERIAL UI
 
+// THEME (DARK MODE)
+.light {
+    transition: all 0.3s ease-in-out;
+    color: var(--text-color);
+}
+.dark {
+    background-color: var(--dark-background-color);
+    color: var(--light-text-color);
+    transition: all 0.3s ease-in-out;
+}
 // ANIMATION
 
 @keyframes dynamic {
@@ -101,4 +120,31 @@ html {
         transform: translateX(10px);
     }
 }
+// animation: 10s linear infinite alternate forwards border-transform;
+@keyframes border-transform {
+    0% {
+        border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+    }
 
+    14% {
+        border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+    }
+    28% {
+        border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+    }
+    42% {
+        border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+    }
+    56% {
+        border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+    }
+    70% {
+        border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+    }
+    84% {
+        border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+    }
+    100% {
+        border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+    }
+}

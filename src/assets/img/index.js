@@ -1,6 +1,6 @@
 const img = {
     // SVG
-    waveBackground: require('./waveBackgound.svg').default,
+    waveBackground: require('./svgs/waveBackgound.svg').default,
     // PNG, JPG
     noImage: require('~/assets/img/no-image.png'),
     avt: require('~/assets/img/mine2020.jpg'),

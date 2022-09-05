@@ -36,6 +36,7 @@ const LanguageMenu = ({ children, dataLanguage = [], onChange = defautFunction }
         <span className={cx('menu')} onClick={visible ? handleHide : handleShow}>
             <Tippy
                 interactive
+                offset={[10, 10]}
                 placement="bottom"
                 visible={visible}
                 onClickOutside={handleHide}

@@ -1,9 +1,15 @@
+.wrapper {
+    height: 100%;
+    border-right: 1px solid var(--white-color);
+    border-left: 1px solid var(--white-color);
+
+}
 // NAV MENU ITEM
 .item {
     flex: 1;
     font-size: 1.2rem;
     background-color: var(--light-background-color);
-    border-right: 1px solid var(--white-color);
+    border-right: 1px solid transparent;
 
     &:hover {
         border-right: 1px solid var(--white-color);

@@ -11,7 +11,7 @@
 .header {
     // max-width: var(--default-layout-width, 1200px);
     height: var(--default-layout-header-height, 50px);
-    padding: var( --default-layout-padding);
+    padding: var(--default-layout-padding);
 
     display: flex;
     justify-content: space-between;
@@ -24,18 +24,30 @@
 }
 .infor {
     display: flex;
+
+    .login {
+        color: var(--white-color);
+        border: 1px solid var(--hover-color);
+        &:hover {
+            color: var(--hover-color);
+        }
+    }
+    .register {
+        color: var(--hover-color);
+    }
 }
 .item {
-    margin-left: 20px;
+    margin-left: 10px;
+    font-weight: 600;
     color: var(--2nd-text-color);
     .icon {
         font-size: 2rem;
         color: var(--hover-color);
     }
-    .login {
+    .login-icon {
         color: var(--white-color);
     }
-    &:hover .login {
+    &:hover .login-icon {
         color: var(--hover-color);
     }
     .avt {

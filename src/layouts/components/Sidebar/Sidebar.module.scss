@@ -102,6 +102,9 @@
     align-items: center;
     justify-content: center;
     padding: 15px 10px;
+    border-right: 1px solid var(--white-color);
+    border-left: 1px solid var(--white-color);
+
     .icon {
         font-size: 5rem;
 

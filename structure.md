@@ -44,11 +44,20 @@ Dark/ Light mode
 # Time
 
 ---
+
+05/09/2022
+
+- Fix UI --> 30%
+- ThemeContext component --> OK
+- Theme Mode --> OK
+
+---
+
 04/09/2022
 
 - SwipeJS Libraries  --> OK
-- Update Home
-    People review
+- Update Home --> OK
+    People review --> OK
 
 ---
 03/09/2022
