@@ -16,7 +16,7 @@
         right: 50px;
         width: 1px;
         height: 70%;
-        background-color: var(--light-background-color);
+        background-color: var(--light-background);
         z-index: 2;
     }
 
@@ -44,11 +44,11 @@
     width: 50px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    color: var(--light-background-color);
+    color: var(--light-background);
 
     &:hover {
-        color: var(--hover-color);
-        background-color: var(--3rd-background-color);
+        color: var(--primary);
+        background-color: var(--lighter-background);
     }
 
     .search-icon {
@@ -57,7 +57,7 @@
 }
 .searchbar {
     padding-left: 15px;
-    background-color: var(--white-color);
+    background-color: var(--white);
     border-radius: 5px;
     height: 45px;
     width: var(--search-width);
@@ -70,10 +70,10 @@
         height: 100%;
         flex: 1;
         padding-right: 40px;
-        caret-color: var(--hover-color);
+        caret-color: var(--primary);
 
         &:not(:placeholder-shown) ~ .search-btn {
-            color: var(--hover-color);
+            color: var(--primary);
         }
     }
 
@@ -118,8 +118,8 @@
         // -webkit-line-clamp: 1;
 
         &:hover {
-            background-color: var(--white-color);
-            color: var(--hover-color);
+            background-color: var(--white);
+            color: var(--primary);
         }
     }
 }

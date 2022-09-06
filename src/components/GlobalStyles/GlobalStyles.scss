@@ -1,20 +1,22 @@
 @import 'normalize.css';
 
 :root {
-    --white-color: #fff;
-    --black-color: #000;
-    --text-color: #333;
-    --light-text-color: #ccc;
-    --2nd-text-color: #939393;
-    --hover-color: #a17560;
-    --dark-background-color: #333;
-    --background-color: #3d3d3b;
-    --light-background-color: #e6e7e7;
-    --3rd-background-color: #f4f4f4;
-    --disabled-color: #7e7d7d;
+    --primary: #dc2f2f;
+    --secondary: #ff894c;
+    --disabled: #7e7d7d;
+    --white: #fff;
+    --black: #000;
+    --lighter-text: #efefef;
+    --light-text: #bbbbbb;
+    --text: #363636;
+    --lighter-background: #f4f4f4;
+    --light-background: #ededed;
+    --background: #3d3d3b;
+    --dark-background: #333;
+    --darkest-background: #000;
 
     --default-layout-width: 1450px;
-    --default-layout-header-height: 45px;
+    --default-layout-header-height: 50px;
     --default-layout-padding: 0px 40px;
 }
 
@@ -33,7 +35,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
-    color: var(--text-color);
+    color: var(--text);
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -49,7 +51,7 @@ input,
 }
 
 a {
-    color: var(--text-color);
+    color: var(--text);
     text-decoration: none;
     transition: all 0.25s ease-in-out;
     -webkit-transition: -webkit-transform 0.25s ease-in-out;
@@ -61,17 +63,17 @@ p {
 html *::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    background-color: var(--3rd-background-color);
+    background-color: var(--lighter-background);
 }
 html *::-webkit-scrollbar {
     width: 5px;
     height: 5px;
-    background-color: var(--3rd-background-color);
+    background-color: var(--lighter-background);
 }
 html *::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: var(--hover-color);
+    background-color: var(--primary);
 }
 // Custom tippy tooltip
 html {
@@ -80,7 +82,7 @@ html {
         font-weight: 600;
         font-size: 1.6rem;
         line-height: 2.2rem;
-        color: var(--white-color);
+        color: var(--white);
         background-color: var(--background-color);
         transition: all 0.25s ease-in-out;
         -webkit-transition: -webkit-transform 0.25s ease-in-out;
@@ -88,8 +90,8 @@ html {
 
     .dark {
         .tippy-box {
-            background-color: var(--dark-background-color);
-            color: var(--light-text-color);
+            background-color: var(--dark-background);
+            color: var(--lighter-text);
             transition: all 0.3s ease-in-out;
         }
     }
@@ -103,13 +105,14 @@ html {
 // THEME (DARK MODE)
 .light {
     transition: all 0.3s ease-in-out;
-    color: var(--text-color);
+    color: var(--text);
 }
 .dark {
-    background-color: var(--dark-background-color);
-    color: var(--light-text-color);
+    background-color: var(--dark-background);
+    color: var(--lighter-text);
     transition: all 0.3s ease-in-out;
 }
+
 // ANIMATION
 
 @keyframes dynamic {
@@ -147,4 +150,34 @@ html {
     100% {
         border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
     }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 1600px) {
+}
+@media screen and (max-width: 1440px) {
+    :root {
+        --default-layout-padding: 0px 30px;
+    }
+}
+@media screen and (max-width: 1200px) {
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+}
+@media screen and (max-width: 1024px) {
+   
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --default-layout-padding: 0px 20px;
+    }
+}
+@media screen and (max-width: 635px) {
+}
+@media screen and (max-width: 425px) {
+}
+@media screen and (max-width: 375px) {
+}
+@media screen and (max-width: 320px) {
 }

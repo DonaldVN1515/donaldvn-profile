@@ -5,13 +5,13 @@
 .menu {
 }
 .item {
-    color: var(--black-color);
+    color: var(--black);
 
     padding: 8px 20px;
     font-size: 1.6rem;
     font-weight: 600;
     &:hover {
-        background-color: var(--light-background-color);
+        background-color: var(--light-background);
     }
 
     &:first-child {
@@ -20,5 +20,5 @@
     }
 }
 .separate {
-    border-top: 1px solid var(--light-background-color);
+    border-top: 1px solid var(--light-background);
 }

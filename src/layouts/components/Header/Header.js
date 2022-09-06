@@ -76,15 +76,24 @@ const Header = () => {
     return (
         <div className={cx('wapper', context.theme)}>
             <div className={cx('header')}>
-                <Breadcrumb />
+                <div className={cx('navbar')}>
+                    <Breadcrumb className={cx('breadcrumb')} />
+
+                    {/* MENU ON TABLET & MOBILE */}
+                    <div className={cx('menu')}>
+                        <span className={cx('menu-icon', 'icon-top', 'icon-top-click')}></span>
+                        <span className={cx('menu-icon', 'icon-mid', 'icon-mid-click')}></span>
+                        <span className={cx('menu-icon', 'icon-bot', 'icon-bot-click')}></span>
+                    </div>
+                </div>
                 <ul className={cx('infor')}>
-                    <Button className={cx('item')} leftIcon={<LocationOn className={cx('icon')} />}>
+                    <Button className={cx('item', 'address')} leftIcon={<LocationOn className={cx('icon')} />}>
                         66 Vo Van Tan, Thanh Khe, Da Nang
                     </Button>
 
                     <Button
                         text
-                        className={cx('item')}
+                        className={cx('item', 'email')}
                         leftIcon={<Email className={cx('icon')} />}
                         href="mailto:vietplqbdaf200035@fpt.edu.vn"
                     >

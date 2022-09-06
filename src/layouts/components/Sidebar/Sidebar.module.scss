@@ -1,18 +1,29 @@
+// THEME (DARK MODE)
+
+// SIDE BAR
 .sidebar {
     flex: 1;
     display: flex;
     height: 100vh;
     max-width: 400px;
     font-size: 1.8rem;
-    color: var(--2nd-text-color);
+    color: var(--light-text);
+    background-color: var(--light-background);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    // THEME (DARK MODE)
+    .dark {
+        border-right: 1px solid var(--light-text);
+        border-left: 1px solid var(--light-text);
+        background-color: var(--dark-background);
+    }
 }
 
 //  ABOUT ME
 .about {
     flex: 4;
     padding: 15px 10px;
-    background-color: var(--background-color);
+    background-color: var(--background);
     overflow-y: auto;
 }
 .about::-webkit-scrollbar {
@@ -26,7 +37,7 @@
 // Description
 .name,
 .job {
-    color: var(--white-color);
+    color: var(--white);
 }
 .name {
     font-size: 3rem;
@@ -52,14 +63,14 @@
     }
 }
 .link {
-    color: var(--2nd-text-color);
+    color: var(--light-text);
     display: flex;
     padding: 8px;
 
     &:hover {
         border-radius: 50%;
 
-        background-color: var(--light-background-color);
+        background-color: var(--light-background);
     }
 }
 // nav bar
@@ -74,54 +85,47 @@
         font-size: 3rem;
     }
 }
-// MENU ON TABLET & MOBILE
-.menu {
-    display: none;
-}
-.menu-icon {
-    backface-visibility: hidden;
-    // position: absolute;
-    // left: 0;
-    border-top: 3px solid #fff;
-    width: 100%;
-    transition: 0.55s;
-}
-.icon-top-click {
-    transform: rotate(45deg);
-    transition: 0.55s 0.5s;
-}
-.icon-mid-click {
-    opacity: 0;
-}
-.icon-bot-click {
-    transform: rotate(-405deg);
-    transition: 0.55s 0.5s;
-}
-.show-hide-profile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 10px;
-    border-right: 1px solid var(--white-color);
-    border-left: 1px solid var(--white-color);
 
-    .icon {
-        font-size: 5rem;
+// RESPONSIVE
 
+@media screen and (max-width: 1440px) {
+    .navbar {
         display: none;
     }
-    .active {
-        display: block;
-        cursor: pointer;
-        animation: dynamic 0.3s infinite ease-in-out alternate;
+}
+// RESPONSIVE
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        flex: none;
+        width: 100%;
+        max-width: unset;
+    }
+    .about {
+        display: flex;
+    }
+    .content {
+        margin-left: 20px;
+        flex: 1;
+    }
+    .image {
+        // max-width: 320px;
+        flex: 1;
     }
 }
+@media screen and (max-width: 635px) {
+    .about {
+        flex-direction: column;
 
-@keyframes dynamic {
-    0% {
-        transform: translateX(-2px);
+        .image {
+            overflow: unset;
+        }
     }
-    100% {
-        transform: translateX(2px);
+    .image {
+        max-width: unset;
+        height: 100%;
+        flex: 1;
+    }
+    .sub-avt {
+        padding: 10px 0;
     }
 }

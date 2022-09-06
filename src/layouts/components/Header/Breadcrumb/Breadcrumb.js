@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 // import Breadcrumbs from '@mui/material/Breadcrumbs';
 // import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
@@ -8,18 +8,21 @@ import styles from './Breadcrumb.module.scss';
 
 const cx = classNames.bind(styles);
 
-const Breadcrumb = () => {
+const Breadcrumb = ({ className }) => {
     const handleClick = (event) => {
         event.preventDefault();
     };
     return (
-        <div className={cx('wapper')} role="presentation" onClick={handleClick}>
+        <div className={cx('wapper', className)} role="presentation" onClick={handleClick}>
             {/* <Breadcrumbs aria-label="breadcrumb">
                     <Link to={config.routes.home}>Home</Link>
                 </Breadcrumbs> */}
+            <h4>Breadcrumb</h4>
         </div>
     );
 };
 
-Breadcrumb.propTypes = {};
+Breadcrumb.propTypes = {
+    className: PropTypes.string,
+};
 export default Breadcrumb;

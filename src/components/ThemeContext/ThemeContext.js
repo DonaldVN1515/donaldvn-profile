@@ -13,7 +13,7 @@ function ThemeProvider({ children }) {
         handleTheme,
     };
 
-    console.log('theme', theme);
+    // console.log('theme', theme);
     return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }
 

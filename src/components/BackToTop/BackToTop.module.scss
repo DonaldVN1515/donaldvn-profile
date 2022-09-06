@@ -8,8 +8,8 @@
     padding: 6px 8px 3px 8px;
     border-radius: 3px;
     border: 1px solid transparent;
-    color: var(--white-color);
-    background-color: var(--hover-color);
+    color: var(--white);
+    background-color: var(--primary);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
         rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     animation: fade 0.3s ease-in-out;
@@ -17,9 +17,9 @@
     cursor: pointer;
     z-index: 9;
     &:hover {
-        color: var(--hover-color);
-        background-color: var(--white-color);
-        border-color: var(--hover-color);
+        color: var(--primary);
+        background-color: var(--white);
+        border-color: var(--primary);
     }
 
     .icon {
@@ -32,5 +32,21 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 1440px) {
+    .back-to-top {
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    
+}
+@media screen and (max-width: 768px) {
+    .back-to-top {
+        right: 20px;
     }
 }

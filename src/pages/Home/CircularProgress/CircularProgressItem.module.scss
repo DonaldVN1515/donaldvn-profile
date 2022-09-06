@@ -54,7 +54,7 @@
     transition: 0.5s;
 }
 .card:hover .percent .num h6 {
-    color: var(--hover-color);
+    color: var(--primary);
     // font-size: 60px;
 }
 .percent .num h6 span {
@@ -63,7 +63,7 @@
     transition: 0.5s;
 }
 .card:hover .percent .num h6 span {
-    color: var(--hover-color);
+    color: var(--primary);
 }
 .text {
     position: relative;
@@ -76,7 +76,7 @@
     transition: 0.5s;
 }
 .card:hover .text {
-    color: var(--hover-color);
+    color: var(--primary);
 }
 svg {
     position: relative;
@@ -99,5 +99,22 @@ svg circle:nth-child(n + 2) {
 }
 .card:nth-child(n + 1) svg circle:nth-child(n + 2) {
     // stroke-dashoffset: calc(440 - (440 * 90) / 100);
-    stroke: var(--hover-color);
+    stroke: var(--primary);
+}
+
+// RESPONSIVE
+
+@media screen and (max-width: 1440px) {
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 635px) {
+    .wrapper {
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        padding: 5px 20px;
+    }
 }

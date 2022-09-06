@@ -18,8 +18,8 @@ const Period = ({ data }) => {
                         <h4 className={cx('job')}>{period.job}</h4>
                         <p className={cx('description')}>{period.description}</p>
                         <ul className={cx('details')}>
-                            {period.details.map((detail) => (
-                                <li>{detail}</li>
+                            {period.details.map((detail, index) => (
+                                <li key={index}>{detail}</li>
                             ))}
                         </ul>
                     </div>

@@ -34,14 +34,13 @@
     height: 300px;
     position: relative;
     transform: skewX(-3deg) skewY(0deg) rotate(-2deg);
-    border-radius: 2px solid var(--black-color);
+    border-radius: 2px solid var(--black);
     .overlay {
         background: rgba(51, 51, 51, 0.6);
         border-radius: 5px;
         opacity: 0;
         z-index: 5;
-    transition: all 0.2s linear;
-
+        transition: all 0.2s linear;
     }
     &::before {
         content: '';
@@ -82,7 +81,7 @@
         font-size: 3rem;
         text-transform: capitalize;
         padding: 10px 0;
-        background-color: var(--light-background-color);
+        background-color: var(--light-background);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -159,6 +158,23 @@
 
     .icon {
         font-size: 9rem;
-        color: var(--white-color);
+        color: var(--white);
+    }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 1600px) {
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .category {
+        right: -5px;
+    }
+}
+@media screen and (max-width: 635px) {
+    .portfolio {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

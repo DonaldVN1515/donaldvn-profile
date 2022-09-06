@@ -4,7 +4,7 @@
     overflow: hidden;
     // margin: 100px auto 0;
     position: relative;
-    background-color: var(--light-background-color);
+    background-color: var(--light-background);
 
     img {
         display: block;
@@ -34,7 +34,7 @@
 
     .icon {
         font-size: 6rem;
-        color: var(--white-color);
+        color: var(--white);
         opacity: 0.6;
         transition: all 0.3s ease-in-out;
         &:hover {
@@ -66,16 +66,16 @@
 .dot {
     width: 50px;
     height: 3px;
-    border: 1px solid var(--3rd-background-color);
+    border: 1px solid var(--lighter-background);
     margin: 0 5px;
     border-radius: 3px;
-    background-color: var(--white-color);
+    background-color: var(--white);
     opacity: 0.4;
     transition: all 0.3s ease-in-out;
 }
 .active {
-    background: var(--hover-color);
-    border: 1px solid var(--hover-color);
+    background: var(--primary);
+    border: 1px solid var(--primary);
 
     opacity: 1;
 }

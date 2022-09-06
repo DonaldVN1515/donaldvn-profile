@@ -10,13 +10,13 @@
 }
 
 .item {
-    color: var(--black-color);
+    color: var(--black);
     cursor: pointer;
     padding: 8px 20px;
     font-size: 1.6rem;
     font-weight: 600;
 
     &:hover {
-        background-color: var(--light-background-color);
+        background-color: var(--light-background);
     }
 }

@@ -15,9 +15,8 @@
 
     .icon {
         font-size: 7rem;
-        color: var(--hover-color);
+        color: var(--primary);
     }
-
 }
 
 .content {
@@ -30,7 +29,7 @@
     justify-content: space-around;
     width: 100%;
 
-    color: var(--white-color);
+    color: var(--white);
 }
 .item {
     display: flex;
@@ -46,5 +45,42 @@
     & > h6 {
         font-size: 2rem;
         text-transform: capitalize;
+    }
+}
+// RESPONSIVE
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .status {
+        padding-top: 250px;
+
+        .icon {
+            font-size: 5rem;
+        }
+    }
+    .item {
+        & > span {
+            font-size: 3rem;
+        }
+    }
+}
+@media screen and (max-width: 635px) {
+    .status {
+        padding-top: 200px;
+
+        .icon {
+            font-size: 4rem;
+        }
+    }
+    .content {
+        padding: 0 5px;
+    }
+
+    .item {
+        & > span {
+            font-size: 2rem;
+        }
+
+        & > h6 {
+            font-size: 1.6rem;
+        }
     }
 }

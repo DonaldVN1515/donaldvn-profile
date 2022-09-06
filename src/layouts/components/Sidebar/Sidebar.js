@@ -16,7 +16,9 @@ import {
     ChevronLeft,
     ChevronRight,
 } from '@mui/icons-material';
+import { useContext } from 'react';
 
+import { ThemeContext } from '~/components/ThemeContext';
 import styles from './Sidebar.module.scss';
 import config from '~/config';
 import Button from '~/components/Buttton/Button';
@@ -27,58 +29,61 @@ import NavMenu, { NavMenuItem } from './NavMenu';
 
 const cx = classNames.bind(styles);
 const Sidebar = () => {
-    
+    // THEME
+    const context = useContext(ThemeContext);
     return (
         <div className={cx('sidebar')}>
             {/* ABOUT ME */}
             <div className={cx('about')}>
                 {/* AVT IMG */}
 
-                <Image src={img.avt} alt="Quoc Viet" />
+                <Image src={img.avt} alt="Quoc Viet" className={cx('image')} />
 
-                <h3 className={cx('name')}>Phan Lam Quoc Viet</h3>
-                <h4 className={cx('job')}>Web Developer</h4>
-                <p className={cx('description')}>
-                    Hi! My name is Quoc Viet, I'm a creative designer and web developer. I enjoy creating eye candy
-                    solutions for web and mobile applications. I'd love to work on yours, too!
-                </p>
-                <div className={cx('sub-avt')}>
-                    <img src="https://profiler.jollyany.co/images/tz_profiler/Victoria-Rawson.png" alt="" />
-                </div>
+                <div className={cx('content')}>
+                    <h3 className={cx('name')}>Phan Lam Quoc Viet</h3>
+                    <h4 className={cx('job')}>Web Developer</h4>
+                    <p className={cx('description')}>
+                        Hi! My name is Quoc Viet, I'm a creative designer and web developer. I enjoy creating eye candy
+                        solutions for web and mobile applications. I'd love to work on yours, too!
+                    </p>
+                    <div className={cx('sub-avt')}>
+                        <img src="https://profiler.jollyany.co/images/tz_profiler/Victoria-Rawson.png" alt="" />
+                    </div>
 
-                {/* PersonalInfor */}
-                <PersonalInfor />
+                    {/* PersonalInfor */}
+                    <PersonalInfor />
 
-                <div className={cx('socials')}>
-                    <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
-                        <Facebook className={cx('icon')} />
-                    </Button>
+                    <div className={cx('socials')}>
+                        <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
+                            <Facebook className={cx('icon')} />
+                        </Button>
 
-                    <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
-                        <YouTube className={cx('icon')} />
-                    </Button>
+                        <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
+                            <YouTube className={cx('icon')} />
+                        </Button>
 
-                    <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
-                        <Email className={cx('icon')} />
-                    </Button>
+                        <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
+                            <Email className={cx('icon')} />
+                        </Button>
 
-                    <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
-                        <Phone className={cx('icon')} />
-                    </Button>
+                        <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
+                            <Phone className={cx('icon')} />
+                        </Button>
 
-                    <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
-                        <Twitter className={cx('icon')} />
-                    </Button>
+                        <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
+                            <Twitter className={cx('icon')} />
+                        </Button>
 
-                    <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
-                        <LinkedIn className={cx('icon')} />
-                    </Button>
+                        <Button className={cx('link')} href="#" target="_blank" rel="noreferrer">
+                            <LinkedIn className={cx('icon')} />
+                        </Button>
+                    </div>
                 </div>
             </div>
 
             {/* NAV BAR (active)*/}
-            <div className={cx('navbar')}>
-                <NavMenu className={cx('nav-menu')}>
+            <div className={cx('navbar', context.theme)}>
+                <NavMenu className={cx('nav-menu', context.theme)}>
                     <NavMenuItem icon={<Home className={cx('icon')} />} title="Home" to={config.routes.home} />
 
                     <NavMenuItem
@@ -94,14 +99,7 @@ const Sidebar = () => {
                     <NavMenuItem icon={<Send className={cx('icon')} />} title="Contact" to={config.routes.contact} />
                 </NavMenu>
 
-                {/* MENU ON TABLET & MOBILE */}
-                <div className={cx('menu')}>
-                    <span className={cx('menu-icon', 'icon-top', 'icon-top-click')}></span>
-                    <span className={cx('menu-icon', 'icon-mid', 'icon-mid-click')}></span>
-                    <span className={cx('menu-icon', 'icon-bot', 'icon-bot-click')}></span>
-                </div>
-
-                <div className={cx('show-hide-profile')}>
+                <div className={cx('show-hide-profile', context.theme)}>
                     <ChevronLeft className={cx('icon', 'active')} />
                     <ChevronRight className={cx('icon', '')} />
                 </div>

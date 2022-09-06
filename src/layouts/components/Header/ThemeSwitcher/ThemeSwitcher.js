@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -8,9 +8,7 @@ import { useContext } from 'react';
 
 import styles from './ThemeSwitcher.module.scss';
 import { ThemeContext } from '~/components/ThemeContext';
-ThemeSwitcher.propTypes = {
-    onTheme: PropTypes.func.isRequired,
-};
+ThemeSwitcher.propTypes = {};
 
 const cx = classNames.bind(styles);
 
@@ -66,7 +64,7 @@ function ThemeSwitcher() {
             borderRadius: 20 / 2,
         },
     }));
-    
+
     // THEME
     const context = useContext(ThemeContext);
 

@@ -34,7 +34,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    color: var(--white-color);
+    color: var(--white);
 
     display: flex;
     flex-direction: column;
@@ -170,7 +170,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    color: var(--text-color);
+    color: var( --text);
 
     display: flex;
     align-items: center;
@@ -195,7 +195,7 @@
 
     .icon {
         font-size: 7rem;
-        color: var(--hover-color);
+        color: var(--primary);
     }
 }
 .contact-location,
@@ -233,8 +233,8 @@
     flex: 5;
     border-radius: 5px;
     padding: 30px 40px;
-    color: var(--text-color);
-    background-color: var(--white-color);
+    color: var( --text);
+    background-color: var(--white);
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 
     & > h6 {
@@ -253,12 +253,12 @@
 .contact-submit {
     padding: 10px 20px;
     margin-top: 10px;
-    color: var(--white-color);
+    color: var(--white);
     font-size: 2rem;
 
     &:hover {
-        color: var(--hover-color);
-        border: 1px solid var(--hover-color);
+        color: var(--primary);
+        border: 1px solid var(--primary);
     }
 }
 
@@ -301,7 +301,7 @@
 }
 
 .follow-input {
-    background-color: var(--white-color);
+    background-color: var(--white);
     border-radius: 5px;
 }
 .follow-policy {
@@ -314,12 +314,12 @@
 }
 .follow-submit {
     padding: 10px 30px;
-    color: var(--white-color);
+    color: var(--white);
     font-size: 2rem;
 
     &:hover {
-        color: var(--hover-color);
-        border: 1px solid var(--hover-color);
+        color: var(--primary);
+        border: 1px solid var(--primary);
     }
 }
 .footer {

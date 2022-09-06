@@ -11,8 +11,8 @@ import { Wrapper } from '~/components/Wrapper';
 
 const cx = classNames.bind(styles);
 const NavMenuItem = ({ to, title, icon }) => {
-// THEME
-const context = useContext(ThemeContext);
+    // THEME
+    const context = useContext(ThemeContext);
 
     const renderSubMenu = (props) => {
         return (
@@ -26,7 +26,7 @@ const context = useContext(ThemeContext);
     return (
         <div className={cx('item', context.theme)}>
             <Tippy interactive delay={[100, 0]} offset={[0, 10]} placement="right" render={renderSubMenu}>
-                <NavLink className={(nav) => cx('option', { active: nav.isActive })} to={to}>
+                <NavLink className={(nav) => cx('option', context.theme, { active: nav.isActive })} to={to}>
                     {icon}
                     <span>{title}</span>
                 </NavLink>
@@ -37,6 +37,6 @@ const context = useContext(ThemeContext);
 NavMenuItem.propTypes = {
     to: PropTypes.node,
     title: PropTypes.string,
-    icon: PropTypes.node,
+    icon: PropTypes.object,
 };
 export default NavMenuItem;

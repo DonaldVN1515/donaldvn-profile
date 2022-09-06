@@ -1,6 +1,6 @@
 .wrapper {
     height: 100vh;
-    color: var(--white-color);
+    color: var(--white);
     background-color: linear-gradient(180deg,  #939393, #3d3d3b);
     background-repeat: no-repeat;
     background-position: center center;
@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     .overlay {
-        background: var(--black-color);
+        background: var(--black);
         opacity: 0.6;
     }
 }
@@ -49,7 +49,7 @@
             transform: translateX(-50%);
             width: 50px;
             height: 5px;
-            background: var(--light-background-color);
+            background: var(--light-background);
         }
     }
     p {
@@ -62,7 +62,7 @@
     max-width: 200px;
     padding: 8px 20px;
     text-transform: uppercase;
-    color: var(--white-color);
+    color: var(--white);
 }
 
 // CUSTOM

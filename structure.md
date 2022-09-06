@@ -34,7 +34,13 @@ Dark/ Light mode
 
 # Link Git: <https://github.com/DonaldVN1515/donaldvn-profile.git>
 
-# Color: #ea2e0d
+# Color
+
+primary: #DC2F2F;
+secondary: #FF894C;
+text-color: #363636;
+light-background: #F8F8F8;
+dark-background: #000;
 
 # Can not do it
 
@@ -42,6 +48,14 @@ Dark/ Light mode
 - Bug When Click Pagination and Radio button
 
 # Time
+
+---
+
+06/09/2022
+
+- Fix UI 
+- Responsive
+- Update Skills
 
 ---
 

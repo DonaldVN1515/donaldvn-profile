@@ -3,7 +3,7 @@
     border-radius: 5px;
     font-size: 1.6rem;
     overflow: hidden;
-    background-color: var(--white-color);
+    background-color: var(--white);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -21,7 +21,7 @@
     font-weight: 900;
 
     :hover {
-        color: var(--hover-color);
+        color: var(--primary);
     }
 }
 .infor {
@@ -50,8 +50,8 @@
 .read-more {
     padding: 10px 15px;
     margin-top: 5px;
-    background-color: var(--hover-color);
-    color: var(--white-color);
+    background-color: var(--primary);
+    color: var(--white);
     border: 1px solid transparent;
     cursor: pointer;
     font-weight: 600;
@@ -60,9 +60,9 @@
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
         rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     &:hover {
-        color: var(--hover-color);
-        background-color: var(--3rd-background-color);
-        border: 1px solid var(--hover-color);
+        color: var(--primary);
+        background-color: var(--lighter-background);
+        border: 1px solid var(--primary);
     }
 }
 
@@ -167,7 +167,7 @@
     overflow: hidden;
     // margin: 100px auto 0;
     position: relative;
-    background-color: var(--light-background-color);
+    background-color: var(--light-background);
 
     img {
         display: block;
@@ -197,7 +197,7 @@
 
     .icon {
         font-size: 6rem;
-        color: var(--white-color);
+        color: var(--white);
         opacity: 0.6;
         transition: all 0.3s ease-in-out;
         &:hover {
@@ -229,16 +229,16 @@
 .dot {
     width: 50px;
     height: 3px;
-    border: 1px solid var(--3rd-background-color);
+    border: 1px solid var(--lighter-background);
     margin: 0 5px;
     border-radius: 3px;
-    background-color: var(--white-color);
+    background-color: var(--white);
     opacity: 0.4;
     transition: all 0.3s ease-in-out;
 }
 .active {
-    background: var(--hover-color);
-    border: 1px solid var(--hover-color);
+    background: var(--primary);
+    border: 1px solid var(--primary);
 
     opacity: 1;
 }
@@ -251,7 +251,7 @@
     border-top-right-radius: 5px;
     overflow: hidden;
 
-    background-color: var(--light-background-color);
+    background-color: var(--light-background);
     img {
         display: block;
         width: 100%;
@@ -266,7 +266,7 @@
     width: 100%;
     // height: 360px;
     padding: 60px;
-    background-color: var(--light-background-color);
+    background-color: var(--light-background);
     position: relative;
 
     .quote-icon {
@@ -293,17 +293,17 @@
         height: 70%;
         left: 55px;
         border-radius: 3px;
-        background-color: var(--text-color);
+        background-color: var( --text);
     }
 }
 .quote-title {
     font-size: 3.5rem;
-    color: var(--hover-color);
+    color: var(--primary);
 }
 .quote-author {
     text-align: right;
     display: block;
-    color: var(--text-color);
+    color: var( --text);
     font-style: italic;
 
     &::before {
