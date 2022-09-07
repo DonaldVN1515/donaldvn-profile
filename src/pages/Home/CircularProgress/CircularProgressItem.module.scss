@@ -54,7 +54,7 @@
     transition: 0.5s;
 }
 .card:hover .percent .num h6 {
-    color: var(--primary);
+    color: var(--secondary);
     // font-size: 60px;
 }
 .percent .num h6 span {
@@ -63,7 +63,7 @@
     transition: 0.5s;
 }
 .card:hover .percent .num h6 span {
-    color: var(--primary);
+    color: var(--secondary);
 }
 .text {
     position: relative;
@@ -76,7 +76,7 @@
     transition: 0.5s;
 }
 .card:hover .text {
-    color: var(--primary);
+    color: var(--secondary);
 }
 svg {
     position: relative;
@@ -99,7 +99,7 @@ svg circle:nth-child(n + 2) {
 }
 .card:nth-child(n + 1) svg circle:nth-child(n + 2) {
     // stroke-dashoffset: calc(440 - (440 * 90) / 100);
-    stroke: var(--primary);
+    stroke: var(--secondary);
 }
 
 // RESPONSIVE

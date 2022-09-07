@@ -51,10 +51,16 @@ dark-background: #000;
 
 ---
 
+- Menu on Tablet & Mobile --> OK
 06/09/2022
 
-- Fix UI 
+---
+
+06/09/2022
+
+- Fix UI --> 50%
 - Responsive
+    Home  --> OK
 - Update Skills
 
 ---

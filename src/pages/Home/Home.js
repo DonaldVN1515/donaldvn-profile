@@ -6,18 +6,18 @@ import { faClock, faFaceLaughBeam } from '@fortawesome/free-regular-svg-icons';
 import { faBriefcase, faTrophy } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from 'react';
 
+import { ThemeContext } from '~/components/ThemeContext';
 import styles from './Home.module.scss';
 import img from '~/assets/img';
 // import PersonalInfor from '~/components/PersonalInfor';
 import Image from '~/components/Image';
-import Period from '~/pages/Home/Period';
-import { CircularProgress, CircularProgressItem } from '~/pages/Home/CircularProgress';
+import { Period } from '~/pages/Home/Period';
 import PortfolioItem from '~/pages/Home/PortfolioItem';
 import Technologies from '~/pages/Home/Technologies';
 import Status from '~/pages/Home/Status';
 import Title from '~/pages/Home/Title';
 import Reviews from '~/pages/Home/Reviews';
-import { ThemeContext } from '~/components/ThemeContext';
+import { CircularProgress, CircularProgressItem } from '~/pages/Home/CircularProgress';
 
 const cx = classNames.bind(styles);
 

@@ -1,11 +1,10 @@
 import classNames from 'classnames/bind';
 import { Email, Language, LocationOn, Person, PersonAddAlt } from '@mui/icons-material';
 import { Avatar } from '@mui/material';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faGear, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
-import { useContext } from 'react';
 
 import { ThemeContext } from '~/components/ThemeContext';
 import styles from './Header.module.scss';
@@ -58,7 +57,7 @@ const Header = () => {
         setDataLanguage(dataLanguage);
     }, []);
 
-    let currUser = false;
+    let currUser = true;
 
     const handleChangeLanguage = () => {
         // console.log(menuItem);
@@ -78,13 +77,6 @@ const Header = () => {
             <div className={cx('header')}>
                 <div className={cx('navbar')}>
                     <Breadcrumb className={cx('breadcrumb')} />
-
-                    {/* MENU ON TABLET & MOBILE */}
-                    <div className={cx('menu')}>
-                        <span className={cx('menu-icon', 'icon-top', 'icon-top-click')}></span>
-                        <span className={cx('menu-icon', 'icon-mid', 'icon-mid-click')}></span>
-                        <span className={cx('menu-icon', 'icon-bot', 'icon-bot-click')}></span>
-                    </div>
                 </div>
                 <ul className={cx('infor')}>
                     <Button className={cx('item', 'address')} leftIcon={<LocationOn className={cx('icon')} />}>

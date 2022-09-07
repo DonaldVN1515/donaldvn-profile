@@ -2,11 +2,14 @@
     display: flex;
     justify-content: center;
     padding: 20px 0;
-    h6 {
+    & > h3 {
         font-size: 1.6rem;
-        color: var( --text);
+        color: var(--text);
     }
 }
 
-
-
+.dark {
+    & > h3 {
+        color: var(--light-text);
+    }
+}

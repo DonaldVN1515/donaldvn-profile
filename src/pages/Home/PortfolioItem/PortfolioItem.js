@@ -1,7 +1,9 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
+import { useContext } from 'react';
 
+import { ThemeContext } from '~/components/ThemeContext';
 import styles from './PortfolioItem.module.scss';
 import Overlay from '~/components/Overlay';
 import { ReadMore } from '@mui/icons-material';
@@ -14,8 +16,10 @@ PortfolioItem.propTypes = {
 };
 
 function PortfolioItem({ data }) {
+    // THEME
+    const context = useContext(ThemeContext);
     return (
-        <div className={cx('portfolio')}>
+        <div className={cx('portfolio', context.theme)}>
             {data.map((data, index) => (
                 <div key={index} className={cx('item')}>
                     <a href={data.href} target="_blank" rel="noreferrer" className={cx('link')}>

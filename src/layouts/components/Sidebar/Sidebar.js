@@ -26,6 +26,7 @@ import PersonalInfor from '~/layouts/components/Sidebar/PersonalInfor';
 import Image from '~/components/Image';
 import img from '~/assets/img';
 import NavMenu, { NavMenuItem } from './NavMenu';
+import { OverlayMenu, OverlayMenuItem } from './OverlayMenu';
 
 const cx = classNames.bind(styles);
 const Sidebar = () => {
@@ -104,6 +105,23 @@ const Sidebar = () => {
                     <ChevronRight className={cx('icon', '')} />
                 </div>
             </div>
+
+            {/* OVERLAY MENU ON MOBILE AND TABLET */}
+            <OverlayMenu className={cx('overlay-menu')}>
+                <OverlayMenuItem icon={<Home className={cx('menu-icon')} />} title="Home" to={config.routes.home} />
+
+                <OverlayMenuItem
+                    icon={<Collections className={cx('menu-icon')} />}
+                    title="Gallerry"
+                    to={config.routes.gallerry}
+                />
+
+                <OverlayMenuItem icon={<Book className={cx('menu-icon')} />} title="Blog" to={config.routes.blog} />
+
+                <OverlayMenuItem icon={<Web className={cx('menu-icon')} />} title="Game" to={config.routes.game} />
+
+                <OverlayMenuItem icon={<Send className={cx('menu-icon')} />} title="Contact" to={config.routes.contact} />
+            </OverlayMenu>
         </div>
     );
 };

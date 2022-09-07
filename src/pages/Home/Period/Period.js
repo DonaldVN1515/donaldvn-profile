@@ -1,13 +1,17 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import { useContext } from 'react';
 
+import { ThemeContext } from '~/components/ThemeContext';
 import styles from './Period.module.scss';
 
 const cx = classNames.bind(styles);
 
 const Period = ({ data }) => {
+    // THEME
+    const context = useContext(ThemeContext);
     return (
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper', context.theme)}>
             {data.map((period, index) => (
                 <div key={index} className={cx('period')}>
                     <div className={cx('work')}>

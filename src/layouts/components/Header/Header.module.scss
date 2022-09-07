@@ -13,6 +13,7 @@
     height: var(--default-layout-header-height, 50px);
     padding: var(--default-layout-padding);
 
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,7 +58,7 @@
 }
 .account {
     padding: 3px 8px;
-
+    font-weight: 700;
     span {
         color: var(--primary);
     }
@@ -68,6 +69,12 @@
         color: var(--primary);
     }
 }
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 90%;
+}
+
 // THEME (DARK MODE)
 .dark {
     background-color: var(--dark-background);
@@ -76,9 +83,10 @@
     }
     .language {
         span {
-            color: var(--lighter-text);
+            color: var(--primary);
         }
     }
+    .account,
     .language,
     .register {
         &:hover {
@@ -86,72 +94,13 @@
         }
     }
 }
-// MENU ON TABLET & MOBILE
-.menu {
-    display: none;
-}
-.menu-icon {
-    backface-visibility: hidden;
-    // position: absolute;
-    // left: 0;
-    border-top: 3px solid #fff;
-    width: 100%;
-    transition: 0.55s;
-}
-.icon-top-click {
-    transform: rotate(45deg);
-    transition: 0.55s 0.5s;
-}
-.icon-mid-click {
-    opacity: 0;
-}
-.icon-bot-click {
-    transform: rotate(-405deg);
-    transition: 0.55s 0.5s;
-}
-.show-hide-profile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 10px;
-    border-right: 1px solid var(--white);
-    border-left: 1px solid var(--white);
-
-    .icon {
-        font-size: 5rem;
-
-        display: none;
-    }
-    .active {
-        display: block;
-        cursor: pointer;
-        animation: dynamic 0.3s infinite ease-in-out alternate;
-    }
-}
-
-@keyframes dynamic {
-    0% {
-        transform: translateX(-2px);
-    }
-    100% {
-        transform: translateX(2px);
-    }
-}
-
 // RESPONSIVE
 @media screen and (max-width: 1600px) {
     .address {
         display: none;
     }
 }
-@media screen and (max-width: 1440px) {
-    .breadcrumb {
-        display: none;
-    }
-    .menu {
-        display: block;
-    }
-}
+
 @media screen and (max-width: 1240px) {
     .email {
         display: none;

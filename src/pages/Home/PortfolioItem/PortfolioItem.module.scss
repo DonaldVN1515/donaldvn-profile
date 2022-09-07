@@ -65,6 +65,7 @@
     text-align: center;
     position: relative;
     padding: 10px 0;
+    z-index: 1;
 }
 .title {
     transform: skewX(4deg) skewY(0deg) rotate(2deg);
@@ -161,7 +162,13 @@
         color: var(--white);
     }
 }
+// // THEME (DARK MODE)
 
+.dark {
+    .title {
+        color: var(--text);
+    }
+}
 // RESPONSIVE
 @media screen and (max-width: 1600px) {
     .portfolio {

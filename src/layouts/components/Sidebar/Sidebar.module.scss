@@ -11,6 +11,8 @@
     background-color: var(--light-background);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
+    position: relative;
+
     // THEME (DARK MODE)
     .dark {
         border-right: 1px solid var(--light-text);
@@ -82,22 +84,62 @@
 .nav-menu {
     .icon {
         margin-bottom: 10px;
-        font-size: 3rem;
+        font-size: 3.5rem;
+    }
+}
+// SHOW / HIDE PROFILE
+
+.show-hide-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    border-right: 1px solid var(--white);
+    border-left: 1px solid var(--white);
+
+    .icon {
+        font-size: 5rem;
+
+        display: none;
+    }
+    .active {
+        display: block;
+        cursor: pointer;
+        animation: dynamic 0.3s infinite ease-in-out alternate;
     }
 }
 
+@keyframes dynamic {
+    0% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(2px);
+    }
+}
 // RESPONSIVE
 
 @media screen and (max-width: 1440px) {
     .navbar {
         display: none;
     }
+    .sidebar {
+        .overlay-menu {
+            display: flex;
+        }
+    }
+    .overlay-menu {
+        .menu-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+        }
+    }
 }
-// RESPONSIVE
 @media screen and (max-width: 1024px) {
     .sidebar {
         flex: none;
         width: 100%;
+        height: unset;
         max-width: unset;
     }
     .about {

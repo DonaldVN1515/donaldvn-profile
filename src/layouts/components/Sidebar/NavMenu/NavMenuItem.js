@@ -18,7 +18,7 @@ const NavMenuItem = ({ to, title, icon }) => {
         return (
             <div tabIndex="-1" {...props}>
                 <Wrapper>
-                    <span className={cx('sub-title')}>{`My ${title}`} </span>
+                    <h3 className={cx('sub-title')}>{`${title}`} </h3>
                 </Wrapper>
             </div>
         );
@@ -28,14 +28,13 @@ const NavMenuItem = ({ to, title, icon }) => {
             <Tippy interactive delay={[100, 0]} offset={[0, 10]} placement="right" render={renderSubMenu}>
                 <NavLink className={(nav) => cx('option', context.theme, { active: nav.isActive })} to={to}>
                     {icon}
-                    <span>{title}</span>
                 </NavLink>
             </Tippy>
         </div>
     );
 };
 NavMenuItem.propTypes = {
-    to: PropTypes.node,
+    to: PropTypes.string,
     title: PropTypes.string,
     icon: PropTypes.object,
 };

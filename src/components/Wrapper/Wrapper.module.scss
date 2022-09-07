@@ -1,7 +1,7 @@
 .wrapper {
     box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
     background-color: var(--lighter-background);
-    color: var( --text);
+    color: var(--text);
     // max-height: min((100vh - 96px) - 60px, 734px);
     width: 100%;
     // min-height: 100px;
@@ -9,4 +9,11 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+}
+// THEME (DARK MODE)
+.dark {
+    .wrapper {
+        background-color: var(--dark-background);
+        color: var(--text);
+    }
 }

@@ -1,8 +1,8 @@
 import classNames from 'classnames/bind';
 import { useContext } from 'react';
 
-import styles from './Footer.module.scss';
 import { ThemeContext } from '~/components/ThemeContext';
+import styles from './Footer.module.scss';
 
 const cx = classNames.bind(styles);
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
     const context = useContext(ThemeContext);
     return (
         <div className={cx('footer', context.theme)}>
-            <h6>© Profile 2022. Design by DONALDVN</h6>
+            <h3>© Profile 2022. Design by DONALDVN</h3>
         </div>
     );
 };

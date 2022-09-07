@@ -60,6 +60,7 @@ p {
     text-align: justify;
 }
 // Custom scroll bar
+
 html *::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
@@ -69,12 +70,14 @@ html *::-webkit-scrollbar {
     width: 5px;
     height: 5px;
     background-color: var(--lighter-background);
+    display: none;
 }
 html *::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: var(--primary);
+    background-color: var(--secondary);
 }
+
 // Custom tippy tooltip
 html {
     .tippy-box {
@@ -86,14 +89,6 @@ html {
         background-color: var(--background-color);
         transition: all 0.25s ease-in-out;
         -webkit-transition: -webkit-transform 0.25s ease-in-out;
-    }
-
-    .dark {
-        .tippy-box {
-            background-color: var(--dark-background);
-            color: var(--lighter-text);
-            transition: all 0.3s ease-in-out;
-        }
     }
     .tippy-content {
         padding: 8px 15px;
@@ -112,7 +107,20 @@ html {
     color: var(--lighter-text);
     transition: all 0.3s ease-in-out;
 }
+.dark *::-webkit-scrollbar-track {
+    background-color: var(--background);
+}
+.dark *::-webkit-scrollbar {
+    background-color: var(--background);
+}
 
+// THEME (DARK MODE)
+.dark {
+    .tippy-box {
+        background-color: var(--dark-background);
+        color: var(--text);
+    }
+}
 // ANIMATION
 
 @keyframes dynamic {
@@ -165,7 +173,6 @@ html {
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
 }
 @media screen and (max-width: 1024px) {
-   
 }
 
 @media screen and (max-width: 768px) {

@@ -11,3 +11,14 @@
 }
 .content {
 }
+
+// RESPONSIVE
+@media screen and (max-width: 1024px) {
+    .wapper {
+        flex-flow: column wrap;
+    }
+    .container {
+        width: 100%;
+        flex: none;
+    }
+}
