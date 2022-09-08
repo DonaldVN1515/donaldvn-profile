@@ -15,6 +15,7 @@ import {
     Send,
     ChevronLeft,
     ChevronRight,
+    Download,
 } from '@mui/icons-material';
 import { useContext } from 'react';
 
@@ -47,9 +48,18 @@ const Sidebar = () => {
                         Hi! My name is Quoc Viet, I'm a creative designer and web developer. I enjoy creating eye candy
                         solutions for web and mobile applications. I'd love to work on yours, too!
                     </p>
-                    <div className={cx('sub-avt')}>
-                        <img src="https://profiler.jollyany.co/images/tz_profiler/Victoria-Rawson.png" alt="" />
-                    </div>
+                    {/* DOWNLOAD CV */}
+                    <Button
+                        href="#"
+                        download
+                        target="_blank"
+                        rel="noreferrer"
+                        primary
+                        className={cx('download-cv')}
+                        leftIcon={<Download className={cx('icon-cv')} />}
+                    >
+                        Download CV
+                    </Button>
 
                     {/* PersonalInfor */}
                     <PersonalInfor />
@@ -85,7 +95,11 @@ const Sidebar = () => {
             {/* NAV BAR (active)*/}
             <div className={cx('navbar', context.theme)}>
                 <NavMenu className={cx('nav-menu', context.theme)}>
-                    <NavMenuItem icon={<Home className={cx('icon')} />} title="Home" to={config.routes.home} />
+                    <NavMenuItem
+                        icon={<Home className={cx('icon')} />}
+                        title="Home"
+                        to={config.routes.home}
+                    />
 
                     <NavMenuItem
                         icon={<Collections className={cx('icon')} />}
@@ -120,7 +134,11 @@ const Sidebar = () => {
 
                 <OverlayMenuItem icon={<Web className={cx('menu-icon')} />} title="Game" to={config.routes.game} />
 
-                <OverlayMenuItem icon={<Send className={cx('menu-icon')} />} title="Contact" to={config.routes.contact} />
+                <OverlayMenuItem
+                    icon={<Send className={cx('menu-icon')} />}
+                    title="Contact"
+                    to={config.routes.contact}
+                />
             </OverlayMenu>
         </div>
     );

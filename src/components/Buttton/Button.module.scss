@@ -18,9 +18,8 @@
     display: flex;
     text-align: center;
 
-
     & > svg {
-         width: unset;
+        width: unset;
     }
 }
 .title {
@@ -51,7 +50,6 @@ a {
     }
 }
 .text {
-
     cursor: pointer;
     &:hover {
         text-decoration: underline;
@@ -71,4 +69,14 @@ a {
     .title {
         // color: var(--white);
     }
+}
+
+// RESPONSIVE
+
+@media screen and (max-width: 635px) {
+    .title {
+    // display: none;
+    }
+}
+@media screen and (max-width: 425px) {
 }

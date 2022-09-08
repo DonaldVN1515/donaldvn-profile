@@ -22,5 +22,10 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 1;
+
+
+        &:hover {
+            color: var(--secondary);
+        }
     }
 }

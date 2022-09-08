@@ -9,6 +9,8 @@
     overflow: hidden;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    height: 100%;
     display: none;
 }
 
@@ -130,5 +132,15 @@
     }
     .option {
         -webkit-text-stroke: 1px var(--secondary);
+    }
+}
+// RESPONSIVE
+
+@media screen and (max-width: 425px) {
+    .options {
+        width: 100%;
+    }
+    .option:fullscreen {
+        display: block;
     }
 }

@@ -9,6 +9,13 @@
         font-size: 4.5rem;
         text-align: justify;
     }
+
+    &:first-child {
+        padding-top: unset;
+    }
+    &:nth-child(3) {
+        border-color: transparent;
+    }
 }
 // INTRODUCE
 .intro {
@@ -117,6 +124,8 @@
 }
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
     .container {
+        padding: 20px 0;
+
         & > h1 {
             font-size: 3.5rem;
         }
@@ -124,14 +133,42 @@
 }
 @media screen and (max-width: 1024px) {
     .container {
-        padding: 10px 0;
+        padding: 20px 0;
+
+        & > h1 {
+            font-size: 3.5rem;
+        }
     }
 }
 @media screen and (max-width: 635px) {
     .container {
+        padding: 10px;
+
         & > h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             line-height: 3.5rem;
+        }
+    }
+    .intro {
+        margin-right: 6px;
+    }
+    .infor::before {
+        transform: translate3d(20px, 20px, -20px);
+    }
+}
+@media screen and (max-width: 425px) {
+    .container {
+        padding: 10px 0;
+
+        & > h1 {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+    .about {
+        & > p {
+            text-indent: 10px;
+            font-size: 1.6rem;
         }
     }
 }

@@ -51,8 +51,21 @@ dark-background: #000;
 
 ---
 
+08/09/2022
+
+- Download CV
+- Complete home page
+- Responsive
+    Contact
+    Gallery
+    Blog
+
+---
+
+07/09/2022
+
+- Dark mode
 - Menu on Tablet & Mobile --> OK
-06/09/2022
 
 ---
 

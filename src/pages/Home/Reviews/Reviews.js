@@ -18,13 +18,28 @@ Reviews.propTypes = {
 const cx = classNames.bind(styles);
 
 function Reviews({ data }) {
+    // console.log(handleSlidesPerView());
     return (
         <div className={cx('wrapper')}>
             <Swiper
+                breakpoints={{
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1440: {
+                        slidesPerView: 3,
+                    },
+                    2560: {
+                        slidesPerView: 5,
+                    },
+                }}
                 effect={'coverflow'}
                 grabCursor
                 centeredSlides
-                slidesPerView={3}
+                // slidesPerView={3}
                 coverflowEffect={{
                     rotate: 50,
                     stretch: 0,

@@ -106,3 +106,42 @@
         display: none;
     }
 }
+@media screen and (max-width: 635px) {
+    .item {
+        margin-left: 5px;
+    }
+    .navbar {
+        display: none;
+    }
+    .infor {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width: 425px) {
+    .account,
+    .language {
+        & > span:last-child {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .account,
+    .language,
+    .register {
+        & > span:last-child {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 320px) {
+    .account,
+    .language,
+    .login,
+    .register {
+        & > span:last-child {
+            display: none;
+        }
+    }
+}

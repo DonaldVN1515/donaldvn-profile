@@ -17,7 +17,35 @@ const cx = classNames.bind(styles);
 
 function Technologies({ data }) {
     return (
-        <Swiper autoplay grabCursor slidesPerView={6} className={cx('wrapper')} modules={[Autoplay]}>
+        <Swiper
+            breakpoints={{
+                0: {
+                    slidesPerView: 1,
+                },
+                375: {
+                    slidesPerView: 2,
+                },
+                635: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                1220: {
+                    slidesPerView: 5,
+                },
+                1440: {
+                    slidesPerView: 6,
+                },
+                2560: {
+                    slidesPerView: 8,
+                },
+            }}
+            autoplay
+            grabCursor
+            className={cx('wrapper')}
+            modules={[Autoplay]}
+        >
             {data.map((award, index) => (
                 <SwiperSlide key={index} className={cx('item')}>
                     <Image src={award.imageUrl} alt={award.title} className={cx('image')} />

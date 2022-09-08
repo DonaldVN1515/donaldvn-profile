@@ -53,7 +53,7 @@
         padding-top: 250px;
 
         .icon {
-            font-size: 5rem;
+            font-size: 4.5rem;
         }
     }
     .item {
@@ -62,7 +62,7 @@
         }
     }
 }
-@media screen and (max-width: 635px) {
+@media screen and (max-width: 1024px) {
     .status {
         padding-top: 200px;
 
@@ -82,5 +82,15 @@
         & > h6 {
             font-size: 1.6rem;
         }
+    }
+}
+@media screen and (max-width: 635px) {
+    .status {
+        padding-top: 340px;
+    }
+    .content {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }

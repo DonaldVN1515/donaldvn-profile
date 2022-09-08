@@ -70,14 +70,19 @@
 .job {
     font-weight: 500;
     font-size: 2.5rem;
+    text-transform: capitalize;
+    text-align: justify;
 }
 .description {
     font-size: 1.8rem;
     padding: 10px 0;
+    text-align: justify;
 }
 .details {
     font-size: 1.6rem;
     margin-left: 30px;
+    text-align: justify;
+
     li {
         padding: 5px 0;
     }
@@ -118,7 +123,7 @@
     }
     .period {
         flex-flow: column wrap;
-        margin-left: 70px;
+        margin-left: 40px;
         &::before {
             left: 3px;
         }
@@ -128,8 +133,37 @@
     }
     .work {
         align-items: unset;
+        margin-right: unset;
     }
     .infor {
         margin: unset;
+    }
+    .job {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .period {
+        flex-flow: column wrap;
+        margin-left: 30px;
+    }
+    .time {
+        font-size: 2rem;
+    }
+    .job {
+        font-size: 1.8rem;
+    }
+    .details {
+        margin-left: 20px;
+        line-height: 1.8rem;
+    }
+    .description {
+        padding: 5px 0;
+    }
+}
+@media screen and (max-width: 375px) {
+    .period {
+        margin-left: 20px;
     }
 }

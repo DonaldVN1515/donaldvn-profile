@@ -57,7 +57,7 @@ const Header = () => {
         setDataLanguage(dataLanguage);
     }, []);
 
-    let currUser = true;
+    let currUser = false;
 
     const handleChangeLanguage = () => {
         // console.log(menuItem);
