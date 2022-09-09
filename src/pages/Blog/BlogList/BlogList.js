@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { Image, OndemandVideo, PermMediaOutlined, FormatQuote, MusicVideo } from '@mui/icons-material';
+import { useContext } from 'react';
 
+import { ThemeContext } from '~/components/ThemeContext';
 import styles from './BlogList.module.scss';
 import { BlogEmbedded, BlogSlides, BlogImage, BlogQuote, BlogContent, BlogType } from '~/pages/Blog/BlogItem';
 
@@ -13,13 +15,22 @@ BlogList.propTypes = {
 
 const cx = classNames.bind(styles);
 function BlogList({ dataBlogs, className }) {
+    // THEME
+    const context = useContext(ThemeContext);
+
+    // console.log(context.theme);
+    const classes = cx('item', {
+        [className]: className,
+        [context.theme]: context.theme,
+    });
+
     return (
         <div className={cx('blogs')}>
             {dataBlogs.map((data, index) => {
                 switch (data.label) {
                     case 'video':
                         return (
-                            <div key={index} className={cx('item', className)}>
+                            <div key={index} className={classes}>
                                 <BlogEmbedded className={cx('embedded')} mediaUrl={data.url} />
 
                                 <BlogContent
@@ -39,7 +50,7 @@ function BlogList({ dataBlogs, className }) {
                         );
                     case 'music':
                         return (
-                            <div key={index} className={cx('item', className)}>
+                            <div key={index} className={classes}>
                                 <BlogEmbedded className={cx('embedded')} mediaUrl={data.url} />
 
                                 <BlogContent
@@ -59,8 +70,8 @@ function BlogList({ dataBlogs, className }) {
                         );
                     case 'slides':
                         return (
-                            <div key={index} className={cx('item', className)}>
-                                <BlogSlides mediaUrl={data.url} title={data.title} className={cx('slides-image')} />
+                            <div key={index} className={classes}>
+                                <BlogSlides mediaUrl={data.url} title={data.title} />
 
                                 <BlogContent
                                     title={data.title}
@@ -79,7 +90,7 @@ function BlogList({ dataBlogs, className }) {
                         );
                     case 'quote':
                         return (
-                            <div key={index} className={cx('item', className)}>
+                            <div key={index} className={classes}>
                                 <BlogQuote mediaUrl={data.url} />
 
                                 <BlogContent
@@ -99,8 +110,8 @@ function BlogList({ dataBlogs, className }) {
                         );
                     case 'image':
                         return (
-                            <div key={index} className={cx('item', className)}>
-                                <BlogImage mediaUrl={data.url} title={data.title} className={cx('image')}/>
+                            <div key={index} className={classes}>
+                                <BlogImage mediaUrl={data.url} title={data.title} className={cx('image')} />
 
                                 <BlogContent
                                     title={data.title}

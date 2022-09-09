@@ -15,7 +15,7 @@ const Blog = () => {
     const [dataFilter, setdataFilter] = useState([]);
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [blogsPerPage] = useState(5);
+    const [blogsPerPage] = useState(6);
 
     useEffect(() => {
         // isRequired: Label, title, url, published, author, category, viewers, readTime
@@ -222,7 +222,7 @@ const Blog = () => {
             return;
         }
         const filteredData = dataBlogs.filter((data) => data.label === filterValueSelected);
-        console.log('filteredData: ', filteredData);
+        // console.log('filteredData: ', filteredData);
 
         setdataFilter(filteredData);
     };
@@ -240,6 +240,7 @@ const Blog = () => {
     return (
         <div className={cx('wapper')}>
             <Filter
+                className={cx('options')}
                 dataFilterCategory={dataFilterCategory}
                 filterValueSelected={handleFilter}
                 dataFilterTitle={dataFilterTitle}

@@ -1,4 +1,4 @@
-.wapper {
+.wrapper {
     display: flex;
     overflow: hidden;
 }
@@ -33,7 +33,7 @@
 
 // RESPONSIVE
 @media screen and (max-width: 1024px) {
-    .wapper {
+    .wrapper {
         flex-flow: column wrap;
     }
     .container {

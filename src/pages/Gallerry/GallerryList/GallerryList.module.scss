@@ -1,7 +1,22 @@
 .collections {
-  margin: 20px 0;
-  column-count: 3;
-  background-color: #f2f2f2;
-  grid-gap: 20px;
+    margin: 20px 0;
+    column-count: 3;
+    background-color: var(--light-background);
+    grid-gap: 20px;
+}
 
+// THEME (DARK MODE)
+.dark {
+}
+// RESPONSIVE
+
+@media screen and (max-width: 1200px) {
+    .collections {
+        column-count: 2;
+    }
+}
+@media screen and (max-width: 635px) {
+  .collections {
+    column-count: 1;
+}
 }

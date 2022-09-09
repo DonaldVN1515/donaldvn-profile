@@ -9,6 +9,8 @@
 }
 
 .dark {
+    background-color: var(--dark-background);
+
     & > h3 {
         color: var(--light-text);
     }

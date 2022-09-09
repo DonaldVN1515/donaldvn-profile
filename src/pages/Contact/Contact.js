@@ -4,7 +4,9 @@ import classNames from 'classnames/bind';
 import { useState, useRef } from 'react';
 import { Pause, PlayArrow, LocationOn, Phone } from '@mui/icons-material';
 import TypeIt from 'typeit-react';
+import { useContext } from 'react';
 
+import { ThemeContext } from '~/components/ThemeContext';
 import styles from './Contact.module.scss';
 import Overlay from '~/components/Overlay/Overlay';
 import songs from '~/assets/music';
@@ -15,9 +17,10 @@ import { Checkbox } from '@mui/material';
 
 Contact.propTypes = {};
 
+const cx = classNames.bind(styles);
 function Contact() {
-    const cx = classNames.bind(styles);
-
+    // THEME
+    const context = useContext(ThemeContext);
     const [isActive, setIsActive] = useState(false);
 
     const audioRef = useRef();
@@ -27,10 +30,10 @@ function Contact() {
     };
 
     return (
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper', context.theme)}>
             {/* INTRO - MUSIC */}
             <div className={cx('container-intro')}>
-                <Overlay />
+                <Overlay className={cx('overlay-theme')} />
                 <div className={cx('intro')}>
                     <div className={cx('intro-music', isActive ? 'active' : false)} onClick={handlePlayer}>
                         <div className={cx('intro-play')}>
@@ -54,7 +57,7 @@ function Contact() {
 
             {/* CONTACT */}
             <div className={cx('container-contact')}>
-                <Overlay />
+                <Overlay className={cx('overlay-theme')} />
                 <div className={cx('contact')}>
                     <div className={cx('contact-infor')}>
                         <h6>Hello! I am Quoc Viet</h6>

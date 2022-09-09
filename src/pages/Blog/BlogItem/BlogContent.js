@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { AccessTime, EventAvailable, FolderOpen, PersonOutline, Visibility } from '@mui/icons-material';
+import { useContext } from 'react';
 
+import { ThemeContext } from '~/components/ThemeContext';
 import Button from '~/components/Buttton';
 import styles from './BlogItem.module.scss';
 import { convertUrl } from '~/components/Functions';
@@ -40,10 +42,14 @@ function BlogContent({
 }) {
     const cx = classNames.bind(styles);
 
+    // THEME
+    const context = useContext(ThemeContext);
+
     const url = convertUrl(title);
 
     const classes = cx('content', {
         [className]: className,
+        [context.theme]: context.theme,
         hotBadge,
         bestPriceBadge,
         bestSellerBadge,
@@ -81,8 +87,6 @@ function BlogContent({
             <Button to={`/blog/${url}`} className={cx('read-more')}>
                 Read more: {title}
             </Button>
-            
-
         </div>
     );
 }

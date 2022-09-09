@@ -5,7 +5,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/autoplay';
 
-import React from 'react';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 

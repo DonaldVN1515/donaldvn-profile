@@ -29,7 +29,7 @@ const DefaultLayout = ({ children }) => {
     const context = useContext(ThemeContext);
 
     return (
-        <div className={cx('wapper', context.theme)}>
+        <div className={cx('wrapper', context.theme)}>
             <Sidebar />
 
             <div className={cx('container', context.theme)} ref={backToTopRef}>
@@ -43,6 +43,10 @@ const DefaultLayout = ({ children }) => {
 
                 <BackToTop ref={backToTopRef} />
             </div>
+
+
+
+
         </div>
     );
 };

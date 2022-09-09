@@ -10,15 +10,15 @@ Filter.propTypes = {
     dataFilterCategory: PropTypes.array.isRequired,
     dataFilterTitle: PropTypes.array,
     filterValueSelected: PropTypes.func,
+    className: PropTypes.string,
 };
 
-function Filter({ dataFilterCategory, filterValueSelected, dataFilterTitle }) {
+function Filter({ dataFilterCategory, filterValueSelected, dataFilterTitle, className }) {
     const cx = classNames.bind(styles);
 
     // FILTER
     const filterValueChanged = (e) => {
         filterValueSelected(e.target.value);
-
     };
     return (
         <div className={cx('filter')}>
@@ -32,7 +32,7 @@ function Filter({ dataFilterCategory, filterValueSelected, dataFilterTitle }) {
             </div>
 
             {/* FIll by CATEGORY */}
-            <div className={cx('options')}>
+            <div className={cx('options', className)}>
                 <RadioItem label="Show All" isChecked={true} onClick={filterValueChanged} />
 
                 {dataFilterCategory.map((category, index) => {

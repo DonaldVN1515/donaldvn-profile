@@ -25,7 +25,6 @@
     background-attachment: scroll;
     background-position: center 25%;
     box-shadow: 0 0 0 0 #ffffff;
-
     position: relative;
 }
 .intro {
@@ -35,7 +34,7 @@
     transform: translate(-50%, -50%);
     z-index: 2;
     color: var(--white);
-
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,12 +169,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    color: var( --text);
-
+    color: var(--text);
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 90%;
+    height: 100%;
     font-size: 2rem;
 }
 .contact-infor {
@@ -202,7 +200,6 @@
 .contact-me {
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-between;
     flex: 1;
 
     & > span {
@@ -233,7 +230,7 @@
     flex: 5;
     border-radius: 5px;
     padding: 30px 40px;
-    color: var( --text);
+    color: var(--text);
     background-color: var(--white);
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 
@@ -264,7 +261,7 @@
 
 // follow
 .container-follow {
-    padding-top: 30%;
+    padding-top: 40%;
     padding-left: 0px;
     padding-right: 0px;
     margin: 0px;
@@ -281,7 +278,8 @@
     padding: 40px;
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 50%;
+    width: 80%;
     transform: translate(-50%, -50%);
     z-index: 2;
     font-size: 2rem;
@@ -310,7 +308,6 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
-
 }
 .follow-submit {
     padding: 10px 30px;
@@ -323,14 +320,280 @@
     }
 }
 .footer {
-    position:absolute;
-    bottom: 0;
+    position: absolute;
+    bottom: 5px;
     left: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     transform: translateX(-50%);
-
 
     h6 {
         font-size: 1.6rem;
         padding: 10px 0;
+    }
+}
+// THEME (DARK MODE)
+.dark {
+    background-color: var(--background);
+    --overlay-color: rgba(255, 255, 255, 0.8);
+
+    .overlay {
+        background: linear-gradient(180deg, rgb(61, 61, 59) 0%, rgba(61, 61, 59, 0) 100%) transparent;
+    }
+
+    .overlay-theme {
+        background: linear-gradient(0deg, rgb(61, 61, 59) 0%, rgba(61, 61, 59, 0) 100%) transparent;
+    }
+    .footer,
+    .intro,
+    .follow,
+    .contact {
+        color: var(--lighter-text);
+    }
+    .intro-music {
+        .icon {
+            color: var(--text);
+        }
+    }
+    .contact-button {
+        & > span {
+            color: var(--lighter-text);
+            transition: all 0.3s linear;
+            &:hover {
+                color: var(--primary);
+            }
+        }
+    }
+}
+// RESPONSIVE
+@media screen and (max-width: 1600px) {
+    .intro-title {
+        & > h4 {
+            font-size: 5.5rem;
+        }
+    }
+    .contact-form {
+        & > h6 {
+            font-size: 4rem;
+        }
+    }
+    .intro-music {
+        margin: 20px 0;
+    }
+    .follow {
+        & > h6 {
+            font-size: 3.6rem;
+        }
+    }
+    .contact-infor {
+        margin-right: 20px;
+    }
+    .contact-location {
+        margin-right: unset;
+        margin-bottom: 20px;
+    }
+    .contact-about {
+        flex-flow: column wrap;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .intro {
+        top: 70%;
+    }
+    .container-contact {
+        padding-top: 100%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .container-intro {
+        padding-top: 70%;
+    }
+    .intro {
+        top: 70%;
+    }
+    .intro-title {
+        & > h4 {
+            font-size: 4.5rem;
+        }
+    }
+    .intro-music {
+        width: 100px;
+        height: 100px;
+    }
+    .contact {
+        flex-direction: column;
+    }
+    .follow {
+        top: 50%;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+        & > h6 {
+            font-size: 3.5rem;
+        }
+    }
+    .contact-infor {
+        flex: unset;
+        margin-right: unset;
+        padding: 30px 0px 10px 0;
+    }
+    .contact-form {
+        flex: unset;
+        width: 100%;
+    }
+    .container-contact {
+        padding-top: 160%;
+    }
+    .container-follow {
+        padding-top: 70%;
+    }
+    .contact-about {
+        flex-flow: row;
+    }
+    .contact-location {
+        margin-bottom: unset;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .container-contact {
+        padding-top: 150%;
+    }
+    .container-follow {
+        padding-top: 60%;
+    }
+    .contact {
+        justify-content: space-evenly;
+    }
+}
+@media screen and (max-width: 768px) {
+    .contact-about {
+        padding: 10px 0;
+        .icon {
+            font-size: 5rem;
+        }
+    }
+    .contact-location,
+    .contact-me {
+        & > span {
+            font-size: 2rem;
+        }
+    }
+    .container-follow {
+        padding-top: 70%;
+    }
+    .follow {
+        & > h6 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        & > p {
+            font-size: 1.8rem;
+        }
+    }
+    .container-contact {
+        padding-top: 180%;
+    }
+    .follow-form {
+        font-size: 1.8rem;
+    }
+    .contact-form {
+        padding: 10px 20px 20px 20px;
+
+        & > h6 {
+            font-size: 2.5rem;
+        }
+        & > p {
+            padding: 10px 0;
+            font-size: 1.6rem;
+        }
+    }
+}
+@media screen and (max-width: 635px) {
+    .intro-title {
+        & > h4 {
+            font-size: 3rem;
+        }
+
+        & > p {
+            margin-top: unset;
+            font-size: 1.6rem;
+        }
+    }
+    .contact-about {
+        flex-direction: column;
+    }
+    .container-contact {
+        padding-top: 200%;
+    }
+    .intro-music {
+        width: 60px;
+        height: 60px;
+
+        .icon {
+            font-size: 3.5rem;
+        }
+    }
+    .container-contact {
+        padding-top: 300%;
+    }
+    .container-follow {
+        padding-top: 110%;
+    }
+    .contact-location {
+        margin-bottom: 10px;
+        & > span {
+            padding: 5px 0;
+        }
+    }
+    .contact-infor {
+        & > h6 {
+            font-size: 2rem;
+        }
+        & > p {
+            font-size: 1.6rem;
+            padding: unset;
+        }
+    }
+    .follow-form {
+        font-size: 1.6rem;
+    }
+    .follow {
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .container-contact {
+        padding-top: 330%;
+    }
+    .container-follow {
+        padding-top: 120%;
+    }
+    .follow {
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .container-contact {
+        padding-top: 390%;
+    }
+    .container-follow {
+        padding-top: 150%;
+    }
+}
+@media screen and (max-width: 320px) {
+    .container-contact {
+        padding-top: 450%;
+    }
+    .container-follow {
+        padding-top: 150%;
+    }
+    .intro {
+        top: 80%;
     }
 }

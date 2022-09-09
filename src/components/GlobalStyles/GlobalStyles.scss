@@ -48,6 +48,8 @@ input,
     outline: none;
     border: none;
     background-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+
 }
 
 a {
@@ -139,6 +141,8 @@ html {
     :root {
         --default-layout-padding: 0px 30px;
     }
+}
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
 }
 @media screen and (max-width: 1200px) {
 }

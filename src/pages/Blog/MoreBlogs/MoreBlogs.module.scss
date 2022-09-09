@@ -16,10 +16,9 @@
 .title {
     display: flex;
     align-items: center;
-    border-radius: 5px;
     padding: 0 10px;
     margin-bottom: 20px;
-    background-color: var(--light-background);
+    border-bottom: 1px solid var(--light-background);
     h4 {
         font-size: 3rem;
         padding: 10px 0;
@@ -42,8 +41,48 @@
     padding: 10px 20px;
     font-weight: 600;
     &:hover {
-        color: var(--white);
+        color: var(--secondary);
 
-        background-color: var(--primary);
+        // background-color: var(--primary);
+    }
+}
+
+//  THEME (DARK MODE)
+.dark {
+    background-color: var(--dark-background);
+    .title {
+        background-color: var(--dark-background);
+    }
+    .link,
+    .blog {
+        background-color: var(--dark-background);
+        color: var(--lighter-text);
+    }
+    .link:hover {
+        color: var(--secondary);
+    }
+}
+// RESPONSIVE
+
+@media screen and (max-width: 768px) {
+    .more {
+        margin-top: unset;
+
+        padding: 10px 10px;
+    }
+    .title {
+        & > h4 {
+            font-size: 2rem;
+        }
+        .icon {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .link {
+        padding: 6px 10px;
+        line-height: 2rem;
     }
 }

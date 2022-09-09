@@ -1,5 +1,5 @@
 .wapper {
-    padding: 10px 0;
+    padding: 20px 0;
 }
 .item {
     flex: 1;
@@ -14,4 +14,31 @@
     }
 }
 
+// FILTER
+.options {
+    grid-template-columns: repeat(6, 1fr);
+}
 // PAGINATION
+
+// RESPONSIVE
+
+@media screen and (max-width: 768px) {
+    .options {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+@media screen and (max-width: 635px) {
+    .options {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (max-width: 425px) {
+    .options {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 320px) {
+    .options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { Article } from '@mui/icons-material';
+import { useContext } from 'react';
 
+import { ThemeContext } from '~/components/ThemeContext';
 import styles from './MoreBlogs.module.scss';
 import Button from '~/components/Buttton';
 import { convertUrl } from '~/components/Functions';
@@ -15,9 +17,11 @@ MoreBlogs.propTypes = {
 
 function MoreBlogs({ moreBlogs, indexOfLastBlog, indexOfFirstBlog }) {
     const cx = classNames.bind(styles);
+    // THEME
+    const context = useContext(ThemeContext);
 
     return (
-        <div className={cx('more')}>
+        <div className={cx('more', context.theme)}>
             <div className={cx('title')}>
                 <Article className={cx('icon')} />
                 <h4>More Articles ...</h4>

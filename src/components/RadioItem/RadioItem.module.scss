@@ -9,10 +9,8 @@
     --input-color--border: rgba(0, 0, 0, 0.08627);
     --input-color--default: #fff;
 
-    padding: 5px 0;
-    margin: 0 10px;
     .input-secondary {
-        --input-color: var(--primary);
+        --input-color: var(--secondary);
         --input-color--line: var(--lighter-background);
     }
 
@@ -155,4 +153,18 @@
     transition-delay: 0.2s;
     -webkit-transform: scale(0.33);
     transform: scale(0.33);
+}
+
+// THEME (DARK MODE)
+.dark {
+    .label {
+        color: var(--lighter-text);
+    }
+}
+
+// RESPONSIVE
+@media screen and (max-width: 635px) {
+    .label {
+        font-size: 1.4rem;
+    }
 }
