@@ -56,6 +56,7 @@
         height: 25px;
     }
 }
+
 .account {
     padding: 3px 8px;
     font-weight: 700;
@@ -80,6 +81,13 @@
     background-color: var(--dark-background);
     .item {
         color: var(--lighter-text);
+    }
+    .item:hover {
+        color: var(--primary);
+
+        span {
+            color: var(--primary);
+        }
     }
     .register,
     .language {

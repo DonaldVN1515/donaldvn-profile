@@ -184,6 +184,7 @@
 }
 @media screen and (max-width: 635px) {
     .portfolio {
+        padding: 0 10px;
         grid-template-columns: repeat(1, 1fr);
     }
 }

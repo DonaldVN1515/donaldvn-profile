@@ -49,9 +49,10 @@ input,
     border: none;
     background-color: transparent;
     font-family: 'Times New Roman', Times, serif;
-
 }
-
+span {
+    transition: all 0.25s linear;
+}
 a {
     color: var(--text);
     text-decoration: none;
@@ -82,20 +83,20 @@ html *::-webkit-scrollbar-thumb {
 
 // Custom tippy tooltip
 html {
-    .tippy-box {
-        border-radius: 3px;
-        font-weight: 600;
-        font-size: 1.6rem;
-        line-height: 2.2rem;
-        color: var(--white);
-        background-color: var(--background-color);
-        transition: all 0.25s ease-in-out;
-        -webkit-transition: -webkit-transform 0.25s ease-in-out;
-    }
-    .tippy-content {
-        padding: 8px 15px;
-        letter-spacing: 1px;
-    }
+    // .tippy-box {
+    //     border-radius: 3px;
+    //     font-weight: 600;
+    //     font-size: 1.6rem;
+    //     line-height: 2.2rem;
+    //     color: var(--white);
+    //     background-color: var(--background-color);
+    //     transition: all 0.25s ease-in-out;
+    //     -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    // }
+    // .tippy-content {
+    //     padding: 8px 15px;
+    //     letter-spacing: 1px;
+    // }
 }
 // Custom MATERIAL UI
 
@@ -164,9 +165,6 @@ html {
 @media screen and (max-width: 425px) {
 }
 @media screen and (max-width: 375px) {
-    :root {
-        --default-layout-padding: 0px 10px;
-    }
 }
 @media screen and (max-width: 320px) {
 }

@@ -43,10 +43,14 @@
 }
 
 @media screen and (max-width: 1024px) {
-    
 }
 @media screen and (max-width: 768px) {
     .back-to-top {
         right: 20px;
+    }
+}
+@media screen and (max-width: 635px) {
+    .back-to-top {
+        right: 10px;
     }
 }

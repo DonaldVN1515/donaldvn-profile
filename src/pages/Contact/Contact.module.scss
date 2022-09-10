@@ -172,8 +172,10 @@
     color: var(--text);
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 100%;
     height: 100%;
+
+    padding: var(--default-layout-padding);
     font-size: 2rem;
 }
 .contact-infor {
@@ -363,6 +365,11 @@
             &:hover {
                 color: var(--primary);
             }
+        }
+    }
+    .contact-radio {
+        span {
+            color: var(--text);
         }
     }
 }

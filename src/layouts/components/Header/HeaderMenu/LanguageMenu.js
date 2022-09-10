@@ -2,6 +2,7 @@ import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import Tippy from '@tippyjs/react/headless';
+import 'tippy.js/animations/scale.css';
 
 import styles from './LanguageMenu.module.scss';
 import { Wrapper } from '~/components/Wrapper';

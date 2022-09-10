@@ -48,6 +48,12 @@ function InputItem({ multiline = false, required = false, rows, label, type, cla
                 '.css-1460p85-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
                     borderColor: '#a17560',
                 },
+                '.css-19nmn3z-MuiOutlinedInput-notchedOutline': {
+                    borderColor: '#a17560',
+                },
+                '.css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input': {
+                    lineHeight: '2.5rem',
+                },
             }}
             InputProps={{
                 sx: {

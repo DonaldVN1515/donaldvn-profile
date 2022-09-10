@@ -51,6 +51,13 @@ dark-background: #000;
 
 ---
 
+10/09/2022
+
+- SEO Website
+- Fix darkmode contact
+
+---
+
 09/09/2022
 
 - Responsive
