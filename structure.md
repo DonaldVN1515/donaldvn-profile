@@ -1,6 +1,4 @@
-# Bug
-
-C:\Users\HP\AppData\Local\Programs\Microsoft VS Code
+# Link Git: <https://github.com/DonaldVN1515/donaldvn-profile.git>
 
 # Trick
 
@@ -10,7 +8,6 @@ debugger
 
 # Structure
 
-color: #ea2e0d
 layout:
         header
             location
@@ -32,8 +29,6 @@ layout:
             © Profiler 2022. Design by @DONALDVN
 Dark/ Light mode
 
-# Link Git: <https://github.com/DonaldVN1515/donaldvn-profile.git>
-
 # Color
 
 primary: #DC2F2F;
@@ -49,12 +44,26 @@ dark-background: #000;
 
 # Time
 
+- Animation On Scroll
+- Code Login - Register
+- Repsonsive Page 404
+- Switch Tab => Srcoll to this
+- Border-radius images
+
+---
+
+22/09/2022
+
+- Fix Overlay menu on Mobile and Tablet   --> OK
+- Scroll to Top ==> Profile also scroll too --> OK
+- Color Image Reivew and Technologies --> OK
+
 ---
 
 10/09/2022
 
-- SEO Website
-- Fix darkmode contact
+- SEO Website  --> OK
+- Fix darkmode contact  --> OK
 
 ---
 

@@ -22,8 +22,13 @@ function OverlayMenu({ children, className }) {
     const handleMenu = () => {
         setIsActive(!isActive);
     };
+
+    const classes = cx('wrapper', isActive ? 'wrapper--active' : false, {
+        [context.theme]: context.theme,
+        [className]: className,
+    });
     return (
-        <div className={cx('wrapper', context.theme, className)}>
+        <div className={classes}>
             {/* MENU ON TABLET & MOBILE */}
             <div className={cx('menu')} onClick={handleMenu}>
                 <span className={cx('menu-icon', 'icon-top', isActive ? 'icon-top-click' : false)}></span>

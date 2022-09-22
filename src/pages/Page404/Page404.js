@@ -48,7 +48,7 @@ function Page404() {
                                 <p className={cx('line-2')}>
                                     <span className={cx('c-p')}>background</span>
                                     <span>:</span>
-                                    <span className={cx('c-y')}>linear-gradient (</span>
+                                    <span className={cx('c-y')}>linear-gradient &lpar;</span>
                                 </p>
 
                                 <p className={cx('line-3')}>
@@ -85,7 +85,7 @@ function Page404() {
                                 <span className={cx('c-g')}>“#DE7300”</span>,{' '}
                                 <span className={cx('c-g')}>“#74B087”</span>];
                                 <span className={cx('c-c', 'block')} style={{ marginTop: '10px' }}>
-                                    // Do the thing
+                                    {/* // Do the thing */}
                                 </span>
                                 <span className={cx('c-y', 'block')}>
                                     function <span className={cx('c-b')}>animate</span>() {}
@@ -95,8 +95,6 @@ function Page404() {
                     </div>
                     <div class="editor-block"></div>
                 </div>
-
-                {/* PAGE 404 */}
                 <div className={cx('content')}>
                     <h4>404</h4>
                     <p>The Page you were looking for, couldn't be found.</p>

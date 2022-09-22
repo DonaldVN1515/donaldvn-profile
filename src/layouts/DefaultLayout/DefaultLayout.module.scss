@@ -1,22 +1,24 @@
 .wrapper {
     display: flex;
-    overflow: hidden;
 }
 .container {
     flex: 3;
     background-color: var(--lighter-background);
-    height: 100vh;
-    overflow-y: overlay;
 }
 .content {
-    // max-width: var(--default-layout-width, 1200px);
     overflow: hidden;
     margin: auto;
     padding: var(--default-layout-padding);
 }
-
+.wrapper--active {
+    overflow: hidden;
+}
+.container--active {
+    height: 100vh;
+    overflow-y: overlay;
+}
 // Custom scroll bar
-.container::-webkit-scrollbar {
+.container--active::-webkit-scrollbar {
     display: block;
 }
 
